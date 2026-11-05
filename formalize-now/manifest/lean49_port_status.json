@@ -1,0 +1,432 @@
+{
+ "R_pos": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ },
+ "R_squarefree": {
+  "status": "inherits_sorryAx",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "S_eq_filter_Ico": {
+  "status": "direct_error",
+  "errors": [
+   "unsolved goals"
+  ],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "accepted_iff_coprime_R": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ },
+ "canonical_window_card_eq_range_coprime": {
+  "status": "inherits_sorryAx",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "card_filter_Ico_split": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ },
+ "coprime_add_mul_right": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "role": "helper_lemma"
+ },
+ "coprime_d_R": {
+  "status": "inherits_sorryAx",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "coprime_iff_coprime_rad": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ },
+ "coprime_m_R": {
+  "status": "inherits_sorryAx",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "coprime_of_modEq_natAbs": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "role": "helper_lemma"
+ },
+ "count_canonical_period": {
+  "status": "inherits_sorryAx",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "d_dvd_rad": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ },
+ "d_mul_R_eq_rad": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ },
+ "exists_accepted": {
+  "status": "direct_error",
+  "errors": [
+   "mod_cast has type"
+  ],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "exists_coprime_R_neg_t_mod_p": {
+  "status": "direct_error",
+  "errors": [
+   "mod_cast has type"
+  ],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "exists_repr_mod_R": {
+  "status": "direct_error",
+  "errors": [
+   "mod_cast has type"
+  ],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "exists_witness_avoiding_dvd": {
+  "status": "inherits_sorryAx",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "gcd_mod_eq": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext"
+  ],
+  "role": "helper_lemma"
+ },
+ "gcd_with_N_iff_gcd_with_R": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ },
+ "gdt_correction_factor": {
+  "status": "inherits_sorryAx",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "challenge_theorem"
+ },
+ "gdt_count_per_period": {
+  "status": "inherits_sorryAx",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "challenge_theorem"
+ },
+ "gdt_density": {
+  "status": "direct_error",
+  "errors": [
+   "omega could not prove the goal:"
+  ],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "challenge_theorem"
+ },
+ "gdt_empty": {
+  "status": "direct_error",
+  "errors": [
+   "unknown constant 'Finset.eq_empty_iff_forall_notMem.mpr'"
+  ],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "challenge_theorem"
+ },
+ "gdt_minimal_period": {
+  "status": "direct_error",
+  "errors": [
+   "mod_cast has type"
+  ],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "challenge_theorem"
+ },
+ "gdt_periodic": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "challenge_theorem"
+ },
+ "general_divisor_theorem": {
+  "status": "inherits_sorryAx",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "challenge_theorem"
+ },
+ "periodic_window_card_eq": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ },
+ "primeFactors_forall_dvd_imp_dvd": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ },
+ "prime_coprime_prod": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ },
+ "prod_primes_squarefree": {
+  "status": "direct_error",
+  "errors": [
+   "too many variable names provided at alternative 'insert', #4 provided, but #2 expected",
+   "unknown identifier 'ha'",
+   "invalid field 'Prime', the environment does not contain 'Not.Prime'",
+   "invalid field notation, type is not of the form (C ...) where C is a constant",
+   "application type mismatch",
+   "application type mismatch"
+  ],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "rad_dvd_self": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ },
+ "rad_eq_self_of_squarefree": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ },
+ "rad_factorization_eq_one": {
+  "status": "inherits_sorryAx",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "rad_pos": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ },
+ "rad_squarefree": {
+  "status": "inherits_sorryAx",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "repr_unique": {
+  "status": "direct_error",
+  "errors": [
+   "mod_cast has type"
+  ],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice",
+   "sorryAx"
+  ],
+  "role": "helper_lemma"
+ },
+ "squarefree_prime_dvd_split": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "role": "helper_lemma"
+ },
+ "totient_rad_mul": {
+  "status": "kernel_clean",
+  "errors": [],
+  "axioms_lean49": [
+   "propext",
+   "Quot.sound",
+   "Classical.choice"
+  ],
+  "role": "helper_lemma"
+ }
+}

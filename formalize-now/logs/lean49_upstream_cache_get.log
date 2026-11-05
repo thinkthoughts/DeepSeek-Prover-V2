@@ -1,0 +1,25 @@
+info: batteries: cloning https://github.com/leanprover-community/batteries to '././.lake/packages/batteries'
+info: Qq: cloning https://github.com/leanprover-community/quote4 to '././.lake/packages/Qq'
+info: aesop: cloning https://github.com/leanprover-community/aesop to '././.lake/packages/aesop'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4 to '././.lake/packages/proofwidgets'
+info: Cli: cloning https://github.com/leanprover/lean4-cli to '././.lake/packages/Cli'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph.git to '././.lake/packages/importGraph'
+✔ [1/10] Fetched proofwidgets:optRelease
+✔ [2/10] Built Cache.IO
+✔ [3/10] Built Cache.Hashing
+✔ [4/10] Built Cache.Hashing:c.o
+✔ [5/10] Built Cache.Requests
+✔ [6/10] Built Cache.IO:c.o
+✔ [7/10] Built Cache.Main
+✔ [8/10] Built Cache.Requests:c.o
+✔ [9/10] Built Cache.Main:c.o
+✔ [10/10] Built cache
+Attempting to download 4650 file(s)
+[progress output condensed: 4650/4650 attempted] (100% success)
+Decompressing 4650 file(s)
+Unpacked in 29872 ms
+Completed successfully!
+
+real	1m1.083s
+user	0m43.957s
+sys	0m10.321s

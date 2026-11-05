@@ -1,0 +1,127 @@
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:45:8: error: unknown constant 'Finset.eq_empty_iff_forall_notMem.mpr'
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:77:12: warning: unused variable `hs`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:77:15: warning: unused variable `ha_not`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:103:2: error: too many variable names provided at alternative 'insert', #4 provided, but #2 expected
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:104:29: error: unknown identifier 'ha'
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:105:17: error: invalid field 'Prime', the environment does not contain 'Not.Prime'
+  a
+has type
+  a✝ ∉ s✝
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:105:17: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  a
+has type
+  a✝ ∈ s✝ → False
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:106:11: error: application type mismatch
+  hs a
+argument
+  a
+has type
+  a✝ ∉ s✝ : Prop
+but is expected to have type
+  ℕ : Type
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:106:39: error: application type mismatch
+  Finset.mem_insert_self ?m.3879 s
+argument
+  s
+has type
+  (∀ p ∈ s✝, p.Prime) → Squarefree (∏ p ∈ s✝, p) : Prop
+but is expected to have type
+  Finset ?m.3865 : Type ?u.3864
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:459:6: error: mod_cast has type
+  k % Tmin N m ≡ aN [MOD m] : Prop
+but is expected to have type
+  ↑(k % Tmin N m) ≡ ↑aN [ZMOD ↑m] : Prop
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:478:4: error: mod_cast has type
+  ↑n1 ≡ ↑n2 [ZMOD ↑m] : Prop
+but is expected to have type
+  n1 ≡ n2 [MOD m] : Prop
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:517:6: error: mod_cast has type
+  k ≡ aN [MOD ?m.41197] : Prop
+but is expected to have type
+  ↑k ≡ ↑aN [ZMOD ↑m] : Prop
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:542:14: warning: unused variable `hsub`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:542:19: warning: unused variable `hall'`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:664:52: error: mod_cast has type
+  r ≡ rp [MOD p] : Prop
+but is expected to have type
+  ↑r ≡ ↑rp [ZMOD ↑p] : Prop
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:734:6: error: mod_cast has type
+  n1 ≡ r [MOD p] : Prop
+but is expected to have type
+  ↑n1 ≡ ↑r [ZMOD ↑p] : Prop
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:784:16: warning: unused variable `hlt`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:784:22: warning: unused variable `hmod`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:841:56: error: unsolved goals
+case a
+N L m : ℕ
+a : ℤ
+n : ℕ
+⊢ accepted N m a n → 1 ≤ n → (n ≤ L ↔ n < L + 1)
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/_AxiomProbe.lean:864:10: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e - i + j ≤ -1
+  f + g ≥ 0
+  i - j ≥ 0
+  e + j ≤ -1
+  e ≥ 0
+  g ≥ 0
+  c ≥ 1
+  b ≥ 1
+where
+ b := ↑N
+ c := ↑m
+ e := ↑s
+ f := ↑k * ↑(R N m).totient
+ g := ↑(S N s m a).card
+ i := ↑(k + 1) * ↑(Tmin N m)
+ j := ↑k * ↑(Tmin N m)
+'GDT.Challenge.R_pos' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.R_squarefree' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.S_eq_filter_Ico' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.accepted_iff_coprime_R' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.canonical_window_card_eq_range_coprime' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice,
+ sorryAx]
+'GDT.Challenge.card_filter_Ico_split' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.coprime_add_mul_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GDT.Challenge.coprime_d_R' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.coprime_iff_coprime_rad' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.coprime_m_R' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.coprime_of_modEq_natAbs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GDT.Challenge.count_canonical_period' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.d_dvd_rad' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.d_mul_R_eq_rad' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.exists_accepted' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.exists_coprime_R_neg_t_mod_p' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.exists_repr_mod_R' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.exists_witness_avoiding_dvd' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.gcd_mod_eq' depends on axioms: [propext]
+'GDT.Challenge.gcd_with_N_iff_gcd_with_R' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.gdt_correction_factor' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.gdt_count_per_period' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.gdt_density' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.gdt_empty' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.gdt_minimal_period' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.gdt_periodic' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.general_divisor_theorem' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.periodic_window_card_eq' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.primeFactors_forall_dvd_imp_dvd' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.prime_coprime_prod' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.prod_primes_squarefree' depends on axioms: [propext, Quot.sound, sorryAx]
+'GDT.Challenge.rad_dvd_self' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.rad_eq_self_of_squarefree' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.rad_factorization_eq_one' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.rad_pos' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GDT.Challenge.rad_squarefree' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.repr_unique' depends on axioms: [propext, Quot.sound, Classical.choice, sorryAx]
+'GDT.Challenge.squarefree_prime_dvd_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GDT.Challenge.totient_rad_mul' depends on axioms: [propext, Quot.sound, Classical.choice]
+
+# exit=1 wall_s=9.2 peak_rss_kb=1312504

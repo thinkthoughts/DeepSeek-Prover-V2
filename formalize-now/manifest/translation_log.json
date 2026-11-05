@@ -1,0 +1,136 @@
+{
+ "rules": [
+  {
+   "id": "T1",
+   "description": "delete `module` header line (module system absent in Lean 4.9)"
+  },
+  {
+   "id": "T2",
+   "description": "`public import X` -> `import X` (visibility modifiers absent in Lean 4.9)"
+  },
+  {
+   "id": "T3",
+   "description": "delete `@[expose] public section` (module-system export control absent in Lean 4.9)"
+  },
+  {
+   "id": "T4",
+   "description": "import path `GeneralDivisorTheorem.Basic` -> `GDTBench.Defs` (local module name)"
+  },
+  {
+   "id": "L1",
+   "description": "Ladder: helper-lemma signature verbatim, proof -> sorry"
+  }
+ ],
+ "source_sha256": {
+  "Defs": "4adb0144dfb1822cbff45e13978034e381002c440ec168f1d8fbd3faf4640f39",
+  "Challenge": "b1852f592237500b5d79dc7374a150a82ea7d7e8af3d334cdbed6cbdbad32be3",
+  "SolutionPort": "419c1670799f6cdbddcffa5fb532b5b8c0608d1aadfc0ce2a3fb50f1ea0dba8f"
+ },
+ "applied": [
+  {
+   "file": "GeneralDivisorTheorem/Basic.lean",
+   "line": 7,
+   "rule": "T1",
+   "before": "module",
+   "after": null
+  },
+  {
+   "file": "GeneralDivisorTheorem/Basic.lean",
+   "line": 9,
+   "rule": "T2",
+   "before": "public import Mathlib.Data.Nat.Totient",
+   "after": "import Mathlib.Data.Nat.Totient"
+  },
+  {
+   "file": "GeneralDivisorTheorem/Basic.lean",
+   "line": 10,
+   "rule": "T2",
+   "before": "public import Mathlib.Data.Nat.Factorization.Basic",
+   "after": "import Mathlib.Data.Nat.Factorization.Basic"
+  },
+  {
+   "file": "GeneralDivisorTheorem/Basic.lean",
+   "line": 11,
+   "rule": "T2",
+   "before": "public import Mathlib.Data.Finset.Basic",
+   "after": "import Mathlib.Data.Finset.Basic"
+  },
+  {
+   "file": "GeneralDivisorTheorem/Basic.lean",
+   "line": 19,
+   "rule": "T3",
+   "before": "@[expose] public section",
+   "after": null
+  },
+  {
+   "file": "Challenge/GeneralDivisorTheorem.lean",
+   "line": 7,
+   "rule": "T1",
+   "before": "module",
+   "after": null
+  },
+  {
+   "file": "Challenge/GeneralDivisorTheorem.lean",
+   "line": 9,
+   "rule": "T2",
+   "before": "public import GeneralDivisorTheorem.Basic",
+   "after": "import GeneralDivisorTheorem.Basic"
+  },
+  {
+   "file": "Challenge/GeneralDivisorTheorem.lean",
+   "line": 9,
+   "rule": "T4",
+   "before": "import GeneralDivisorTheorem.Basic",
+   "after": "import GDTBench.Defs"
+  },
+  {
+   "file": "Challenge/GeneralDivisorTheorem.lean",
+   "line": 16,
+   "rule": "T3",
+   "before": "@[expose] public section",
+   "after": null
+  },
+  {
+   "file": "Solution/GeneralDivisorTheorem.lean",
+   "line": 7,
+   "rule": "T1",
+   "before": "module",
+   "after": null
+  },
+  {
+   "file": "Solution/GeneralDivisorTheorem.lean",
+   "line": 9,
+   "rule": "T2",
+   "before": "public import GeneralDivisorTheorem.Basic",
+   "after": "import GeneralDivisorTheorem.Basic"
+  },
+  {
+   "file": "Solution/GeneralDivisorTheorem.lean",
+   "line": 9,
+   "rule": "T4",
+   "before": "import GeneralDivisorTheorem.Basic",
+   "after": "import GDTBench.Defs"
+  },
+  {
+   "file": "Solution/GeneralDivisorTheorem.lean",
+   "line": 10,
+   "rule": "T2",
+   "before": "public import Mathlib.Data.Nat.Squarefree",
+   "after": "import Mathlib.Data.Nat.Squarefree"
+  },
+  {
+   "file": "Solution/GeneralDivisorTheorem.lean",
+   "line": 19,
+   "rule": "T3",
+   "before": "@[expose] public section",
+   "after": null
+  },
+  {
+   "file": "Solution/GeneralDivisorTheorem.lean",
+   "line": null,
+   "rule": "L1",
+   "before": "32 helper lemma proofs",
+   "after": "`sorry` in GDTBench/Ladder.lean (statements verbatim)"
+  }
+ ]
+}

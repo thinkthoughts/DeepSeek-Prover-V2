@@ -1,0 +1,445 @@
+✔ [1240/1242] Built GeneralDivisorTheorem.Basic (1.9s)
+✔ [1241/1242] Built GeneralDivisorTheorem (827ms)
+Build completed successfully (1242 jobs).
+⚠ [1241/1243] Built Challenge.GeneralDivisorTheorem (1.1s)
+warning: Challenge/GeneralDivisorTheorem.lean:4:0: * 'Source: thinkthoughts, "The General Divisor Theorem: Exact Density Correction under
+Residue Conditioning", Draft v3.3, Theorem 3 (§2.2).':
+If an authors line spans multiple lines, each line but the last must end with a trailing comma
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Challenge/GeneralDivisorTheorem.lean:4:0: * 'Source: t':
+The authors line should begin with 'Authors: '
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Challenge/GeneralDivisorTheorem.lean:5:31: * '.':
+Please, do not end the authors' line with a period.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Challenge/GeneralDivisorTheorem.lean:24:8: declaration uses `sorry`
+warning: Challenge/GeneralDivisorTheorem.lean:30:8: declaration uses `sorry`
+warning: Challenge/GeneralDivisorTheorem.lean:37:8: declaration uses `sorry`
+warning: Challenge/GeneralDivisorTheorem.lean:45:8: declaration uses `sorry`
+warning: Challenge/GeneralDivisorTheorem.lean:55:8: declaration uses `sorry`
+warning: Challenge/GeneralDivisorTheorem.lean:64:8: declaration uses `sorry`
+warning: Challenge/GeneralDivisorTheorem.lean:70:8: declaration uses `sorry`
+✔ [1242/1243] Built Challenge (882ms)
+Build completed successfully (1243 jobs).
+⚠ [1317/1319] Built Solution.GeneralDivisorTheorem (2.4s)
+warning: Solution/GeneralDivisorTheorem.lean:202:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: Solution/GeneralDivisorTheorem.lean:201:2: The following tactic starts with 2 goals and ends with 2 goals, 1 of which is not operated on.
+  rw [Nat.coprime_mul_iff_right] at hcoN
+Please focus on the current goal, for instance using `·` (typed as "\.").
+
+Note: This linter can be disabled with `set_option linter.style.multiGoal false`
+warning: Solution/GeneralDivisorTheorem.lean:202:2: The following tactic starts with 2 goals and ends with 2 goals, 1 of which is not operated on.
+  show Nat.Coprime k N ↔ Nat.Coprime k (R N m)
+Please focus on the current goal, for instance using `·` (typed as "\.").
+
+Note: This linter can be disabled with `set_option linter.style.multiGoal false`
+warning: Solution/GeneralDivisorTheorem.lean:203:2: The following tactic starts with 2 goals and ends with 2 goals, 1 of which is not operated on.
+  rw [hcoN]
+Please focus on the current goal, for instance using `·` (typed as "\.").
+
+Note: This linter can be disabled with `set_option linter.style.multiGoal false`
+warning: Solution/GeneralDivisorTheorem.lean:291:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                  ↓
+  ⏎          omega⏎⏎        have hkT_notmem : (k + T) ∉ Finset.Ico (k + 1) (k + T) := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:295:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                  ↓
+  ⏎          omega⏎⏎        have hsplit_left :⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:302:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                  ↓
+  ⏎          omega⏎⏎        have hsplit_right :⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:309:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                  ↓
+  ⏎          omega⏎⏎        have hcard_left :⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:318:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                        ↓
+  ⏎          · simp [hp]⏎⏎        have hcard_right :⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:327:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                        ↓
+  ⏎          · simp [hp]⏎⏎        have hif_eq :⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:336:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                              ↓
+  ⏎            simp [hp, hnot]⏎⏎        calc⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:287:6: This central dot `·` is isolated; please merge it with the next line.
+
+Note: This linter can be disabled with `set_option linter.style.cdot false`
+warning: Solution/GeneralDivisorTheorem.lean:333:10: This central dot `·` is isolated; please merge it with the next line.
+
+Note: This linter can be disabled with `set_option linter.style.cdot false`
+warning: Solution/GeneralDivisorTheorem.lean:353:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                           ↓
+  ⏎  obtain ⟨p, hp, hpdvd⟩ := Nat.exists_prime_and_dvd hne'⏎⏎  have hpm : p ∣ m :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:356:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                         ↓
+  ⏎    hpdvd.trans (Nat.gcd_dvd_left _ _)⏎⏎  have hpR : p ∣ R N m :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:359:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                          ↓
+  ⏎    hpdvd.trans (Nat.gcd_dvd_right _ _)⏎⏎  have hpradN : p ∣ rad N := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:366:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                             ↓
+  ⏎    exact hpR.trans hR_dvd⏎⏎  have hpN : p ∣ N :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:369:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                    ↓
+  ⏎    hpradN.trans (rad_dvd_self N)⏎⏎  have hp_gcd_mN : p ∣ Nat.gcd m N :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:372:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                          ↓
+  ⏎    Nat.dvd_gcd hpm hpN⏎⏎  have hgcd_ne : Nat.gcd m N ≠ 0 := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:375:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                ↓
+  ⏎    exact (Nat.gcd_pos_of_pos_right m hN).ne'⏎⏎  have hp_mem : p ∈ (Nat.gcd m N).primeFactors :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:378:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                        ↓
+  ⏎    Nat.mem_primeFactors.mpr ⟨hp, hp_gcd_mN, hgcd_ne⟩⏎⏎  have hpd : p ∣ d N m := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:386:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                   ↓
+  ⏎    exact hp_mem⏎⏎  have hcontra : p ∣ Nat.gcd (d N m) (R N m) :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:389:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                          ↓
+  ⏎    Nat.dvd_gcd hpd hpR⏎⏎  have heq : Nat.gcd (d N m) (R N m) = 1 :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:392:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                     ↓
+  ⏎    coprime_d_R hN⏎⏎  rw [heq] at hcontra⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:394:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                        ↓
+  ⏎  rw [heq] at hcontra⏎⏎  exact absurd⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:438:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: Solution/GeneralDivisorTheorem.lean:503:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: Solution/GeneralDivisorTheorem.lean:544:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                      ↓
+  ⏎        rw [Finset.prod_insert hps]⏎⏎        have hp_mem_n : p ∈ n.primeFactors :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:547:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                              ↓
+  ⏎          hsub (Finset.mem_insert_self p s)⏎⏎        have hs_sub : s ⊆ n.primeFactors := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:551:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                     ↓
+  ⏎          exact hsub (Finset.mem_insert_of_mem hq)⏎⏎        have hpdvd : p ∣ t :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:554:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                 ↓
+  ⏎          hall' p (Finset.mem_insert_self p s)⏎⏎        have hsdvd : s.prod id ∣ t := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:559:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                        ↓
+  ⏎          exact hall' q (Finset.mem_insert_of_mem hq)⏎⏎        have hpprime : p.Prime :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:562:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                   ↓
+  ⏎          Nat.prime_of_mem_primeFactors hp_mem_n⏎⏎        have hsprime : ∀ q ∈ s, q.Prime := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:566:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                            ↓
+  ⏎          exact Nat.prime_of_mem_primeFactors (hs_sub hq)⏎⏎        have hcop : Nat.Coprime p (s.prod id) :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:569:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                   ↓
+  ⏎          prime_coprime_prod hpprime hsprime hps⏎⏎        exact Nat.Coprime.mul_dvd_of_dvd_of_dvd hcop hpdvd hsdvd⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:571:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                                   ↓
+  ⏎        exact Nat.Coprime.mul_dvd_of_dvd_of_dvd hcop hpdvd hsdvd⏎⏎  exact aux n.primeFactors (by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:618:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: Solution/GeneralDivisorTheorem.lean:640:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: Solution/GeneralDivisorTheorem.lean:643:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: Solution/GeneralDivisorTheorem.lean:652:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: Solution/GeneralDivisorTheorem.lean:673:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                ↓
+  ⏎  obtain ⟨n0, hn0⟩ := exists_accepted hN hm h⏎⏎  have hn0t : accepted N m a (n0 + t) :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:676:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                      ↓
+  ⏎    (hp n0).mpr hn0⏎⏎  have hmt : m ∣ t := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:689:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                          ↓
+  ⏎    exact_mod_cast hmtZ⏎⏎  have hradRt : rad (R N m) ∣ t := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:693:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                    ↓
+  ⏎    intro p hpmem⏎⏎    have hpp : p.Prime :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:696:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                            ↓
+  ⏎      Nat.prime_of_mem_primeFactors hpmem⏎⏎    have hpR : p ∣ R N m :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:699:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                          ↓
+  ⏎      Nat.dvd_of_mem_primeFactors hpmem⏎⏎    by_contra hpt⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:701:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                    ↓
+  ⏎    by_contra hpt⏎⏎    obtain ⟨r, hrlt, hrcop, hrneg⟩ :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:704:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                    ↓
+  ⏎      exists_coprime_R_neg_t_mod_p hN hpp hpR hpt⏎⏎    obtain ⟨n1, hn1lt, hn1mod, hn1modR⟩ :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:707:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                              ↓
+  ⏎      exists_repr_mod_R (a := a) hN hm hrlt⏎⏎    have hgcdR1 : Nat.gcd n1 (R N m) = 1 := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:715:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                         ↓
+  ⏎        _ = 1 := hrcop⏎⏎    have hn1acc : accepted N m a n1 := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:719:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                                    ↓
+  ⏎      exact (gcd_with_N_iff_gcd_with_R hN hm h hn1mod).mpr hgcdR1⏎⏎    have hn1tacc : accepted N m a (n1 + t) :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:722:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                           ↓
+  ⏎      (hp n1).mpr hn1acc⏎⏎    have hn1_modR : n1 ≡ r [MOD R N m] := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:726:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                            ↓
+  ⏎      rw [hn1modR, Nat.mod_eq_of_lt hrlt]⏎⏎    have hn1_modp_nat : n1 ≡ r [MOD p] :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:729:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                      ↓
+  ⏎      Nat.ModEq.of_dvd hpR hn1_modR⏎⏎    have hn1_modp : (n1 : ℤ) ≡ (r : ℤ) [ZMOD (p : ℤ)] := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:732:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                    ↓
+  ⏎      exact_mod_cast hn1_modp_nat⏎⏎    have hn1_neg_t : (n1 : ℤ) ≡ -(t : ℤ) [ZMOD (p : ℤ)] :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:735:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                             ↓
+  ⏎      hn1_modp.trans hrneg⏎⏎    have hsum0 :⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:741:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                         ↓
+  ⏎      simpa using hsum⏎⏎    have hp_sumZ : (p : ℤ) ∣ ((n1 : ℤ) + (t : ℤ)) :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:744:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                        ↓
+  ⏎      Int.modEq_zero_iff_dvd.mp hsum0⏎⏎    have hp_sum : p ∣ n1 + t := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:747:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                               ↓
+  ⏎      exact_mod_cast hp_sumZ⏎⏎    have hgcdRt : Nat.gcd (n1 + t) (R N m) = 1 :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:750:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                                   ↓
+  ⏎      (gcd_with_N_iff_gcd_with_R hN hm h hn1tacc.1).mp hn1tacc.2⏎⏎    have hp_one : p ∣ 1 := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:754:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                     ↓
+  ⏎      exact Nat.dvd_gcd hp_sum hpR⏎⏎    exact absurd⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:758:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                ↓
+  ⏎      (not_le.mpr hpp.one_lt)⏎⏎  have hRt : R N m ∣ t := by⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:764:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                   ↓
+  ⏎    exact hradRt⏎⏎  have hmR : m * R N m ∣ t :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:768:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                 ↓
+  ⏎      (coprime_m_R hN) hmt hRt⏎⏎  unfold Tmin⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:909:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                        ↓
+  ⏎      (fun p hp => Nat.prime_of_mem_primeFactors hp)]⏎⏎  have hradEuler := Nat.totient_mul_prod_primeFactors (rad n)⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:912:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                          ↓
+  ⏎  rw [hpf] at hradEuler⏎⏎  have hphi_rad :⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:929:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                     ↓
+  ⏎    exact Nat.mul_right_cancel (rad_pos n) hcancel⏎⏎  have hnEuler := Nat.totient_mul_prod_primeFactors n⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:931:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                                                        ↓
+  ⏎  have hnEuler := Nat.totient_mul_prod_primeFactors n⏎⏎  have hrad_eq :⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:935:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+          ↓
+  ⏎    rfl⏎⏎  rw [hrad_eq] at hnEuler⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:937:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                            ↓
+  ⏎  rw [hrad_eq] at hnEuler⏎⏎  calc⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:951:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                     ↓
+  ⏎    coprime_d_R hN⏎⏎  have hrad : d N m * R N m = rad N :=⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+warning: Solution/GeneralDivisorTheorem.lean:954:0: Please, write a comment here or remove this line, but do not place empty lines within commands!
+Context:
+                        ↓
+  ⏎    d_mul_R_eq_rad hN⏎⏎  calc⏎
+
+Note: This linter can be disabled with `set_option linter.style.emptyLine false`
+✔ [1318/1319] Built Solution (919ms)
+Build completed successfully (1319 jobs).
+
+real	0m12.175s
+user	0m9.935s
+sys	0m3.107s

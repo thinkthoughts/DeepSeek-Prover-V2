@@ -1,0 +1,13 @@
+info: aesop: cloning https://github.com/leanprover-community/aesop to '././.lake/packages/aesop'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4 to '././.lake/packages/proofwidgets'
+info: Cli: cloning https://github.com/leanprover/lean4-cli to '././.lake/packages/Cli'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph.git to '././.lake/packages/importGraph'
+info: mathlib: running post-update hooks
+Unpacked in 259 ms
+Completed successfully!
+Build completed successfully.
+
+real	1m25.611s
+user	1m30.771s
+sys	0m16.265s
+exit=0

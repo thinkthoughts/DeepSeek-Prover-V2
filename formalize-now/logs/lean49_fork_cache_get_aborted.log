@@ -1,0 +1,28 @@
+warning: could not check for elan self-update: failed to parse latest release tag
+info: downloading https://releases.lean-lang.org/lean4/v4.9.0-rc1/lean-4.9.0-rc1-linux.tar.zst
+info: installing /root/.elan/toolchains/leanprover--lean4---v4.9.0-rc1
+info: batteries: cloning https://github.com/leanprover-community/batteries to '././.lake/packages/batteries'
+info: Qq: cloning https://github.com/leanprover-community/quote4 to '././.lake/packages/Qq'
+info: aesop: cloning https://github.com/leanprover-community/aesop to '././.lake/packages/aesop'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4 to '././.lake/packages/proofwidgets'
+info: Cli: cloning https://github.com/leanprover/lean4-cli to '././.lake/packages/Cli'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph.git to '././.lake/packages/importGraph'
+info: REPL: cloning https://github.com/xinhjBrant/repl.git to '././.lake/packages/REPL'
+✔ [1/10] Fetched proofwidgets:optRelease
+✔ [2/10] Built Cache.IO
+✔ [3/10] Built Cache.Hashing
+✔ [4/10] Built Cache.Hashing:c.o
+✔ [5/10] Built Cache.IO:c.o
+✔ [6/10] Built Cache.Requests
+✔ [7/10] Built Cache.Main
+✔ [8/10] Built Cache.Requests:c.o
+✔ [9/10] Built Cache.Main:c.o
+✔ [10/10] Built cache
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 1906k  100 1906k    0     0  3696k      0 --:--:-- --:--:-- --:--:-- 3696k
+
+installing leantar 0.1.11
+Attempting to download 4650 file(s)
+[progress output condensed: 1932/4650 attempted]
