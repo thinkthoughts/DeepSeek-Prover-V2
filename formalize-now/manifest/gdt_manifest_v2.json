@@ -1,0 +1,2361 @@
+{
+ "schema": "rpi-ds-001b/gdt-manifest/v2",
+ "source_repo": "https://github.com/thinkthoughts/general-divisor-theorem",
+ "source_commit": "ec66260c98eff965bea79891ffbbc0d3229c6e93",
+ "toolchain": "leanprover/lean4:v4.34.0-rc2",
+ "file_sha256": {
+  "GeneralDivisorTheorem/Basic.lean": "4adb0144dfb1822cbff45e13978034e381002c440ec168f1d8fbd3faf4640f39",
+  "Challenge/GeneralDivisorTheorem.lean": "b1852f592237500b5d79dc7374a150a82ea7d7e8af3d334cdbed6cbdbad32be3",
+  "Solution/GeneralDivisorTheorem.lean": "419c1670799f6cdbddcffa5fb532b5b8c0608d1aadfc0ce2a3fb50f1ea0dba8f"
+ },
+ "dependency_semantics": {
+  "kernel_deps": "GDT constants in the elaborated type or value (auxiliary _proof_/match_ constants expanded); established by Lean",
+  "syntactic_refs": "GDT short names appearing as identifiers in comment-stripped source; not verified"
+ },
+ "counts": {
+  "total": 48,
+  "definitions": 9,
+  "challenge_theorems": 7,
+  "helper_lemmas": 32
+ },
+ "problems": [],
+ "declarations": [
+  {
+   "name": "GDT.Admissible",
+   "short": "Admissible",
+   "kind": "def",
+   "role": "definition",
+   "source_file": "GeneralDivisorTheorem/Basic.lean",
+   "source_line": 31,
+   "source_statement": "def Admissible (N m : ℕ) (a : ℤ) : Prop",
+   "elaborated_type": "ℕ → ℕ → ℤ → Prop",
+   "type_hash": "412604790",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.d"
+   ],
+   "syntactic_refs": [
+    "GDT.d"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 7,
+   "lean49": {
+    "statement_elaborates": true,
+    "definition_text": "verbatim (rules T1–T3 only)"
+   },
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.R_pos",
+   "short": "R_pos",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 417,
+   "source_statement": "lemma R_pos {N m : ℕ} (hN : 0 < N) : 0 < R N m",
+   "elaborated_type": "∀ {N m : ℕ}, 0 < N → 0 < GDT.R N m",
+   "type_hash": "3141014156",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.d_mul_R_eq_rad",
+    "GDT.Challenge.rad_pos",
+    "GDT.R",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.d_mul_R_eq_rad",
+    "GDT.Challenge.rad_pos",
+    "GDT.R"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "mathlib_value_consts": 24,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.R_squarefree",
+   "short": "R_squarefree",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 604,
+   "source_statement": "lemma R_squarefree {N m : ℕ} (hN : 0 < N) : Squarefree (R N m)",
+   "elaborated_type": "∀ {N m : ℕ}, 0 < N → Squarefree (GDT.R N m)",
+   "type_hash": "643965339",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.d_mul_R_eq_rad",
+    "GDT.Challenge.rad_squarefree",
+    "GDT.R",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.d_mul_R_eq_rad",
+    "GDT.Challenge.rad_squarefree",
+    "GDT.R",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 52,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "inherits_sorryAx",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.S_eq_filter_Ico",
+   "short": "S_eq_filter_Ico",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 836,
+   "source_statement": "lemma S_eq_filter_Ico (N L m : ℕ) (a : ℤ) : S N L m a = (Finset.Ico 1 (L + 1)).filter (accepted N m a)",
+   "elaborated_type": "∀ (N L m : ℕ) (a : ℤ), GDT.S N L m a = Finset.filter (GDT.accepted N m a) (Finset.Ico 1 (L + 1))",
+   "type_hash": "3869988062",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.S",
+    "GDT.accepted",
+    "GDT.acceptedDecidable"
+   ],
+   "syntactic_refs": [
+    "GDT.S",
+    "GDT.accepted"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [
+    "GDT.acceptedDecidable"
+   ],
+   "mathlib_value_consts": 46,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "direct_error",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [
+     "E08"
+    ],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_density"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.accepted_iff_coprime_R",
+   "short": "accepted_iff_coprime_R",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 399,
+   "source_statement": "lemma accepted_iff_coprime_R {N m : ℕ} (hN : 0 < N) (hm : 0 < m) {a : ℤ} (h : Admissible N m a) (n : ℕ) : accepted N m a n ↔ (n : ℤ) ≡ a [ZMOD (m : ℤ)] ∧ Nat.gcd n (R N m) = 1",
+   "elaborated_type": "∀ {N m : ℕ},\n  0 < N →\n    0 < m → ∀ {a : ℤ}, GDT.Admissible N m a → ∀ (n : ℕ), GDT.accepted N m a n ↔ ↑n ≡ a [ZMOD ↑m] ∧ n.gcd (GDT.R N m) = 1",
+   "type_hash": "297653849",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Admissible",
+    "GDT.Challenge.gcd_with_N_iff_gcd_with_R",
+    "GDT.R",
+    "GDT.accepted"
+   ],
+   "syntactic_refs": [
+    "GDT.Admissible",
+    "GDT.Challenge.gcd_with_N_iff_gcd_with_R",
+    "GDT.R",
+    "GDT.accepted"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 19,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.canonical_window_card_eq_range_coprime",
+   "short": "canonical_window_card_eq_range_coprime",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 772,
+   "source_statement": "lemma canonical_window_card_eq_range_coprime {N m : ℕ} (hN : 0 < N) (hm : 0 < m) {a : ℤ} (_h : Admissible N m a) : ((Finset.Ico 0 (Tmin N m)).filter (fun (n : ℕ) => (n : ℤ) ≡ a [ZMOD (m : ℤ)] ∧ Nat.gcd n (R N m) = 1)).card = ((Finset.range (R N m)).filter (fun r => Nat.gcd r (R N m) = 1)).card",
+   "elaborated_type": "∀ {N m : ℕ},\n  0 < N →\n    0 < m →\n      ∀ {a : ℤ},\n        GDT.Admissible N m a →\n          {n ∈ Finset.Ico 0 (GDT.Tmin N m) | ↑n ≡ a [ZMOD ↑m] ∧ n.gcd (GDT.R N m) = 1}.card =\n            {r ∈ Finset.range (GDT.R N m) | r.gcd (GDT.R N m) = 1}.card",
+   "type_hash": "4069351042",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Admissible",
+    "GDT.Challenge.R_pos",
+    "GDT.Challenge.exists_repr_mod_R",
+    "GDT.Challenge.gcd_mod_eq",
+    "GDT.Challenge.repr_unique",
+    "GDT.R",
+    "GDT.Tmin"
+   ],
+   "syntactic_refs": [
+    "GDT.Admissible",
+    "GDT.Challenge.R_pos",
+    "GDT.Challenge.exists_repr_mod_R",
+    "GDT.Challenge.gcd_mod_eq",
+    "GDT.Challenge.repr_unique",
+    "GDT.R",
+    "GDT.Tmin"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 51,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "inherits_sorryAx",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.card_filter_Ico_split",
+   "short": "card_filter_Ico_split",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 818,
+   "source_statement": "lemma card_filter_Ico_split {P : ℕ → Prop} [DecidablePred P] {a b c : ℕ} (hab : a ≤ b) (hbc : b ≤ c) : ((Finset.Ico a c).filter P).card = ((Finset.Ico a b).filter P).card + ((Finset.Ico b c).filter P).card",
+   "elaborated_type": "∀ {P : ℕ → Prop} [inst : DecidablePred P] {a b c : ℕ},\n  a ≤ b →\n    b ≤ c →\n      (Finset.filter P (Finset.Ico a c)).card =\n        (Finset.filter P (Finset.Ico a b)).card + (Finset.filter P (Finset.Ico b c)).card",
+   "type_hash": "2013063865",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [],
+   "syntactic_refs": [],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 54,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_density"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.coprime_add_mul_right",
+   "short": "coprime_add_mul_right",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 207,
+   "source_statement": "lemma coprime_add_mul_right {k c e : ℕ} : Nat.Coprime (k + e * c) e ↔ Nat.Coprime k e",
+   "elaborated_type": "∀ {k c e : ℕ}, (k + e * c).Coprime e ↔ k.Coprime e",
+   "type_hash": "3479845686",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [],
+   "syntactic_refs": [],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 64,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Classical.choice",
+     "Quot.sound"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_periodic",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.coprime_d_R",
+   "short": "coprime_d_R",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 117,
+   "source_statement": "lemma coprime_d_R {N m : ℕ} (hN : 0 < N) : Nat.Coprime (d N m) (R N m)",
+   "elaborated_type": "∀ {N m : ℕ}, 0 < N → (GDT.d N m).Coprime (GDT.R N m)",
+   "type_hash": "3817377821",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.d_mul_R_eq_rad",
+    "GDT.Challenge.rad_squarefree",
+    "GDT.R",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.d_mul_R_eq_rad",
+    "GDT.Challenge.rad_squarefree",
+    "GDT.R",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 18,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "inherits_sorryAx",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_correction_factor",
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.coprime_iff_coprime_rad",
+   "short": "coprime_iff_coprime_rad",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 129,
+   "source_statement": "lemma coprime_iff_coprime_rad {k n : ℕ} (hn : n ≠ 0) : Nat.Coprime k n ↔ Nat.Coprime k (rad n)",
+   "elaborated_type": "∀ {k n : ℕ}, n ≠ 0 → (k.Coprime n ↔ k.Coprime (GDT.rad n))",
+   "type_hash": "3685421036",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.rad_dvd_self",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.rad_dvd_self",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 62,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "gdt_periodic",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.coprime_m_R",
+   "short": "coprime_m_R",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 348,
+   "source_statement": "lemma coprime_m_R {N m : ℕ} (hN : 0 < N) : Nat.Coprime m (R N m)",
+   "elaborated_type": "∀ {N m : ℕ}, 0 < N → m.Coprime (GDT.R N m)",
+   "type_hash": "763463088",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.coprime_d_R",
+    "GDT.Challenge.d_mul_R_eq_rad",
+    "GDT.Challenge.rad_dvd_self",
+    "GDT.R",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.coprime_d_R",
+    "GDT.Challenge.d_mul_R_eq_rad",
+    "GDT.Challenge.rad_dvd_self",
+    "GDT.R",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 103,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "inherits_sorryAx",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.coprime_of_modEq_natAbs",
+   "short": "coprime_of_modEq_natAbs",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 166,
+   "source_statement": "lemma coprime_of_modEq_natAbs {k : ℕ} {a : ℤ} {e : ℕ} (hk : (k : ℤ) ≡ a [ZMOD (e : ℤ)]) (ha : Nat.gcd a.natAbs e = 1) : Nat.Coprime k e",
+   "elaborated_type": "∀ {k : ℕ} {a : ℤ} {e : ℕ}, ↑k ≡ a [ZMOD ↑e] → a.natAbs.gcd e = 1 → k.Coprime e",
+   "type_hash": "3424644005",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [],
+   "syntactic_refs": [],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 61,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Classical.choice",
+     "Quot.sound"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "gdt_periodic",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.count_canonical_period",
+   "short": "count_canonical_period",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 799,
+   "source_statement": "lemma count_canonical_period {N m : ℕ} (hN : 0 < N) (hm : 0 < m) {a : ℤ} (h : Admissible N m a) : ((Finset.Ico 0 (Tmin N m)).filter (accepted N m a)).card = Nat.totient (R N m)",
+   "elaborated_type": "∀ {N m : ℕ},\n  0 < N →\n    0 < m →\n      ∀ {a : ℤ},\n        GDT.Admissible N m a →\n          (Finset.filter (GDT.accepted N m a) (Finset.Ico 0 (GDT.Tmin N m))).card = (GDT.R N m).totient",
+   "type_hash": "2096667583",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Admissible",
+    "GDT.Challenge.accepted_iff_coprime_R",
+    "GDT.Challenge.canonical_window_card_eq_range_coprime",
+    "GDT.R",
+    "GDT.Tmin",
+    "GDT.accepted",
+    "GDT.acceptedDecidable"
+   ],
+   "syntactic_refs": [
+    "GDT.Admissible",
+    "GDT.Challenge.accepted_iff_coprime_R",
+    "GDT.Challenge.canonical_window_card_eq_range_coprime",
+    "GDT.R",
+    "GDT.Tmin",
+    "GDT.accepted"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [
+    "GDT.acceptedDecidable"
+   ],
+   "mathlib_value_consts": 35,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "inherits_sorryAx",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.d_dvd_rad",
+   "short": "d_dvd_rad",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 56,
+   "source_statement": "lemma d_dvd_rad {N m : ℕ} (hN : 0 < N) : d N m ∣ rad N",
+   "elaborated_type": "∀ {N m : ℕ}, 0 < N → GDT.d N m ∣ GDT.rad N",
+   "type_hash": "2944732799",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 21,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_correction_factor",
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "gdt_periodic",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.d_mul_R_eq_rad",
+   "short": "d_mul_R_eq_rad",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 64,
+   "source_statement": "lemma d_mul_R_eq_rad {N m : ℕ} (hN : 0 < N) : d N m * R N m = rad N",
+   "elaborated_type": "∀ {N m : ℕ}, 0 < N → GDT.d N m * GDT.R N m = GDT.rad N",
+   "type_hash": "440971781",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.d_dvd_rad",
+    "GDT.R",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.d_dvd_rad",
+    "GDT.R",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 11,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_correction_factor",
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "gdt_periodic",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.exists_accepted",
+   "short": "exists_accepted",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 492,
+   "source_statement": "lemma exists_accepted {N m : ℕ} (hN : 0 < N) (hm : 0 < m) {a : ℤ} (h : Admissible N m a) : ∃ n, accepted N m a n",
+   "elaborated_type": "∀ {N m : ℕ}, 0 < N → 0 < m → ∀ {a : ℤ}, GDT.Admissible N m a → ∃ n, GDT.accepted N m a n",
+   "type_hash": "2098967006",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Admissible",
+    "GDT.Challenge.R_pos",
+    "GDT.Challenge.coprime_m_R",
+    "GDT.Challenge.gcd_mod_eq",
+    "GDT.Challenge.gcd_with_N_iff_gcd_with_R",
+    "GDT.R",
+    "GDT.accepted"
+   ],
+   "syntactic_refs": [
+    "GDT.Admissible",
+    "GDT.Challenge.R_pos",
+    "GDT.Challenge.coprime_m_R",
+    "GDT.Challenge.gcd_mod_eq",
+    "GDT.Challenge.gcd_with_N_iff_gcd_with_R",
+    "GDT.R",
+    "GDT.accepted"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 74,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "direct_error",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [
+     "E05"
+    ],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.exists_coprime_R_neg_t_mod_p",
+   "short": "exists_coprime_R_neg_t_mod_p",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 608,
+   "source_statement": "lemma exists_coprime_R_neg_t_mod_p {N m : ℕ} (hN : 0 < N) {p t : ℕ} (hp : p.Prime) (hpR : p ∣ R N m) (hpt : ¬ p ∣ t) : ∃ r, r < R N m ∧ Nat.Coprime r (R N m) ∧ (r : ℤ) ≡ -(t : ℤ) [ZMOD (p : ℤ)]",
+   "elaborated_type": "∀ {N m : ℕ},\n  0 < N →\n    ∀ {p t : ℕ}, Nat.Prime p → p ∣ GDT.R N m → ¬p ∣ t → ∃ r < GDT.R N m, r.Coprime (GDT.R N m) ∧ ↑r ≡ -↑t [ZMOD ↑p]",
+   "type_hash": "1428610470",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.R_pos",
+    "GDT.Challenge.R_squarefree",
+    "GDT.Challenge.gcd_mod_eq",
+    "GDT.Challenge.squarefree_prime_dvd_split",
+    "GDT.R"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.R_pos",
+    "GDT.Challenge.R_squarefree",
+    "GDT.Challenge.gcd_mod_eq",
+    "GDT.Challenge.squarefree_prime_dvd_split",
+    "GDT.R"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 119,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "direct_error",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [
+     "E06"
+    ],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.exists_repr_mod_R",
+   "short": "exists_repr_mod_R",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 427,
+   "source_statement": "lemma exists_repr_mod_R {N m : ℕ} (hN : 0 < N) (hm : 0 < m) {a : ℤ} {r : ℕ} (hr : r < R N m) : ∃ n, n < Tmin N m ∧ (n : ℤ) ≡ a [ZMOD (m : ℤ)] ∧ n % R N m = r",
+   "elaborated_type": "∀ {N m : ℕ}, 0 < N → 0 < m → ∀ {a : ℤ} {r : ℕ}, r < GDT.R N m → ∃ n < GDT.Tmin N m, ↑n ≡ a [ZMOD ↑m] ∧ n % GDT.R N m = r",
+   "type_hash": "2151808035",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.R_pos",
+    "GDT.Challenge.coprime_m_R",
+    "GDT.R",
+    "GDT.Tmin"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.R_pos",
+    "GDT.Challenge.coprime_m_R",
+    "GDT.R",
+    "GDT.Tmin"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 102,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "direct_error",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [
+     "E03"
+    ],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.exists_witness_avoiding_dvd",
+   "short": "exists_witness_avoiding_dvd",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 576,
+   "source_statement": "lemma exists_witness_avoiding_dvd {N m : ℕ} (hN : 0 < N) (hm : 0 < m) {a : ℤ} (h : Admissible N m a) {p : ℕ} (hp : p.Prime) (hpR : p ∣ R N m) : ∃ n1, accepted N m a n1 ∧ ¬ (p ∣ n1)",
+   "elaborated_type": "∀ {N m : ℕ},\n  0 < N →\n    0 < m →\n      ∀ {a : ℤ}, GDT.Admissible N m a → ∀ {p : ℕ}, Nat.Prime p → p ∣ GDT.R N m → ∃ n1, GDT.accepted N m a n1 ∧ ¬p ∣ n1",
+   "type_hash": "1228487426",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Admissible",
+    "GDT.Challenge.exists_accepted",
+    "GDT.Challenge.gcd_with_N_iff_gcd_with_R",
+    "GDT.R",
+    "GDT.accepted"
+   ],
+   "syntactic_refs": [
+    "GDT.Admissible",
+    "GDT.Challenge.exists_accepted",
+    "GDT.Challenge.gcd_with_N_iff_gcd_with_R",
+    "GDT.R",
+    "GDT.accepted"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 47,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "inherits_sorryAx",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [],
+   "reachable_from_challenge": false,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.gcd_mod_eq",
+   "short": "gcd_mod_eq",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 488,
+   "source_statement": "lemma gcd_mod_eq (n R : ℕ) : Nat.gcd n R = Nat.gcd (n % R) R",
+   "elaborated_type": "∀ (n R : ℕ), n.gcd R = (n % R).gcd R",
+   "type_hash": "3060656749",
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [],
+   "syntactic_refs": [
+    "GDT.R"
+   ],
+   "syntactic_only": [
+    "GDT.R"
+   ],
+   "kernel_only": [],
+   "mathlib_value_consts": 12,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.gcd_with_N_iff_gcd_with_R",
+   "short": "gcd_with_N_iff_gcd_with_R",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 187,
+   "source_statement": "lemma gcd_with_N_iff_gcd_with_R {N m k : ℕ} (hN : 0 < N) (_hm : 0 < m) {a : ℤ} (ha : Admissible N m a) (hk : (k : ℤ) ≡ a [ZMOD (m : ℤ)]) : Nat.gcd k N = 1 ↔ Nat.gcd k (R N m) = 1",
+   "elaborated_type": "∀ {N m k : ℕ},\n  0 < N → 0 < m → ∀ {a : ℤ}, GDT.Admissible N m a → ↑k ≡ a [ZMOD ↑m] → (k.gcd N = 1 ↔ k.gcd (GDT.R N m) = 1)",
+   "type_hash": "2079981934",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Admissible",
+    "GDT.Challenge.coprime_iff_coprime_rad",
+    "GDT.Challenge.coprime_of_modEq_natAbs",
+    "GDT.Challenge.d_mul_R_eq_rad",
+    "GDT.Challenge.rad_dvd_self",
+    "GDT.R",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Admissible",
+    "GDT.Challenge.coprime_iff_coprime_rad",
+    "GDT.Challenge.coprime_of_modEq_natAbs",
+    "GDT.Challenge.d_mul_R_eq_rad",
+    "GDT.Challenge.rad_dvd_self",
+    "GDT.R",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 38,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "gdt_periodic",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.gdt_correction_factor",
+   "short": "gdt_correction_factor",
+   "kind": "theorem",
+   "role": "challenge_theorem",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 946,
+   "source_statement": "theorem gdt_correction_factor {N m : ℕ} (hN : 0 < N) (_hm : 0 < m) : Nat.totient (R N m) * N * Nat.totient (d N m) = d N m * R N m * Nat.totient N",
+   "elaborated_type": "∀ {N m : ℕ}, 0 < N → 0 < m → (GDT.R N m).totient * N * (GDT.d N m).totient = GDT.d N m * GDT.R N m * N.totient",
+   "type_hash": "1913959043",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.coprime_d_R",
+    "GDT.Challenge.d_mul_R_eq_rad",
+    "GDT.Challenge.totient_rad_mul",
+    "GDT.R",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.coprime_d_R",
+    "GDT.Challenge.d_mul_R_eq_rad",
+    "GDT.Challenge.totient_rad_mul",
+    "GDT.R",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 52,
+   "challenge_type_hash_match": true,
+   "challenge_line": 64,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "inherits_sorryAx",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.gdt_count_per_period",
+   "short": "gdt_count_per_period",
+   "kind": "theorem",
+   "role": "challenge_theorem",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 811,
+   "source_statement": "theorem gdt_count_per_period {N m : ℕ} (hN : 0 < N) (hm : 0 < m) {a : ℤ} (h : Admissible N m a) (b : ℕ) : ((Finset.Ico b (b + Tmin N m)).filter (accepted N m a)).card = Nat.totient (R N m)",
+   "elaborated_type": "∀ {N m : ℕ},\n  0 < N →\n    0 < m →\n      ∀ {a : ℤ},\n        GDT.Admissible N m a →\n          ∀ (b : ℕ), (Finset.filter (GDT.accepted N m a) (Finset.Ico b (b + GDT.Tmin N m))).card = (GDT.R N m).totient",
+   "type_hash": "1440447477",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Admissible",
+    "GDT.Challenge.count_canonical_period",
+    "GDT.Challenge.gdt_periodic",
+    "GDT.Challenge.periodic_window_card_eq",
+    "GDT.R",
+    "GDT.Tmin",
+    "GDT.accepted",
+    "GDT.acceptedDecidable"
+   ],
+   "syntactic_refs": [
+    "GDT.Admissible",
+    "GDT.Challenge.count_canonical_period",
+    "GDT.Challenge.gdt_periodic",
+    "GDT.Challenge.periodic_window_card_eq",
+    "GDT.R",
+    "GDT.Tmin",
+    "GDT.accepted"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [
+    "GDT.acceptedDecidable"
+   ],
+   "mathlib_value_consts": 19,
+   "challenge_type_hash_match": true,
+   "challenge_line": 45,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "inherits_sorryAx",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_density",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.gdt_density",
+   "short": "gdt_density",
+   "kind": "theorem",
+   "role": "challenge_theorem",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 845,
+   "source_statement": "theorem gdt_density {N m q s : ℕ} (hN : 0 < N) (hm : 0 < m) {a : ℤ} (h : Admissible N m a) (_hs : s < Tmin N m) : (S N (q * Tmin N m + s) m a).card = q * Nat.totient (R N m) + (S N s m a).card",
+   "elaborated_type": "∀ {N m q s : ℕ},\n  0 < N →\n    0 < m →\n      ∀ {a : ℤ},\n        GDT.Admissible N m a →\n          s < GDT.Tmin N m → (GDT.S N (q * GDT.Tmin N m + s) m a).card = q * (GDT.R N m).totient + (GDT.S N s m a).card",
+   "type_hash": "568915967",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Admissible",
+    "GDT.Challenge.S_eq_filter_Ico",
+    "GDT.Challenge.card_filter_Ico_split",
+    "GDT.Challenge.gdt_count_per_period",
+    "GDT.R",
+    "GDT.S",
+    "GDT.Tmin",
+    "GDT.accepted",
+    "GDT.acceptedDecidable"
+   ],
+   "syntactic_refs": [
+    "GDT.Admissible",
+    "GDT.Challenge.S_eq_filter_Ico",
+    "GDT.Challenge.card_filter_Ico_split",
+    "GDT.Challenge.gdt_count_per_period",
+    "GDT.R",
+    "GDT.S",
+    "GDT.Tmin",
+    "GDT.accepted"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [
+    "GDT.acceptedDecidable"
+   ],
+   "mathlib_value_consts": 82,
+   "challenge_type_hash_match": true,
+   "challenge_line": 55,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "direct_error",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [
+     "E09"
+    ],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.gdt_empty",
+   "short": "gdt_empty",
+   "kind": "theorem",
+   "role": "challenge_theorem",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 25,
+   "source_statement": "theorem gdt_empty {N m L : ℕ} (_hN : 0 < N) (hm : 0 < m) {a : ℤ} (h : ¬ Admissible N m a) : S N L m a = ∅",
+   "elaborated_type": "∀ {N m L : ℕ}, 0 < N → 0 < m → ∀ {a : ℤ}, ¬GDT.Admissible N m a → GDT.S N L m a = ∅",
+   "type_hash": "87408655",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Admissible",
+    "GDT.S",
+    "GDT.accepted",
+    "GDT.acceptedDecidable",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Admissible",
+    "GDT.S",
+    "GDT.accepted",
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [
+    "GDT.acceptedDecidable"
+   ],
+   "mathlib_value_consts": 78,
+   "challenge_type_hash_match": true,
+   "challenge_line": 24,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "direct_error",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [
+     "E02"
+    ],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.gdt_minimal_period",
+   "short": "gdt_minimal_period",
+   "kind": "theorem",
+   "role": "challenge_theorem",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 669,
+   "source_statement": "theorem gdt_minimal_period {N m : ℕ} (hN : 0 < N) (hm : 0 < m) {a : ℤ} (h : Admissible N m a) {t : ℕ} (_ht : 0 < t) (hp : IsPeriod N m a t) : Tmin N m ∣ t",
+   "elaborated_type": "∀ {N m : ℕ},\n  0 < N → 0 < m → ∀ {a : ℤ}, GDT.Admissible N m a → ∀ {t : ℕ}, 0 < t → GDT.IsPeriod N m a t → GDT.Tmin N m ∣ t",
+   "type_hash": "3070391018",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Admissible",
+    "GDT.Challenge.R_pos",
+    "GDT.Challenge.R_squarefree",
+    "GDT.Challenge.coprime_m_R",
+    "GDT.Challenge.exists_accepted",
+    "GDT.Challenge.exists_coprime_R_neg_t_mod_p",
+    "GDT.Challenge.exists_repr_mod_R",
+    "GDT.Challenge.gcd_mod_eq",
+    "GDT.Challenge.gcd_with_N_iff_gcd_with_R",
+    "GDT.Challenge.primeFactors_forall_dvd_imp_dvd",
+    "GDT.Challenge.rad_eq_self_of_squarefree",
+    "GDT.IsPeriod",
+    "GDT.R",
+    "GDT.Tmin",
+    "GDT.accepted",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Admissible",
+    "GDT.Challenge.R_pos",
+    "GDT.Challenge.R_squarefree",
+    "GDT.Challenge.coprime_m_R",
+    "GDT.Challenge.exists_accepted",
+    "GDT.Challenge.exists_coprime_R_neg_t_mod_p",
+    "GDT.Challenge.exists_repr_mod_R",
+    "GDT.Challenge.gcd_mod_eq",
+    "GDT.Challenge.gcd_with_N_iff_gcd_with_R",
+    "GDT.Challenge.primeFactors_forall_dvd_imp_dvd",
+    "GDT.Challenge.rad_eq_self_of_squarefree",
+    "GDT.IsPeriod",
+    "GDT.R",
+    "GDT.Tmin",
+    "GDT.accepted",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 113,
+   "challenge_type_hash_match": true,
+   "challenge_line": 37,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "direct_error",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [
+     "E07"
+    ],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.gdt_periodic",
+   "short": "gdt_periodic",
+   "kind": "theorem",
+   "role": "challenge_theorem",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 234,
+   "source_statement": "theorem gdt_periodic {N m : ℕ} (hN : 0 < N) (hm : 0 < m) {a : ℤ} (h : Admissible N m a) : IsPeriod N m a (Tmin N m)",
+   "elaborated_type": "∀ {N m : ℕ}, 0 < N → 0 < m → ∀ {a : ℤ}, GDT.Admissible N m a → GDT.IsPeriod N m a (GDT.Tmin N m)",
+   "type_hash": "4241412386",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Admissible",
+    "GDT.Challenge.coprime_add_mul_right",
+    "GDT.Challenge.gcd_with_N_iff_gcd_with_R",
+    "GDT.IsPeriod",
+    "GDT.R",
+    "GDT.Tmin",
+    "GDT.accepted"
+   ],
+   "syntactic_refs": [
+    "GDT.Admissible",
+    "GDT.Challenge.coprime_add_mul_right",
+    "GDT.Challenge.gcd_with_N_iff_gcd_with_R",
+    "GDT.IsPeriod",
+    "GDT.R",
+    "GDT.Tmin",
+    "GDT.accepted"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 93,
+   "challenge_type_hash_match": true,
+   "challenge_line": 30,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.general_divisor_theorem",
+   "short": "general_divisor_theorem",
+   "kind": "theorem",
+   "role": "challenge_theorem",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 968,
+   "source_statement": "theorem general_divisor_theorem {N m L : ℕ} (hN : 0 < N) (hm : 0 < m) (a : ℤ) : (¬ Admissible N m a → S N L m a = ∅) ∧ (Admissible N m a → IsPeriod N m a (Tmin N m) ∧ (∀ t : ℕ, 0 < t → IsPeriod N m a t → Tmin N m ∣ t) ∧ (∀ b : ℕ, ((Finset.Ico b (b + Tmin N m)).filter (accepted N m a)).card = Nat.totient (R N m))) ∧ Nat.totient (R N m) * N * Nat.totient (d N m) = d N m * R N m * Nat.totient N",
+   "elaborated_type": "∀ {N m L : ℕ},\n  0 < N →\n    0 < m →\n      ∀ (a : ℤ),\n        (¬GDT.Admissible N m a → GDT.S N L m a = ∅) ∧\n          (GDT.Admissible N m a →\n              GDT.IsPeriod N m a (GDT.Tmin N m) ∧\n                (∀ (t : ℕ), 0 < t → GDT.IsPeriod N m a t → GDT.Tmin N m ∣ t) ∧\n                  ∀ (b : ℕ),\n                    (Finset.filter (GDT.accepted N m a) (Finset.Ico b (b + GDT.Tmin N m))).card = (GDT.R N m).totient) ∧\n            (GDT.R N m).totient * N * (GDT.d N m).totient = GDT.d N m * GDT.R N m * N.totient",
+   "type_hash": "1546405987",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Admissible",
+    "GDT.Challenge.gdt_correction_factor",
+    "GDT.Challenge.gdt_count_per_period",
+    "GDT.Challenge.gdt_empty",
+    "GDT.Challenge.gdt_minimal_period",
+    "GDT.Challenge.gdt_periodic",
+    "GDT.IsPeriod",
+    "GDT.R",
+    "GDT.S",
+    "GDT.Tmin",
+    "GDT.accepted",
+    "GDT.acceptedDecidable",
+    "GDT.d"
+   ],
+   "syntactic_refs": [
+    "GDT.Admissible",
+    "GDT.Challenge.gdt_correction_factor",
+    "GDT.Challenge.gdt_count_per_period",
+    "GDT.Challenge.gdt_empty",
+    "GDT.Challenge.gdt_minimal_period",
+    "GDT.Challenge.gdt_periodic",
+    "GDT.IsPeriod",
+    "GDT.R",
+    "GDT.S",
+    "GDT.Tmin",
+    "GDT.accepted",
+    "GDT.d"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [
+    "GDT.acceptedDecidable"
+   ],
+   "mathlib_value_consts": 27,
+   "challenge_type_hash_match": true,
+   "challenge_line": 70,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "inherits_sorryAx",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.periodic_window_card_eq",
+   "short": "periodic_window_card_eq",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 277,
+   "source_statement": "lemma periodic_window_card_eq {P : ℕ → Prop} [DecidablePred P] {T : ℕ} (hP : ∀ n, P (n + T) ↔ P n) (b : ℕ) : ((Finset.Ico b (b + T)).filter P).card = ((Finset.Ico 0 T).filter P).card",
+   "elaborated_type": "∀ {P : ℕ → Prop} [inst : DecidablePred P] {T : ℕ},\n  (∀ (n : ℕ), P (n + T) ↔ P n) →\n    ∀ (b : ℕ), (Finset.filter P (Finset.Ico b (b + T))).card = (Finset.filter P (Finset.Ico 0 T)).card",
+   "type_hash": "2127016694",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [],
+   "syntactic_refs": [],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 86,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.primeFactors_forall_dvd_imp_dvd",
+   "short": "primeFactors_forall_dvd_imp_dvd",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 531,
+   "source_statement": "lemma primeFactors_forall_dvd_imp_dvd {n t : ℕ} (_hn : 0 < n) (hall : ∀ p ∈ n.primeFactors, p ∣ t) : rad n ∣ t",
+   "elaborated_type": "∀ {n t : ℕ}, 0 < n → (∀ p ∈ n.primeFactors, p ∣ t) → GDT.rad n ∣ t",
+   "type_hash": "2813420582",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.prime_coprime_prod",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.prime_coprime_prod",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 58,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.prime_coprime_prod",
+   "short": "prime_coprime_prod",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 68,
+   "source_statement": "lemma prime_coprime_prod {a : ℕ} (ha : a.Prime) {s : Finset ℕ} (hs : ∀ p ∈ s, p.Prime) (ha_not : a ∉ s) : Nat.Coprime a (∏ p ∈ s, p)",
+   "elaborated_type": "∀ {a : ℕ}, Nat.Prime a → ∀ {s : Finset ℕ}, (∀ p ∈ s, Nat.Prime p) → a ∉ s → a.Coprime (∏ p ∈ s, p)",
+   "type_hash": "1938244958",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [],
+   "syntactic_refs": [],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 39,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_correction_factor",
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.prod_primes_squarefree",
+   "short": "prod_primes_squarefree",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 95,
+   "source_statement": "lemma prod_primes_squarefree {s : Finset ℕ} (hs : ∀ p ∈ s, p.Prime) : Squarefree (∏ p ∈ s, p)",
+   "elaborated_type": "∀ {s : Finset ℕ}, (∀ p ∈ s, Nat.Prime p) → Squarefree (∏ p ∈ s, p)",
+   "type_hash": "1070457429",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.prime_coprime_prod"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.prime_coprime_prod"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 50,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "direct_error",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [
+     "E01"
+    ],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_correction_factor",
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.rad_dvd_self",
+   "short": "rad_dvd_self",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 124,
+   "source_statement": "lemma rad_dvd_self (n : ℕ) : rad n ∣ n",
+   "elaborated_type": "∀ (n : ℕ), GDT.rad n ∣ n",
+   "type_hash": "2306653785",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 5,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "gdt_periodic",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.rad_eq_self_of_squarefree",
+   "short": "rad_eq_self_of_squarefree",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 664,
+   "source_statement": "lemma rad_eq_self_of_squarefree {n : ℕ} (_hn : 0 < n) (hsf : Squarefree n) : rad n = n",
+   "elaborated_type": "∀ {n : ℕ}, 0 < n → Squarefree n → GDT.rad n = n",
+   "type_hash": "1185269441",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 10,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.rad_factorization_eq_one",
+   "short": "rad_factorization_eq_one",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 882,
+   "source_statement": "lemma rad_factorization_eq_one {n : ℕ} (_hn : 0 < n) {p : ℕ} (hp : p ∈ n.primeFactors) : (rad n).factorization p = 1",
+   "elaborated_type": "∀ {n : ℕ}, 0 < n → ∀ {p : ℕ}, p ∈ n.primeFactors → (GDT.rad n).factorization p = 1",
+   "type_hash": "3994394056",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.rad_pos",
+    "GDT.Challenge.rad_squarefree",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.rad_pos",
+    "GDT.Challenge.rad_squarefree",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 45,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "inherits_sorryAx",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [],
+   "reachable_from_challenge": false,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.rad_pos",
+   "short": "rad_pos",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 411,
+   "source_statement": "lemma rad_pos (n : ℕ) : 0 < rad n",
+   "elaborated_type": "∀ (n : ℕ), 0 < GDT.rad n",
+   "type_hash": "2617634990",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 20,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_correction_factor",
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.rad_squarefree",
+   "short": "rad_squarefree",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 112,
+   "source_statement": "lemma rad_squarefree (n : ℕ) : Squarefree (rad n)",
+   "elaborated_type": "∀ (n : ℕ), Squarefree (GDT.rad n)",
+   "type_hash": "4178960531",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.prod_primes_squarefree",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.prod_primes_squarefree",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 10,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "inherits_sorryAx",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_correction_factor",
+    "gdt_count_per_period",
+    "gdt_density",
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.repr_unique",
+   "short": "repr_unique",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 467,
+   "source_statement": "lemma repr_unique {N m : ℕ} (hN : 0 < N) (_hm : 0 < m) {a : ℤ} {n1 n2 : ℕ} (h1 : n1 < Tmin N m) (h2 : n2 < Tmin N m) (hmod1 : (n1 : ℤ) ≡ a [ZMOD (m : ℤ)]) (hmod2 : (n2 : ℤ) ≡ a [ZMOD (m : ℤ)]) (hReq : n1 % R N m = n2 % R N m) : n1 = n2",
+   "elaborated_type": "∀ {N m : ℕ},\n  0 < N →\n    0 < m →\n      ∀ {a : ℤ} {n1 n2 : ℕ},\n        n1 < GDT.Tmin N m →\n          n2 < GDT.Tmin N m → ↑n1 ≡ a [ZMOD ↑m] → ↑n2 ≡ a [ZMOD ↑m] → n1 % GDT.R N m = n2 % GDT.R N m → n1 = n2",
+   "type_hash": "56297919",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.coprime_m_R",
+    "GDT.R",
+    "GDT.Tmin"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.coprime_m_R",
+    "GDT.R",
+    "GDT.Tmin"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 29,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "direct_error",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [
+     "E04"
+    ],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_count_per_period",
+    "gdt_density",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.squarefree_prime_dvd_split",
+   "short": "squarefree_prime_dvd_split",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 591,
+   "source_statement": "lemma squarefree_prime_dvd_split {n p : ℕ} (hsf : Squarefree n) (hp : p.Prime) (hpn : p ∣ n) : Nat.Coprime p (n / p) ∧ p * (n / p) = n",
+   "elaborated_type": "∀ {n p : ℕ}, Squarefree n → Nat.Prime p → p ∣ n → p.Coprime (n / p) ∧ p * (n / p) = n",
+   "type_hash": "617143220",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [],
+   "syntactic_refs": [],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 27,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Classical.choice",
+     "Quot.sound"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_minimal_period",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Challenge.totient_rad_mul",
+   "short": "totient_rad_mul",
+   "kind": "theorem",
+   "role": "helper_lemma",
+   "source_file": "Solution/GeneralDivisorTheorem.lean",
+   "source_line": 902,
+   "source_statement": "lemma totient_rad_mul (n : ℕ) (_hn : 0 < n) : n * Nat.totient (rad n) = rad n * Nat.totient n",
+   "elaborated_type": "∀ (n : ℕ), 0 < n → n * (GDT.rad n).totient = GDT.rad n * n.totient",
+   "type_hash": "2289043500",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.Challenge.rad_pos",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.Challenge.rad_pos",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 38,
+   "lean49": {
+    "statement_elaborates": true,
+    "original_proof_status": "kernel_clean",
+    "reference_proof": "certified",
+    "reference_proof_module": "GDTBench.SolutionRef",
+    "reference_axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "proof_port_edits": [],
+    "statement_alpha_equivalent_to_expected": true,
+    "signature_text_unchanged": true
+   },
+   "reachable_from": [
+    "gdt_correction_factor",
+    "general_divisor_theorem"
+   ],
+   "reachable_from_challenge": true,
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.IsPeriod",
+   "short": "IsPeriod",
+   "kind": "def",
+   "role": "definition",
+   "source_file": "GeneralDivisorTheorem/Basic.lean",
+   "source_line": 46,
+   "source_statement": "def IsPeriod (N m : ℕ) (a : ℤ) (t : ℕ) : Prop",
+   "elaborated_type": "ℕ → ℕ → ℤ → ℕ → Prop",
+   "type_hash": "2528724761",
+   "axioms": [],
+   "kernel_deps": [
+    "GDT.accepted"
+   ],
+   "syntactic_refs": [
+    "GDT.accepted"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 6,
+   "lean49": {
+    "statement_elaborates": true,
+    "definition_text": "verbatim (rules T1–T3 only)"
+   },
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.R",
+   "short": "R",
+   "kind": "def",
+   "role": "definition",
+   "source_file": "GeneralDivisorTheorem/Basic.lean",
+   "source_line": 27,
+   "source_statement": "def R (N m : ℕ) : ℕ",
+   "elaborated_type": "ℕ → ℕ → ℕ",
+   "type_hash": "9906956",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.d",
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 4,
+   "lean49": {
+    "statement_elaborates": true,
+    "definition_text": "verbatim (rules T1–T3 only)"
+   },
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.S",
+   "short": "S",
+   "kind": "def",
+   "role": "definition",
+   "source_file": "GeneralDivisorTheorem/Basic.lean",
+   "source_line": 43,
+   "source_statement": "def S (N L m : ℕ) (a : ℤ) : Finset ℕ",
+   "elaborated_type": "ℕ → ℕ → ℕ → ℤ → Finset ℕ",
+   "type_hash": "3777679008",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.accepted",
+    "GDT.acceptedDecidable"
+   ],
+   "syntactic_refs": [
+    "GDT.accepted"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [
+    "GDT.acceptedDecidable"
+   ],
+   "mathlib_value_consts": 8,
+   "lean49": {
+    "statement_elaborates": true,
+    "definition_text": "verbatim (rules T1–T3 only)"
+   },
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.Tmin",
+   "short": "Tmin",
+   "kind": "def",
+   "role": "definition",
+   "source_file": "GeneralDivisorTheorem/Basic.lean",
+   "source_line": 29,
+   "source_statement": "def Tmin (N m : ℕ) : ℕ",
+   "elaborated_type": "ℕ → ℕ → ℕ",
+   "type_hash": "9906956",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.R"
+   ],
+   "syntactic_refs": [
+    "GDT.R"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 4,
+   "lean49": {
+    "statement_elaborates": true,
+    "definition_text": "verbatim (rules T1–T3 only)"
+   },
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.accepted",
+   "short": "accepted",
+   "kind": "def",
+   "role": "definition",
+   "source_file": "GeneralDivisorTheorem/Basic.lean",
+   "source_line": 34,
+   "source_statement": "def accepted (N m : ℕ) (a : ℤ) (n : ℕ) : Prop",
+   "elaborated_type": "ℕ → ℕ → ℤ → ℕ → Prop",
+   "type_hash": "2528724761",
+   "axioms": [],
+   "kernel_deps": [],
+   "syntactic_refs": [],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 10,
+   "lean49": {
+    "statement_elaborates": true,
+    "definition_text": "verbatim (rules T1–T3 only)"
+   },
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.acceptedDecidable",
+   "short": "acceptedDecidable",
+   "kind": "def",
+   "role": "definition",
+   "source_file": "GeneralDivisorTheorem/Basic.lean",
+   "source_line": 37,
+   "source_statement": "instance acceptedDecidable (N m : ℕ) (a : ℤ) : DecidablePred (accepted N m a)",
+   "elaborated_type": "(N m : ℕ) → (a : ℤ) → DecidablePred (GDT.accepted N m a)",
+   "type_hash": "352276464",
+   "axioms": [],
+   "kernel_deps": [
+    "GDT.accepted"
+   ],
+   "syntactic_refs": [
+    "GDT.accepted"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 14,
+   "lean49": {
+    "statement_elaborates": true,
+    "definition_text": "verbatim (rules T1–T3 only)"
+   },
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.d",
+   "short": "d",
+   "kind": "def",
+   "role": "definition",
+   "source_file": "GeneralDivisorTheorem/Basic.lean",
+   "source_line": 25,
+   "source_statement": "def d (N m : ℕ) : ℕ",
+   "elaborated_type": "ℕ → ℕ → ℕ",
+   "type_hash": "9906956",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [
+    "GDT.rad"
+   ],
+   "syntactic_refs": [
+    "GDT.rad"
+   ],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 2,
+   "lean49": {
+    "statement_elaborates": true,
+    "definition_text": "verbatim (rules T1–T3 only)"
+   },
+   "unresolved_dependencies": []
+  },
+  {
+   "name": "GDT.rad",
+   "short": "rad",
+   "kind": "def",
+   "role": "definition",
+   "source_file": "GeneralDivisorTheorem/Basic.lean",
+   "source_line": 23,
+   "source_statement": "def rad (n : ℕ) : ℕ",
+   "elaborated_type": "ℕ → ℕ",
+   "type_hash": "2546708756",
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "kernel_deps": [],
+   "syntactic_refs": [],
+   "syntactic_only": [],
+   "kernel_only": [],
+   "mathlib_value_consts": 5,
+   "lean49": {
+    "statement_elaborates": true,
+    "definition_text": "verbatim (rules T1–T3 only)"
+   },
+   "unresolved_dependencies": []
+  }
+ ],
+ "derived_from": "manifest/gdt_manifest.json (rpi-ds-001a, unchanged)",
+ "lean49_environment": {
+  "lean": "4.9.0-rc1",
+  "mathlib": "leanprover-community/mathlib4@d1d1e4b72c6e009edd97cabe1d661b021fe8eeae",
+  "deepseek_fork": "xinhjBrant/mathlib4@2f65ba7f (identical Mathlib/ sources)"
+ },
+ "certification": {
+  "certified": 39,
+  "expected": 39,
+  "rule": "theorem; type alpha-equivalent to expected; axioms subset of {propext, Quot.sound, Classical.choice}; signature text identical to original Solution; strict differences binder names only",
+  "lean4checker": [
+   "replay GDTBench.SolutionRef: pass",
+   "--fresh GDTBench.SolutionRef: pass"
+  ]
+ },
+ "open_questions": [
+  "Mathlib-level dependencies are counted, not enumerated (mathlib_value_consts).",
+  "Cross-version agreement of Mathlib definitions is established at the printed-definition and characterising-lemma level; kernel identity across versions is not a meaningful comparison (reports/LEAN49_DEFINITIONS.md)."
+ ],
+ "verification_commands": {
+  "build": "cd formalize-now/lean49 && lake update && lake exe cache get && lake build",
+  "certify": "cd formalize-now/lean49 && lake env lean ../tools/SigCheck.lean > ../logs/lean49_sigcheck.log && cd .. && python3 tools/certify49.py logs/lean49_sigcheck.log",
+  "lean4checker": "cd formalize-now/lean49 && lake env <lean4checker@v4.9.0-rc1> GDTBench.SolutionRef   (and --fresh)",
+  "candidate": "python3 formalize-now/harness/verify_strict.py --item <id> --proof <file> --lean4checker"
+ }
+}

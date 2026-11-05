@@ -1,0 +1,401 @@
+{
+ "lean4checker": true,
+ "failures": 0,
+ "cases": [
+  {
+   "case": "V1_valid_proof_gdt_empty",
+   "item": "gdt/gdt_empty",
+   "mode": "proof",
+   "expected_accept": true,
+   "accepted": true,
+   "test_passed": true,
+   "reasons": [],
+   "v15_complete_equivalent": true,
+   "token_scan": {},
+   "lean_check": {
+    "type_alpha_equivalent": true,
+    "present": true,
+    "local_axioms": [
+     "Finset.filter._at.GDT.S._spec_2",
+     "Finset.Icc._at.GDT.S._spec_1",
+     "List.filterTR.loop._at.GDT.S._spec_4",
+     "Multiset.filter._at.GDT.S._spec_3"
+    ],
+    "is_theorem": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ]
+   },
+   "wall_s": 3.0,
+   "first_messages": []
+  },
+  {
+   "case": "V2_valid_proof_coprime_add_mul_right",
+   "item": "gdt/coprime_add_mul_right",
+   "mode": "proof",
+   "expected_accept": true,
+   "accepted": true,
+   "test_passed": true,
+   "reasons": [],
+   "v15_complete_equivalent": true,
+   "token_scan": {},
+   "lean_check": {
+    "type_alpha_equivalent": true,
+    "present": true,
+    "local_axioms": [
+     "Finset.filter._at.GDT.S._spec_2",
+     "Finset.Icc._at.GDT.S._spec_1",
+     "List.filterTR.loop._at.GDT.S._spec_4",
+     "Multiset.filter._at.GDT.S._spec_3"
+    ],
+    "is_theorem": true,
+    "axioms": [
+     "propext",
+     "Classical.choice",
+     "Quot.sound"
+    ]
+   },
+   "wall_s": 3.0,
+   "first_messages": []
+  },
+  {
+   "case": "V3_valid_full_code_gdt_empty",
+   "item": "gdt/gdt_empty",
+   "mode": "full-code",
+   "expected_accept": true,
+   "accepted": true,
+   "test_passed": true,
+   "reasons": [],
+   "v15_complete_equivalent": true,
+   "token_scan": {},
+   "lean_check": {
+    "type_alpha_equivalent": true,
+    "present": true,
+    "local_axioms": [
+     "Finset.filter._at.GDT.S._spec_2",
+     "Finset.Icc._at.GDT.S._spec_1",
+     "List.filterTR.loop._at.GDT.S._spec_4",
+     "Multiset.filter._at.GDT.S._spec_3"
+    ],
+    "is_theorem": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ]
+   },
+   "wall_s": 3.0,
+   "first_messages": []
+  },
+  {
+   "case": "I1_sorry",
+   "item": "gdt/gdt_empty",
+   "mode": "proof",
+   "expected_accept": false,
+   "accepted": false,
+   "test_passed": true,
+   "reasons": [
+    "C5_axioms"
+   ],
+   "v15_complete_equivalent": false,
+   "token_scan": {
+    "sorry": 1
+   },
+   "lean_check": {
+    "type_alpha_equivalent": true,
+    "present": true,
+    "local_axioms": [
+     "Finset.filter._at.GDT.S._spec_2",
+     "Finset.Icc._at.GDT.S._spec_1",
+     "List.filterTR.loop._at.GDT.S._spec_4",
+     "Multiset.filter._at.GDT.S._spec_3"
+    ],
+    "is_theorem": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice",
+     "sorryAx"
+    ]
+   },
+   "wall_s": 2.9,
+   "first_messages": []
+  },
+  {
+   "case": "I2_admit",
+   "item": "gdt/gdt_empty",
+   "mode": "proof",
+   "expected_accept": false,
+   "accepted": false,
+   "test_passed": true,
+   "reasons": [
+    "C5_axioms"
+   ],
+   "v15_complete_equivalent": false,
+   "token_scan": {
+    "admit": 1
+   },
+   "lean_check": {
+    "type_alpha_equivalent": true,
+    "present": true,
+    "local_axioms": [
+     "Finset.filter._at.GDT.S._spec_2",
+     "Finset.Icc._at.GDT.S._spec_1",
+     "List.filterTR.loop._at.GDT.S._spec_4",
+     "Multiset.filter._at.GDT.S._spec_3"
+    ],
+    "is_theorem": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice",
+     "sorryAx"
+    ]
+   },
+   "wall_s": 2.9,
+   "first_messages": []
+  },
+  {
+   "case": "I3_compile_error",
+   "item": "gdt/gdt_empty",
+   "mode": "proof",
+   "expected_accept": false,
+   "accepted": false,
+   "test_passed": true,
+   "reasons": [
+    "C1_compile",
+    "C5_axioms"
+   ],
+   "v15_complete_equivalent": false,
+   "token_scan": {},
+   "lean_check": {
+    "type_alpha_equivalent": true,
+    "present": true,
+    "local_axioms": [
+     "Finset.filter._at.GDT.S._spec_2",
+     "Finset.Icc._at.GDT.S._spec_1",
+     "List.filterTR.loop._at.GDT.S._spec_4",
+     "Multiset.filter._at.GDT.S._spec_3"
+    ],
+    "is_theorem": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice",
+     "sorryAx"
+    ]
+   },
+   "wall_s": 2.9,
+   "first_messages": [
+    "unknown identifier 'foo_bar_baz'\n@@RPI_CHECK {\"type_alpha_equivalent\":true,\"present\":true,\"local_axioms\":[\"Finset.filter._at.GDT.S._spec_2\",\"Finset.Icc._at.GDT."
+   ]
+  },
+  {
+   "case": "I4_weakened_statement_full_code",
+   "item": "gdt/gdt_empty",
+   "mode": "full-code",
+   "expected_accept": false,
+   "accepted": false,
+   "test_passed": true,
+   "reasons": [
+    "C4_statement"
+   ],
+   "v15_complete_equivalent": true,
+   "token_scan": {},
+   "lean_check": {
+    "type_alpha_equivalent": false,
+    "present": true,
+    "local_axioms": [
+     "Finset.filter._at.GDT.S._spec_2",
+     "Finset.Icc._at.GDT.S._spec_1",
+     "List.filterTR.loop._at.GDT.S._spec_4",
+     "Multiset.filter._at.GDT.S._spec_3"
+    ],
+    "is_theorem": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ]
+   },
+   "wall_s": 2.8,
+   "first_messages": []
+  },
+  {
+   "case": "I5_local_axiom_full_code",
+   "item": "gdt/gdt_empty",
+   "mode": "full-code",
+   "expected_accept": false,
+   "accepted": false,
+   "test_passed": true,
+   "reasons": [
+    "C5_axioms",
+    "C6_no_local_axioms"
+   ],
+   "v15_complete_equivalent": true,
+   "token_scan": {
+    "axiom": 1
+   },
+   "lean_check": {
+    "type_alpha_equivalent": true,
+    "present": true,
+    "local_axioms": [
+     "Finset.filter._at.GDT.S._spec_2",
+     "Finset.Icc._at.GDT.S._spec_1",
+     "List.filterTR.loop._at.GDT.S._spec_4",
+     "Multiset.filter._at.GDT.S._spec_3",
+     "rpi_cheat"
+    ],
+    "is_theorem": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice",
+     "rpi_cheat"
+    ]
+   },
+   "wall_s": 3.0,
+   "first_messages": []
+  },
+  {
+   "case": "I6_exit_after_partial_proof",
+   "item": "gdt/gdt_empty",
+   "mode": "proof",
+   "expected_accept": false,
+   "accepted": false,
+   "test_passed": true,
+   "reasons": [
+    "C1_compile",
+    "C2_check_ran",
+    "C3_present_theorem",
+    "C4_statement",
+    "C5_axioms",
+    "C6_no_local_axioms"
+   ],
+   "v15_complete_equivalent": false,
+   "token_scan": {
+    "#exit": 1
+   },
+   "lean_check": {},
+   "wall_s": 2.8,
+   "first_messages": [
+    "unsolved goals\nN m L : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : ¬Admissible N m a\n⊢ S N L m a = ∅"
+   ]
+  },
+  {
+   "case": "I7_native_decide_dependency",
+   "item": "gdt/gdt_empty",
+   "mode": "full-code",
+   "expected_accept": false,
+   "accepted": false,
+   "test_passed": true,
+   "reasons": [
+    "C5_axioms",
+    "C8_lean4checker"
+   ],
+   "v15_complete_equivalent": true,
+   "token_scan": {
+    "native_decide": 1
+   },
+   "lean_check": {
+    "type_alpha_equivalent": true,
+    "present": true,
+    "local_axioms": [
+     "Finset.filter._at.GDT.S._spec_2",
+     "Finset.Icc._at.GDT.S._spec_1",
+     "List.filterTR.loop._at.GDT.S._spec_4",
+     "Multiset.filter._at.GDT.S._spec_3"
+    ],
+    "is_theorem": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice",
+     "Lean.ofReduceBool"
+    ]
+   },
+   "wall_s": 3.1,
+   "first_messages": []
+  },
+  {
+   "case": "I8_renamed_theorem_full_code",
+   "item": "gdt/gdt_empty",
+   "mode": "full-code",
+   "expected_accept": false,
+   "accepted": false,
+   "test_passed": true,
+   "reasons": [
+    "C3_present_theorem",
+    "C4_statement",
+    "C5_axioms"
+   ],
+   "v15_complete_equivalent": true,
+   "token_scan": {},
+   "lean_check": {
+    "present": false,
+    "local_axioms": [
+     "Finset.filter._at.GDT.S._spec_2",
+     "Finset.Icc._at.GDT.S._spec_1",
+     "List.filterTR.loop._at.GDT.S._spec_4",
+     "Multiset.filter._at.GDT.S._spec_3"
+    ]
+   },
+   "wall_s": 3.0,
+   "first_messages": []
+  },
+  {
+   "case": "I9_prefix_tampering_full_code",
+   "item": "gdt/gdt_empty",
+   "mode": "full-code",
+   "expected_accept": false,
+   "accepted": false,
+   "test_passed": true,
+   "reasons": [
+    "full-code candidate does not start with the trusted header and definitions"
+   ],
+   "v15_complete_equivalent": null,
+   "token_scan": null,
+   "lean_check": null,
+   "wall_s": null,
+   "first_messages": []
+  },
+  {
+   "case": "I10_skipKernelTC_option",
+   "item": "gdt/gdt_empty",
+   "mode": "full-code",
+   "expected_accept": false,
+   "accepted": false,
+   "test_passed": true,
+   "reasons": [
+    "C7_options",
+    "C1_compile"
+   ],
+   "v15_complete_equivalent": false,
+   "token_scan": {
+    "debug.skipKernelTC": 1
+   },
+   "lean_check": {
+    "type_alpha_equivalent": true,
+    "present": true,
+    "local_axioms": [
+     "Finset.filter._at.GDT.S._spec_2",
+     "Finset.Icc._at.GDT.S._spec_1",
+     "List.filterTR.loop._at.GDT.S._spec_4",
+     "Multiset.filter._at.GDT.S._spec_3"
+    ],
+    "is_theorem": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ]
+   },
+   "wall_s": 3.2,
+   "first_messages": [
+    "unknown option 'debug.skipKernelTC'"
+   ]
+  }
+ ]
+}

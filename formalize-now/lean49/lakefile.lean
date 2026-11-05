@@ -16,4 +16,5 @@ require mathlib from git
 
 @[default_target]
 lean_lib GDTBench where
-  roots := #[`GDTBench.Defs, `GDTBench.Challenge, `GDTBench.Ladder]
+  roots := #[`GDTBench.Defs, `GDTBench.Challenge, `GDTBench.Ladder,
+    `GDTBench.SolutionRef, `GDTBench.Expected]

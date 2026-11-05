@@ -1,0 +1,242 @@
+{
+ "schema": "rpi-ds-001b/proof-port-log/v1",
+ "edits": [
+  {
+   "id": "E01",
+   "decl": "prod_primes_squarefree",
+   "line_in_SolutionPort": 103,
+   "line_in_SolutionRef": 103,
+   "original": "  | insert a s ha ih =>",
+   "revised": "  | @insert a s ha ih =>",
+   "error_addressed": "too many variable names provided at alternative 'insert', #4 provided, but #2 expected",
+   "reason": "In Mathlib d1d1e4b7, `Finset.induction` binds the inserted element and the set implicitly in the `insert` case; `@insert` names them explicitly. The case split, names and remaining proof are unchanged; the same pattern already compiles in `prime_coprime_prod` in this file.",
+   "verification": {
+    "elaborates": true,
+    "certified": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "type_alpha_equivalent": true,
+    "signature_text_unchanged": true,
+    "commands": [
+     "cd formalize-now/lean49 && lake build",
+     "cd formalize-now/lean49 && lake env lean ../tools/SigCheck.lean"
+    ]
+   },
+   "scope": "proof body only (fragment located after the declaration's top-level :=)"
+  },
+  {
+   "id": "E02",
+   "decl": "gdt_empty",
+   "line_in_SolutionPort": 45,
+   "line_in_SolutionRef": 45,
+   "original": "Finset.eq_empty_iff_forall_notMem.mpr",
+   "revised": "Finset.eq_empty_iff_forall_not_mem.mpr",
+   "error_addressed": "unknown constant 'Finset.eq_empty_iff_forall_notMem.mpr'",
+   "reason": "Mathlib rename: the 2024 name is `Finset.eq_empty_iff_forall_not_mem` (Mathlib/Data/Finset/Basic.lean:581, statement `s = ∅ ↔ ∀ x, x ∉ s`), the same lemma that the 2026 `eq_empty_iff_forall_notMem` names.",
+   "verification": {
+    "elaborates": true,
+    "certified": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "type_alpha_equivalent": true,
+    "signature_text_unchanged": true,
+    "commands": [
+     "cd formalize-now/lean49 && lake build",
+     "cd formalize-now/lean49 && lake env lean ../tools/SigCheck.lean"
+    ]
+   },
+   "scope": "proof body only (fragment located after the declaration's top-level :=)"
+  },
+  {
+   "id": "E03",
+   "decl": "exists_repr_mod_R",
+   "line_in_SolutionPort": 459,
+   "line_in_SolutionRef": 459,
+   "original": "      exact_mod_cast hnm\n",
+   "revised": "      exact Int.natCast_modEq_iff.mpr hnm\n",
+   "error_addressed": "mod_cast has type k % Tmin N m ≡ aN [MOD m] but is expected to have type ↑(k % Tmin N m) ≡ ↑aN [ZMOD ↑m]",
+   "reason": "`exact_mod_cast` relies on `Int.natCast_modEq_iff` (`a ≡ b [ZMOD n] ↔ a ≡ b [MOD n]` for naturals), which carries `@[simp, norm_cast]` in Mathlib v4.34 and has no `norm_cast` attribute in Mathlib d1d1e4b7 (Mathlib/Data/Int/ModEq.lean:77). Applying the same lemma explicitly gives the identical step; the goal and hypothesis are unchanged.",
+   "verification": {
+    "elaborates": true,
+    "certified": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "type_alpha_equivalent": true,
+    "signature_text_unchanged": true,
+    "commands": [
+     "cd formalize-now/lean49 && lake build",
+     "cd formalize-now/lean49 && lake env lean ../tools/SigCheck.lean"
+    ]
+   },
+   "scope": "proof body only (fragment located after the declaration's top-level :=)"
+  },
+  {
+   "id": "E04",
+   "decl": "repr_unique",
+   "line_in_SolutionPort": 478,
+   "line_in_SolutionRef": 478,
+   "original": "    exact_mod_cast h\n",
+   "revised": "    exact Int.natCast_modEq_iff.mp h\n",
+   "error_addressed": "mod_cast has type ↑n1 ≡ ↑n2 [ZMOD ↑m] but is expected to have type n1 ≡ n2 [MOD m]",
+   "reason": "`exact_mod_cast` relies on `Int.natCast_modEq_iff` (`a ≡ b [ZMOD n] ↔ a ≡ b [MOD n]` for naturals), which carries `@[simp, norm_cast]` in Mathlib v4.34 and has no `norm_cast` attribute in Mathlib d1d1e4b7 (Mathlib/Data/Int/ModEq.lean:77). Applying the same lemma explicitly gives the identical step; the goal and hypothesis are unchanged.",
+   "verification": {
+    "elaborates": true,
+    "certified": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "type_alpha_equivalent": true,
+    "signature_text_unchanged": true,
+    "commands": [
+     "cd formalize-now/lean49 && lake build",
+     "cd formalize-now/lean49 && lake env lean ../tools/SigCheck.lean"
+    ]
+   },
+   "scope": "proof body only (fragment located after the declaration's top-level :=)"
+  },
+  {
+   "id": "E05",
+   "decl": "exists_accepted",
+   "line_in_SolutionPort": 517,
+   "line_in_SolutionRef": 517,
+   "original": "      exact_mod_cast hk1\n",
+   "revised": "      exact Int.natCast_modEq_iff.mpr hk1\n",
+   "error_addressed": "mod_cast has type k ≡ aN [MOD ?m] but is expected to have type ↑k ≡ ↑aN [ZMOD ↑m]",
+   "reason": "`exact_mod_cast` relies on `Int.natCast_modEq_iff` (`a ≡ b [ZMOD n] ↔ a ≡ b [MOD n]` for naturals), which carries `@[simp, norm_cast]` in Mathlib v4.34 and has no `norm_cast` attribute in Mathlib d1d1e4b7 (Mathlib/Data/Int/ModEq.lean:77). Applying the same lemma explicitly gives the identical step; the goal and hypothesis are unchanged.",
+   "verification": {
+    "elaborates": true,
+    "certified": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "type_alpha_equivalent": true,
+    "signature_text_unchanged": true,
+    "commands": [
+     "cd formalize-now/lean49 && lake build",
+     "cd formalize-now/lean49 && lake env lean ../tools/SigCheck.lean"
+    ]
+   },
+   "scope": "proof body only (fragment located after the declaration's top-level :=)"
+  },
+  {
+   "id": "E06",
+   "decl": "exists_coprime_R_neg_t_mod_p",
+   "line_in_SolutionPort": 664,
+   "line_in_SolutionRef": 664,
+   "original": "by exact_mod_cast hr_modeq_rp",
+   "revised": "by exact Int.natCast_modEq_iff.mpr hr_modeq_rp",
+   "error_addressed": "mod_cast has type r ≡ rp [MOD p] but is expected to have type ↑r ≡ ↑rp [ZMOD ↑p]",
+   "reason": "`exact_mod_cast` relies on `Int.natCast_modEq_iff` (`a ≡ b [ZMOD n] ↔ a ≡ b [MOD n]` for naturals), which carries `@[simp, norm_cast]` in Mathlib v4.34 and has no `norm_cast` attribute in Mathlib d1d1e4b7 (Mathlib/Data/Int/ModEq.lean:77). Applying the same lemma explicitly gives the identical step; the goal and hypothesis are unchanged.",
+   "verification": {
+    "elaborates": true,
+    "certified": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "type_alpha_equivalent": true,
+    "signature_text_unchanged": true,
+    "commands": [
+     "cd formalize-now/lean49 && lake build",
+     "cd formalize-now/lean49 && lake env lean ../tools/SigCheck.lean"
+    ]
+   },
+   "scope": "proof body only (fragment located after the declaration's top-level :=)"
+  },
+  {
+   "id": "E07",
+   "decl": "gdt_minimal_period",
+   "line_in_SolutionPort": 734,
+   "line_in_SolutionRef": 734,
+   "original": "      exact_mod_cast hn1_modp_nat\n",
+   "revised": "      exact Int.natCast_modEq_iff.mpr hn1_modp_nat\n",
+   "error_addressed": "mod_cast has type n1 ≡ r [MOD p] but is expected to have type ↑n1 ≡ ↑r [ZMOD ↑p]",
+   "reason": "`exact_mod_cast` relies on `Int.natCast_modEq_iff` (`a ≡ b [ZMOD n] ↔ a ≡ b [MOD n]` for naturals), which carries `@[simp, norm_cast]` in Mathlib v4.34 and has no `norm_cast` attribute in Mathlib d1d1e4b7 (Mathlib/Data/Int/ModEq.lean:77). Applying the same lemma explicitly gives the identical step; the goal and hypothesis are unchanged.",
+   "verification": {
+    "elaborates": true,
+    "certified": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "type_alpha_equivalent": true,
+    "signature_text_unchanged": true,
+    "commands": [
+     "cd formalize-now/lean49 && lake build",
+     "cd formalize-now/lean49 && lake env lean ../tools/SigCheck.lean"
+    ]
+   },
+   "scope": "proof body only (fragment located after the declaration's top-level :=)"
+  },
+  {
+   "id": "E08",
+   "decl": "S_eq_filter_Ico",
+   "line_in_SolutionPort": 845,
+   "line_in_SolutionRef": 845,
+   "original": "  simp only [Finset.mem_filter, Finset.mem_Icc, Finset.mem_Ico]\n  simp\n",
+   "revised": "  simp only [Finset.mem_filter, Finset.mem_Icc, Finset.mem_Ico]\n  simp\n  intro _ _\n  omega\n",
+   "error_addressed": "unsolved goals ⊢ accepted N m a n → 1 ≤ n → (n ≤ L ↔ n < L + 1)",
+   "reason": "Mathlib d1d1e4b7's simp set leaves the residual natural-number goal `n ≤ L ↔ n < L + 1` (under two hypotheses) that the v4.34 simp set closes. `intro _ _; omega` discharges exactly that linear-arithmetic residue; the statement and the preceding proof steps are unchanged.",
+   "verification": {
+    "elaborates": true,
+    "certified": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "type_alpha_equivalent": true,
+    "signature_text_unchanged": true,
+    "commands": [
+     "cd formalize-now/lean49 && lake build",
+     "cd formalize-now/lean49 && lake env lean ../tools/SigCheck.lean"
+    ]
+   },
+   "scope": "proof body only (fragment located after the declaration's top-level :=)"
+  },
+  {
+   "id": "E09",
+   "decl": "gdt_density",
+   "line_in_SolutionPort": 864,
+   "line_in_SolutionRef": 866,
+   "original": "      (by omega) (by omega)]",
+   "revised": "      (Nat.le_add_left 1 _) (Nat.add_le_add_right (Nat.le_add_right _ _) 1)]",
+   "error_addressed": "omega could not prove the goal (side condition 1 ≤ k * Tmin N m + s + 1 of card_filter_Ico_split)",
+   "reason": "The two side conditions are `1 ≤ k * Tmin N m + s + 1` and `k * Tmin N m + s + 1 ≤ k * Tmin N m + s + Tmin N m + 1`. Lean 4.9 omega treats the cast product `↑k * ↑(Tmin N m)` as an atom without a non-negativity fact and fails; the core lemmas `Nat.le_add_left` and `Nat.add_le_add_right ∘ Nat.le_add_right` prove the same two inequalities directly.",
+   "verification": {
+    "elaborates": true,
+    "certified": true,
+    "axioms": [
+     "propext",
+     "Quot.sound",
+     "Classical.choice"
+    ],
+    "type_alpha_equivalent": true,
+    "signature_text_unchanged": true,
+    "commands": [
+     "cd formalize-now/lean49 && lake build",
+     "cd formalize-now/lean49 && lake env lean ../tools/SigCheck.lean"
+    ]
+   },
+   "scope": "proof body only (fragment located after the declaration's top-level :=)"
+  }
+ ],
+ "source": "lean49/GDTBench/SolutionPort.lean (unchanged GDT Solution proofs, RPI-DS-001a)",
+ "target": "lean49/GDTBench/SolutionRef.lean",
+ "root_failures_from_stage0": 9
+}

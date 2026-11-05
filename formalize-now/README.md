@@ -1,4 +1,47 @@
-# formalize-now / RPI-DS-001a — GDT-Ladder Stage 0
+# formalize-now / GDT-Ladder — RPI-DS-001a (Stage 0) and RPI-DS-001b
+
+## RPI-DS-001b — reference proof certification (current)
+
+All 39 GDT theorems (7 challenge theorems and 32 helper lemmas) are certified in the
+model-matched environment: Lean 4.9.0-rc1 with Mathlib `d1d1e4b7`.
+
+- **Proof repairs:** 9 proof-body edits fixed the 9 root failures found in Stage 0. The
+  11 inherited failures cleared with them.
+- **Statements unchanged:** signature text is byte-identical to the original Solution,
+  and each type is alpha-equivalent to the trusted expected statement.
+- **Axioms:** only `propext`, `Quot.sound` and `Classical.choice`.
+- **Kernel replay:** lean4checker passes, both module replay and `--fresh`.
+- **Strict verification wrapper:** passes 13/13 valid and invalid tests. The V1.5
+  completeness rule would accept 4 of its 10 invalid cases.
+
+| Deliverable | Path |
+|---|---|
+| Reference proofs | `lean49/GDTBench/SolutionRef.lean` |
+| Edit log | `manifest/proof_port_log.json` |
+| Certification | `manifest/certification_lean49.json`, `tools/SigCheck.lean`, `tools/certify49.py` |
+| Manifest v2 / items v2 | `manifest/gdt_manifest_v2.json`, `benchmark/gdt_items_v2.jsonl` (Stage 0 files kept unchanged) |
+| Verification wrapper + tests | `harness/` |
+| Definition correspondence | `reports/LEAN49_DEFINITIONS.md` |
+| Build and verification report | `reports/RPI-DS-001b_BUILD_AND_VERIFICATION.md` |
+| Next step | `reports/RECOMMENDATION_RPI-DS-001c.md` |
+
+Reproduce 001b after the Stage 0 steps below:
+
+```bash
+cd formalize-now/lean49 && lake update && lake exe cache get && lake build
+lake env lean ../tools/SigCheck.lean > ../logs/lean49_sigcheck.log && cd ..
+python3 tools/certify49.py logs/lean49_sigcheck.log && python3 tools/build_manifest_v2.py
+# lean4checker v4.9.0-rc1: git clone https://github.com/leanprover/lean4checker; git checkout v4.9.0-rc1; lake build
+(cd lean49 && lake env <lean4checker> GDTBench.SolutionRef && lake env <lean4checker> --fresh GDTBench.SolutionRef)
+LEAN4CHECKER=<lean4checker> python3 harness/tests/run_tests.py --lean4checker
+```
+
+Model inference stays out of this patch; the gate for it is listed in the 001c
+recommendation.
+
+---
+
+## RPI-DS-001a — GDT-Ladder Stage 0
 
 This directory holds an independent, CPU-only preparation step for a theorem-proving
 experiment with DeepSeek-Prover-V2. It belongs to formalize.now (thinkthoughts) and sits on
@@ -58,6 +101,7 @@ formalize-now/
     gdt_items.jsonl            39 items in DeepSeek V1.5/V2 prompt shape (no proofs)
     AllItemsCheck.lean         all items under the V1.5 header, for the elaboration check
   tools/                       extractors, translator, generators, check scripts
+  harness/                     strict verification wrapper and tests (001b)
   reports/                     human-readable reports (+ _generated_* tables)
   logs/                        build, elaboration, axiom and extraction logs
 ```

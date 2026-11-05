@@ -1,0 +1,26 @@
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/SolutionRef.lean:77:12: warning: unused variable `hs`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/SolutionRef.lean:77:15: warning: unused variable `ha_not`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/SolutionRef.lean:435:41: warning: unused variable `haN_def`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/SolutionRef.lean:497:41: warning: unused variable `haN_def`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/SolutionRef.lean:542:14: warning: unused variable `hsub`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/SolutionRef.lean:542:19: warning: unused variable `hall'`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/SolutionRef.lean:615:27: warning: unused variable `hR'_def`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/SolutionRef.lean:616:50: warning: unused variable `hrp_def`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/SolutionRef.lean:653:33: warning: unused variable `hr_def`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/SolutionRef.lean:708:16: warning: unused variable `hn1lt`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/SolutionRef.lean:784:16: warning: unused variable `hlt`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/lean49/GDTBench/SolutionRef.lean:784:22: warning: unused variable `hmod`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+
+# exit=0 wall_s=3.6 peak_rss_kb=1299156
