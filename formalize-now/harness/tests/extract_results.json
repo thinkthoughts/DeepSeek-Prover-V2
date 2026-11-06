@@ -380,7 +380,8 @@
     "C3_present_theorem",
     "C4_statement",
     "C5_axioms",
-    "C6_no_local_axioms"
+    "C6_no_local_axioms",
+    "C9_permitted_lemmas"
    ],
    "passed": true
   },

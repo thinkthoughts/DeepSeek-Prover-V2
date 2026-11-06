@@ -1,24 +1,24 @@
-REPL import Mathlib: 2.7 s
-V1_valid_proof_gdt_empty                     direct=preliminary repl=preliminary AGREE  v15(repl msgs)=True  t_direct=3.2s t_repl=0.4s
-V2_valid_proof_coprime_add_mul_right         direct=preliminary repl=preliminary AGREE  v15(repl msgs)=True  t_direct=2.9s t_repl=0.3s
-V3_valid_full_code_gdt_empty                 direct=preliminary repl=preliminary AGREE  v15(repl msgs)=True  t_direct=2.9s t_repl=0.3s
-I1_sorry                                     direct=rejected    repl=rejected    AGREE  v15(repl msgs)=False  t_direct=2.9s t_repl=0.2s
-I2_admit                                     direct=rejected    repl=rejected    AGREE  v15(repl msgs)=False  t_direct=2.8s t_repl=0.2s
-I3_compile_error                             direct=rejected    repl=rejected    AGREE  v15(repl msgs)=False  t_direct=2.9s t_repl=0.2s
-I4_weakened_statement_full_code              direct=rejected    repl=rejected    AGREE  v15(repl msgs)=True  t_direct=2.9s t_repl=0.2s
-I5_local_axiom_full_code                     direct=rejected    repl=rejected    AGREE  v15(repl msgs)=True  t_direct=2.8s t_repl=0.2s
-I6_exit_after_partial_proof                  direct=rejected    repl=rejected    AGREE  v15(repl msgs)=False  t_direct=2.7s t_repl=0.1s
-I7_native_decide_dependency                  direct=rejected    repl=rejected    AGREE  v15(repl msgs)=True  t_direct=2.9s t_repl=0.3s
-I8_renamed_theorem_full_code                 direct=rejected    repl=rejected    AGREE  v15(repl msgs)=True  t_direct=2.6s t_repl=0.2s
+REPL import Mathlib: 1.9 s
+V1_valid_proof_gdt_empty                     direct=preliminary repl=preliminary AGREE  v15(repl msgs)=True  t_direct=2.3s t_repl=0.6s
+V2_valid_proof_coprime_add_mul_right         direct=preliminary repl=preliminary AGREE  v15(repl msgs)=True  t_direct=2.3s t_repl=0.5s
+V3_valid_full_code_gdt_empty                 direct=preliminary repl=preliminary AGREE  v15(repl msgs)=True  t_direct=2.3s t_repl=0.5s
+I1_sorry                                     direct=rejected    repl=rejected    AGREE  v15(repl msgs)=False  t_direct=2.2s t_repl=0.5s
+I2_admit                                     direct=rejected    repl=rejected    AGREE  v15(repl msgs)=False  t_direct=2.2s t_repl=0.5s
+I3_compile_error                             direct=rejected    repl=rejected    AGREE  v15(repl msgs)=False  t_direct=2.3s t_repl=0.5s
+I4_weakened_statement_full_code              direct=rejected    repl=rejected    AGREE  v15(repl msgs)=True  t_direct=2.3s t_repl=0.5s
+I5_local_axiom_full_code                     direct=rejected    repl=rejected    AGREE  v15(repl msgs)=True  t_direct=2.3s t_repl=0.5s
+I6_exit_after_partial_proof                  direct=rejected    repl=rejected    AGREE  v15(repl msgs)=False  t_direct=2.1s t_repl=0.1s
+I7_native_decide_dependency                  direct=rejected    repl=rejected    AGREE  v15(repl msgs)=True  t_direct=3.0s t_repl=0.6s
+I8_renamed_theorem_full_code                 direct=rejected    repl=rejected    AGREE  v15(repl msgs)=True  t_direct=2.9s t_repl=0.5s
 I9_prefix_tampering_full_code                direct=rejected    repl=rejected    AGREE  v15(repl msgs)=None  t_direct=0.0s t_repl=Nones
-I10_skipKernelTC_option                      direct=rejected    repl=rejected    AGREE  v15(repl msgs)=False  t_direct=3.1s t_repl=0.4s
-P1_valid_proof_without_kernel_replay         direct=preliminary repl=preliminary AGREE  v15(repl msgs)=True  t_direct=3.0s t_repl=0.3s
-P2_valid_full_code_without_kernel_replay     direct=preliminary repl=preliminary AGREE  v15(repl msgs)=True  t_direct=2.9s t_repl=0.3s
-P3_local_axiom_without_kernel_replay         direct=rejected    repl=rejected    AGREE  v15(repl msgs)=True  t_direct=2.7s t_repl=0.2s
+I10_skipKernelTC_option                      direct=rejected    repl=rejected    AGREE  v15(repl msgs)=False  t_direct=2.3s t_repl=0.6s
+P1_valid_proof_without_kernel_replay         direct=preliminary repl=preliminary AGREE  v15(repl msgs)=True  t_direct=2.9s t_repl=0.6s
+P2_valid_full_code_without_kernel_replay     direct=preliminary repl=preliminary AGREE  v15(repl msgs)=True  t_direct=2.8s t_repl=0.5s
+P3_local_axiom_without_kernel_replay         direct=rejected    repl=rejected    AGREE  v15(repl msgs)=True  t_direct=2.8s t_repl=0.5s
 certify V1_valid_proof_gdt_empty             expect=certified  got=certified  PASS
 certify V2_valid_proof_coprime_add_mul_right expect=certified  got=certified  PASS
 certify V3_valid_full_code_gdt_empty         expect=certified  got=certified  PASS
 certify I4_weakened_statement_full_code      expect=rejected   got=rejected   PASS
 certify I5_local_axiom_full_code             expect=rejected   got=rejected   PASS
 
-# exit=0 wall_s=67.9 peak_tree_rss_kb=7816036
+# exit=0 wall_s=64.6 peak_tree_rss_kb=7861476

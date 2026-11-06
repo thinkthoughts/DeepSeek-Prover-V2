@@ -39,8 +39,6 @@ R gdt/rad_factorization_eq_one                     ctx= 4 certified  PASS []
 R gdt/totient_rad_mul                              ctx= 1 certified  PASS []
 N1_cites_lemma_outside_closure                     rejected   PASS ['C1_compile', 'C5_axioms']
 N2_cites_dependency_without_context                rejected   PASS ['C1_compile', 'C5_axioms']
+N3_uses_transitive_not_direct_dependency           rejected   PASS ['C9_permitted_lemmas']
 
-real	3m53.225s
-user	3m17.231s
-sys	0m35.553s
-exit=0
+# exit=0 wall_s=198.0 peak_tree_rss_kb=3944984

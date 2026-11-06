@@ -12,8 +12,8 @@
 | Environment | Lean, REPL and Mathlib sources identical to DeepSeek's. Batteries differs by one linter commit, outside the proofs' closure. Exact fork build deferred |
 | Pre-registration | `PREREGISTRATION.md`, `preregistration.json` (sha256 `fb58a25d…`), prompts `benchmark/prompts_v1.jsonl` (184; 0 reference-proof matches) |
 | Instrumentation | `harness/instrument.py`. Tokens, attempts, GPU time and energy are filled at inference; RAPL and NVML are absent on this host and recorded as such |
-| Model inference | not started. Smoke test (≤ 2 outputs) ready pending approval of a ≥ 40 GB GPU host; C2 assembler done (`reports/C2_ASSEMBLER_001d2.md`); pilot waits for the live smoke test |
-| Pre-registration amendments | A1 (2026-11-05, before any output): non-CoT prompts v2, proof-body extraction, smoke exclusion. A2 (2026-11-05, before any output): C2 assembly order, selection, certification, claim levels |
+| Model inference | not started. Smoke test (≤ 2 outputs) ready pending approval of a ≥ 40 GB GPU host; C2 assembler done; GPU kit in `gpu/` (pins, setup, preflight, budget guard, collection); waiting for an A6000 (`reports/GPU_EXECUTION_CHECKLIST_001e.md`) |
+| Pre-registration amendments | A1 (2026-11-05, before any output): non-CoT prompts v2, proof-body extraction, smoke exclusion. A2 (2026-11-05, before any output): C2 assembly order, selection, certification, claim levels. A3 (2026-11-05, before any output): kernel-level C9 information check, runtime pins |
 
 001c reports:
 
@@ -21,6 +21,8 @@
 - `reports/PLAN_RPI-DS-001d_SMOKE.md` (minimal GPU interface test; planning only)
 - `reports/SMOKE_INTERFACE_REVIEW_001d.md` (001d: output extraction, trusted assembly, C2 context, hardware estimate, go/no-go; Amendment A1)
 - `reports/C2_ASSEMBLER_001d2.md` (001d.2: theorem-level C2 assembler, 22/22 fixture tests; Amendment A2)
+- `reports/RPI-DS-001e_TEST_REPORT.md` (001e: C2 condition, C9 information check, GPU kit tests; Amendment A3)
+- `reports/GPU_EXECUTION_CHECKLIST_001e.md` (A6000 smoke-test checklist: setup, preflight, launch gate, budget, collection, shutdown)
 - `reports/CAUTO_BASELINE_001c.md`
 - `reports/ENVIRONMENT_COMPATIBILITY_001c.md`
 - `reports/RPI-DS-001c_BUILD_AND_VALIDATION.md`

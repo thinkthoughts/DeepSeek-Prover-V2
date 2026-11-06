@@ -134,6 +134,37 @@
     "none": "not certified"
    },
    "tests": "harness/tests/run_assembly_tests.py 22/22"
+  },
+  {
+   "id": "A3",
+   "date": "2026-11-05",
+   "recorded_before_model_output": true,
+   "c9": "GDT lemmas in the candidate proof term must be a subset of those its condition exposes (C0/C0h/C1: none; C2: direct dependencies); GDT.Expected forbidden; applied per member by the assembler; required for preliminary and certified",
+   "c2_context_order": "alphabetical (committed prompts_v2), unchanged",
+   "runtime_pins": {
+    "file": "gpu/pins.json",
+    "vllm": "0.32.0",
+    "torch": "2.13.0",
+    "cuda_userspace": "13.0",
+    "min_driver_major": 580,
+    "max_model_len": 20480,
+    "gpu_memory_utilization": 0.9
+   },
+   "unchanged": [
+    "model revision",
+    "dtype",
+    "sampling",
+    "seeds",
+    "budgets",
+    "conditions",
+    "metrics",
+    "interpretation"
+   ],
+   "tests": {
+    "c2_condition": "9/9",
+    "context": "42/42",
+    "assembly": "23/23"
+   }
   }
  ],
  "original_sha256_before_amendments": "fb58a25dba660aac8a3e17eeba164bb9d75350eb87c5ebda9ad0214009f3989f"

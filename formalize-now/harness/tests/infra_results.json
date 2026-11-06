@@ -1,0 +1,99 @@
+{
+ "failures": 0,
+ "results": [
+  {
+   "test": "I1_verify_model_pinned_tokenizer_passes",
+   "passed": true
+  },
+  {
+   "test": "I2_verify_model_corrupted_fails",
+   "passed": true
+  },
+  {
+   "test": "I3_verify_model_missing_weights_fails",
+   "passed": true
+  },
+  {
+   "test": "I4_budget_arithmetic",
+   "passed": true,
+   "status": {
+    "estimated_spend_usd": 1.0901,
+    "elapsed_hours": 1.0001,
+    "rate_per_hour": 1.09,
+    "warn_at": 3.0,
+    "stop_at": 4.0,
+    "cap": 5.0,
+    "level": "ok",
+    "remaining_to_stop_usd": 2.9099,
+    "provider_side_cap": false,
+    "note": "Local guard only. It is NOT a provider-side spending cap; the instance bills until terminated in the provider console."
+   }
+  },
+  {
+   "test": "I5_budget_gate_pass_and_fail",
+   "passed": true,
+   "pass_rc": 0,
+   "fail_rc": 1
+  },
+  {
+   "test": "I6_budget_guard_stops_process",
+   "passed": true,
+   "rc": 2,
+   "seconds": 30.5
+  },
+  {
+   "test": "I7_preflight_cpu_test_structure",
+   "passed": true,
+   "failing": [
+    "disk_free_gb",
+    "ram_gb",
+    "gpu_present",
+    "gpu_memory_gb",
+    "driver_version",
+    "vllm_version",
+    "torch_version",
+    "torch_cuda_available",
+    "nvml_energy_counter",
+    "model_files_pinned",
+    "budget_room_for_smoke"
+   ]
+  },
+  {
+   "test": "I8_live_gate_refusals",
+   "passed": true,
+   "cases": {
+    "no_approval": true,
+    "no_preflight": true,
+    "failed_preflight": true,
+    "stale_preflight": true,
+    "head_mismatch": true,
+    "no_launch_time": true
+   }
+  },
+  {
+   "test": "I9_interrupt_then_resume_no_duplicates",
+   "passed": true,
+   "crashed": true,
+   "resumed_rc": 0,
+   "rows": 4,
+   "unique": 4,
+   "completions": 4
+  },
+  {
+   "test": "I10_cost_records_valid_and_nulls_documented",
+   "passed": true,
+   "problems": []
+  },
+  {
+   "test": "I11_collect_results_archive_verifies",
+   "passed": true
+  },
+  {
+   "test": "I12_setup_script_syntax_and_dry_run",
+   "passed": true,
+   "rc_syntax": 0,
+   "rc_dry": 0,
+   "tail": ""
+  }
+ ]
+}

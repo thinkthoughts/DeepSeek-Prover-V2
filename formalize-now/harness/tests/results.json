@@ -14,6 +14,7 @@
    "v15_complete_equivalent": true,
    "token_scan": {},
    "lean_check": {
+    "used_lemmas": [],
     "type_alpha_equivalent": true,
     "present": true,
     "local_axioms": [
@@ -29,7 +30,7 @@
      "Classical.choice"
     ]
    },
-   "wall_s": 2.9,
+   "wall_s": 2.4,
    "checks": {
     "C7_options": true,
     "C1_compile": true,
@@ -38,6 +39,7 @@
     "C4_statement": true,
     "C5_axioms": true,
     "C6_no_local_axioms": true,
+    "C9_permitted_lemmas": true,
     "C8_lean4checker": true
    },
    "first_messages": []
@@ -55,6 +57,7 @@
    "v15_complete_equivalent": true,
    "token_scan": {},
    "lean_check": {
+    "used_lemmas": [],
     "type_alpha_equivalent": true,
     "present": true,
     "local_axioms": [
@@ -70,7 +73,7 @@
      "Quot.sound"
     ]
    },
-   "wall_s": 2.9,
+   "wall_s": 2.7,
    "checks": {
     "C7_options": true,
     "C1_compile": true,
@@ -79,6 +82,7 @@
     "C4_statement": true,
     "C5_axioms": true,
     "C6_no_local_axioms": true,
+    "C9_permitted_lemmas": true,
     "C8_lean4checker": true
    },
    "first_messages": []
@@ -96,6 +100,7 @@
    "v15_complete_equivalent": true,
    "token_scan": {},
    "lean_check": {
+    "used_lemmas": [],
     "type_alpha_equivalent": true,
     "present": true,
     "local_axioms": [
@@ -111,7 +116,7 @@
      "Classical.choice"
     ]
    },
-   "wall_s": 2.8,
+   "wall_s": 3.1,
    "checks": {
     "prefix": true,
     "C7_options": true,
@@ -121,6 +126,7 @@
     "C4_statement": true,
     "C5_axioms": true,
     "C6_no_local_axioms": true,
+    "C9_permitted_lemmas": true,
     "C8_lean4checker": true
    },
    "first_messages": []
@@ -142,6 +148,7 @@
     "sorry": 1
    },
    "lean_check": {
+    "used_lemmas": [],
     "type_alpha_equivalent": true,
     "present": true,
     "local_axioms": [
@@ -158,7 +165,7 @@
      "sorryAx"
     ]
    },
-   "wall_s": 2.2,
+   "wall_s": 2.8,
    "checks": {
     "C7_options": true,
     "C1_compile": true,
@@ -166,7 +173,8 @@
     "C3_present_theorem": true,
     "C4_statement": true,
     "C5_axioms": false,
-    "C6_no_local_axioms": true
+    "C6_no_local_axioms": true,
+    "C9_permitted_lemmas": true
    },
    "first_messages": []
   },
@@ -187,6 +195,7 @@
     "admit": 1
    },
    "lean_check": {
+    "used_lemmas": [],
     "type_alpha_equivalent": true,
     "present": true,
     "local_axioms": [
@@ -203,7 +212,7 @@
      "sorryAx"
     ]
    },
-   "wall_s": 2.2,
+   "wall_s": 2.5,
    "checks": {
     "C7_options": true,
     "C1_compile": true,
@@ -211,7 +220,8 @@
     "C3_present_theorem": true,
     "C4_statement": true,
     "C5_axioms": false,
-    "C6_no_local_axioms": true
+    "C6_no_local_axioms": true,
+    "C9_permitted_lemmas": true
    },
    "first_messages": []
   },
@@ -231,6 +241,7 @@
    "v15_complete_equivalent": false,
    "token_scan": {},
    "lean_check": {
+    "used_lemmas": [],
     "type_alpha_equivalent": true,
     "present": true,
     "local_axioms": [
@@ -247,7 +258,7 @@
      "sorryAx"
     ]
    },
-   "wall_s": 2.4,
+   "wall_s": 2.9,
    "checks": {
     "C7_options": true,
     "C1_compile": false,
@@ -255,10 +266,11 @@
     "C3_present_theorem": true,
     "C4_statement": true,
     "C5_axioms": false,
-    "C6_no_local_axioms": true
+    "C6_no_local_axioms": true,
+    "C9_permitted_lemmas": true
    },
    "first_messages": [
-    "unknown identifier 'foo_bar_baz'\n@@RPI_CHECK {\"type_alpha_equivalent\":true,\"present\":true,\"local_axioms\":[\"Finset.filter._at.GDT.S._spec_2\",\"Finset.Icc._at.GDT."
+    "unknown identifier 'foo_bar_baz'\n@@RPI_CHECK {\"used_lemmas\":[],\"type_alpha_equivalent\":true,\"present\":true,\"local_axioms\":[\"Finset.filter._at.GDT.S._spec_2\",\"Fi"
    ]
   },
   {
@@ -276,6 +288,7 @@
    "v15_complete_equivalent": true,
    "token_scan": {},
    "lean_check": {
+    "used_lemmas": [],
     "type_alpha_equivalent": false,
     "present": true,
     "local_axioms": [
@@ -291,7 +304,7 @@
      "Classical.choice"
     ]
    },
-   "wall_s": 2.9,
+   "wall_s": 2.4,
    "checks": {
     "prefix": true,
     "C7_options": true,
@@ -300,7 +313,8 @@
     "C3_present_theorem": true,
     "C4_statement": false,
     "C5_axioms": true,
-    "C6_no_local_axioms": true
+    "C6_no_local_axioms": true,
+    "C9_permitted_lemmas": true
    },
    "first_messages": []
   },
@@ -322,6 +336,7 @@
     "axiom": 1
    },
    "lean_check": {
+    "used_lemmas": [],
     "type_alpha_equivalent": true,
     "present": true,
     "local_axioms": [
@@ -339,7 +354,7 @@
      "rpi_cheat"
     ]
    },
-   "wall_s": 2.3,
+   "wall_s": 2.9,
    "checks": {
     "prefix": true,
     "C7_options": true,
@@ -348,7 +363,8 @@
     "C3_present_theorem": true,
     "C4_statement": true,
     "C5_axioms": false,
-    "C6_no_local_axioms": false
+    "C6_no_local_axioms": false,
+    "C9_permitted_lemmas": true
    },
    "first_messages": []
   },
@@ -367,14 +383,15 @@
     "C3_present_theorem",
     "C4_statement",
     "C5_axioms",
-    "C6_no_local_axioms"
+    "C6_no_local_axioms",
+    "C9_permitted_lemmas"
    ],
    "v15_complete_equivalent": false,
    "token_scan": {
     "#exit": 1
    },
    "lean_check": {},
-   "wall_s": 2.1,
+   "wall_s": 2.5,
    "checks": {
     "C7_options": true,
     "C1_compile": false,
@@ -382,7 +399,8 @@
     "C3_present_theorem": false,
     "C4_statement": false,
     "C5_axioms": false,
-    "C6_no_local_axioms": false
+    "C6_no_local_axioms": false,
+    "C9_permitted_lemmas": false
    },
    "first_messages": [
     "unsolved goals\nN m L : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : ¬Admissible N m a\n⊢ S N L m a = ∅"
@@ -405,6 +423,7 @@
     "native_decide": 1
    },
    "lean_check": {
+    "used_lemmas": [],
     "type_alpha_equivalent": true,
     "present": true,
     "local_axioms": [
@@ -421,7 +440,7 @@
      "Lean.ofReduceBool"
     ]
    },
-   "wall_s": 2.4,
+   "wall_s": 2.8,
    "checks": {
     "prefix": true,
     "C7_options": true,
@@ -430,7 +449,8 @@
     "C3_present_theorem": true,
     "C4_statement": true,
     "C5_axioms": false,
-    "C6_no_local_axioms": true
+    "C6_no_local_axioms": true,
+    "C9_permitted_lemmas": true
    },
    "first_messages": []
   },
@@ -446,7 +466,8 @@
    "reasons": [
     "C3_present_theorem",
     "C4_statement",
-    "C5_axioms"
+    "C5_axioms",
+    "C9_permitted_lemmas"
    ],
    "v15_complete_equivalent": true,
    "token_scan": {},
@@ -459,7 +480,7 @@
      "Multiset.filter._at.GDT.S._spec_3"
     ]
    },
-   "wall_s": 2.9,
+   "wall_s": 2.2,
    "checks": {
     "prefix": true,
     "C7_options": true,
@@ -468,7 +489,8 @@
     "C3_present_theorem": false,
     "C4_statement": false,
     "C5_axioms": false,
-    "C6_no_local_axioms": true
+    "C6_no_local_axioms": true,
+    "C9_permitted_lemmas": false
    },
    "first_messages": []
   },
@@ -511,6 +533,7 @@
     "debug.skipKernelTC": 1
    },
    "lean_check": {
+    "used_lemmas": [],
     "type_alpha_equivalent": true,
     "present": true,
     "local_axioms": [
@@ -526,7 +549,7 @@
      "Classical.choice"
     ]
    },
-   "wall_s": 2.7,
+   "wall_s": 2.4,
    "checks": {
     "prefix": true,
     "C7_options": false,
@@ -535,7 +558,8 @@
     "C3_present_theorem": true,
     "C4_statement": true,
     "C5_axioms": true,
-    "C6_no_local_axioms": true
+    "C6_no_local_axioms": true,
+    "C9_permitted_lemmas": true
    },
    "first_messages": [
     "unknown option 'debug.skipKernelTC'"
@@ -556,6 +580,7 @@
    "v15_complete_equivalent": true,
    "token_scan": {},
    "lean_check": {
+    "used_lemmas": [],
     "type_alpha_equivalent": true,
     "present": true,
     "local_axioms": [
@@ -571,7 +596,7 @@
      "Classical.choice"
     ]
    },
-   "wall_s": 2.7,
+   "wall_s": 2.5,
    "checks": {
     "C7_options": true,
     "C1_compile": true,
@@ -579,7 +604,8 @@
     "C3_present_theorem": true,
     "C4_statement": true,
     "C5_axioms": true,
-    "C6_no_local_axioms": true
+    "C6_no_local_axioms": true,
+    "C9_permitted_lemmas": true
    },
    "first_messages": []
   },
@@ -598,6 +624,7 @@
    "v15_complete_equivalent": true,
    "token_scan": {},
    "lean_check": {
+    "used_lemmas": [],
     "type_alpha_equivalent": true,
     "present": true,
     "local_axioms": [
@@ -613,7 +640,7 @@
      "Classical.choice"
     ]
    },
-   "wall_s": 2.7,
+   "wall_s": 2.4,
    "checks": {
     "prefix": true,
     "C7_options": true,
@@ -622,7 +649,8 @@
     "C3_present_theorem": true,
     "C4_statement": true,
     "C5_axioms": true,
-    "C6_no_local_axioms": true
+    "C6_no_local_axioms": true,
+    "C9_permitted_lemmas": true
    },
    "first_messages": []
   },
@@ -644,6 +672,7 @@
     "axiom": 1
    },
    "lean_check": {
+    "used_lemmas": [],
     "type_alpha_equivalent": true,
     "present": true,
     "local_axioms": [
@@ -661,7 +690,7 @@
      "rpi_cheat"
     ]
    },
-   "wall_s": 2.6,
+   "wall_s": 2.2,
    "checks": {
     "prefix": true,
     "C7_options": true,
@@ -670,7 +699,8 @@
     "C3_present_theorem": true,
     "C4_statement": true,
     "C5_axioms": false,
-    "C6_no_local_axioms": false
+    "C6_no_local_axioms": false,
+    "C9_permitted_lemmas": true
    },
    "first_messages": []
   }

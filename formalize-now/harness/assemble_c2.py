@@ -23,7 +23,8 @@ Procedure (the first failing step determines the outcome):
     then a trusted check of EVERY member.
  4. Certification: `lean` compile with -o, then lean4checker replay of the module.
     Required for every member: present, theorem, type alpha-equivalent to its expected
-    statement, axioms ⊆ {propext, Quot.sound, Classical.choice}; no declared axioms;
+    statement, axioms ⊆ {propext, Quot.sound, Classical.choice}; its proof term uses
+    only its own DIRECT kernel dependencies (C9, RPI-DS-001e); no declared axioms;
     no weakening options; C8 replay passes. Outcome: certified or rejected.
  5. Claim level (separate from certification):
       c2_success        certified, every member's provenance is "model" with a
@@ -127,6 +128,7 @@ open Lean in
   let env ← getEnv
   let axiomsOf (c : Name) : Array Name :=
     (((Lean.Elab.Command.CollectAxioms.collect c).run env).run {{}}).2.axioms
+{vs.USED_LEMMAS_LEAN}
   let localAxioms := env.constants.map₂.toList.filterMap fun (n, ci) =>
     if ci matches .axiomInfo _ then some n.toString else none
   let mut rows : Array Json := #[]
@@ -137,7 +139,7 @@ open Lean in
     | some ci, some eci =>
       rows := rows.push (Json.mkObj [("name", toJson s.toString), ("present", toJson true),
         ("is_theorem", toJson (ci matches .thmInfo _)), ("type_alpha_equivalent", toJson (ci.type == eci.type)),
-        ("axioms", toJson ((axiomsOf t).map toString))])
+        ("axioms", toJson ((axiomsOf t).map toString)), ("used_lemmas", toJson (usedLemmas t))])
     | _, _ => rows := rows.push (Json.mkObj [("name", toJson s.toString), ("present", toJson false)])
   IO.println ("@@RPI_ASSEMBLY " ++ (Json.mkObj [("members", Json.arr rows), ("local_axioms", toJson localAxioms)]).compress)
 '''
@@ -179,6 +181,9 @@ def certify_source(source, exp_lines, order):
         rec["declared_axioms"] = declared
         rec["checks"]["no_declared_axioms"] = mm is not None and not declared
         rec["checks"]["no_weakening_options"] = not any(o in source for o in vs.FORBIDDEN_OPTIONS)
+        # C9 per member (RPI-DS-001e): each member's proof term uses only its DIRECT deps
+        rec["checks"]["all_use_only_direct_dependencies"] = mm is not None and all(
+            rows.get(m, {}).get("used_lemmas") is not None and set(rows[m]["used_lemmas"]) <= set(DEPS[m]) for m in order)
         if all(rec["checks"].values()):
             env = dict(os.environ)
             lp = subprocess.run(["lake", "env", "printenv", "LEAN_PATH"], cwd=vs.LEAN49, capture_output=True, text=True).stdout.strip()

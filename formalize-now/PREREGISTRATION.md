@@ -233,3 +233,38 @@ and metrics are unchanged.
    candidates, and all 7 challenge theorems with reference fixtures
    (`harness/tests/assembly_results.json`). Model provenance appears in those tests only
    as a labelled simulation.
+
+### A3 — 2026-11-05, recorded before any model output (RPI-DS-001e)
+
+1. **Information discipline enforced in the kernel (check C9).** §4 defines C2 as the item
+   *plus its direct dependencies*. The per-item verification context of §5 contains the
+   item's full transitive closure, because the reference proofs of the direct dependencies
+   need it. A C2 candidate could therefore have used a transitive lemma that its prompt
+   never showed.
+   - C9 requires that the GDT lemmas occurring in the candidate's *proof term* are a subset
+     of the lemmas its condition exposes: none for C0, C0h and C1; the item's direct
+     dependencies for C2. Occurrence is read from kernel constants, with the theorem's own
+     auxiliary constants expanded, not from text.
+   - Any `GDT.Expected` constant is forbidden.
+   - The theorem-level assembler applies C9 to every member, using that member's own
+     direct dependencies.
+   - C9 joins the checks required for `preliminary` and `certified`. All 39 reference proofs
+     satisfy it, and the Lean 4.9 recomputation equals the Stage 0 direct-dependency graph
+     for all 39 items.
+2. **C2 context ordering (clarification, no change).** `prompts_v2` lists the direct
+   dependencies in alphabetical order. Their statements depend only on the definitions,
+   so the order does not affect elaboration. The committed `prompts_v2` (Amendment A1
+   hash) is kept unchanged.
+3. **Runtime pins for the smoke test.** `gpu/pins.json` records:
+   - vLLM 0.32.0 (torch 2.13.0, CUDA 13.0 user space; NVIDIA driver R580 or later checked
+     by the preflight);
+   - the model file hashes at the pinned revision;
+   - `max_model_len` 20480 and `gpu_memory_utilization` 0.90;
+   - the Lean, lean4checker and REPL commits.
+
+   The model revision, dtype, sampling, seeds and budgets of §3–§6 are unchanged.
+4. **Tests.**
+   - `harness/tests/run_c2_condition_tests.py`: 9/9 (graph, prompt artifacts, elaboration
+     of 92 CoT prompts).
+   - `run_context_tests.py`: 42/42, including the transitive-use negative.
+   - `run_assembly_tests.py`: 23/23, including a member that uses a transitive dependency.

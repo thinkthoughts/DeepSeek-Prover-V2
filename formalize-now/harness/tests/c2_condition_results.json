@@ -1,0 +1,56 @@
+{
+ "failures": 0,
+ "results": [
+  {
+   "test": "G1_manifest_equals_stage0_kernel_record",
+   "passed": true,
+   "mismatches": {}
+  },
+  {
+   "test": "G2_known_acyclic_source_ordered",
+   "passed": true,
+   "unknown": {},
+   "later": []
+  },
+  {
+   "test": "G3_lean49_used_lemmas_equal_manifest_direct_deps",
+   "passed": true,
+   "discrepancies": {}
+  },
+  {
+   "test": "G4_cycle_unknown_dependency_unknown_target_rejected",
+   "passed": true,
+   "cycle": true,
+   "unknown_dependency": true,
+   "unknown_target": "error"
+  },
+  {
+   "test": "P1_trusted_statement_verbatim_once_last",
+   "passed": true,
+   "failures": {}
+  },
+  {
+   "test": "P2_context_is_exactly_direct_dependencies_in_order",
+   "passed": true,
+   "failures": {},
+   "transitive_only_total": 179
+  },
+  {
+   "test": "P3_no_reference_proof_lines_in_prompts",
+   "passed": true,
+   "lines_checked": 471
+  },
+  {
+   "test": "P4_prompts_v2_deterministic",
+   "passed": true,
+   "committed": "b7d12b0424614c0f",
+   "regenerated": "b7d12b0424614c0f"
+  },
+  {
+   "test": "P5_cot_prompt_code_elaborates_statement_preserved",
+   "passed": true,
+   "prompts_checked": 92,
+   "failures": {}
+  }
+ ]
+}

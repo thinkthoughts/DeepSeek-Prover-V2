@@ -19,6 +19,9 @@ as necessary and insufficient. A candidate is ACCEPTED only when all hold:
   C7 options   : no kernel/elaborator-weakening option (`debug.skipKernelTC`, …);
   C8 kernel    : (optional, --lean4checker) the compiled module replays through
                  lean4checker.
+  C9 lemmas    : (RPI-DS-001e) the GDT lemmas used by the proof TERM (kernel constants)
+                 are among those the condition exposes: none for C0/C1, the item's
+                 direct dependencies for C2 (reference_deps=True).
 A token scan (sorry, admit, apply?, native_decide, …) is recorded as an additional
 signal only; decisions come from C1–C8 on the elaborated declarations.
 
@@ -64,6 +67,39 @@ def expected_block(item):
                                  .replace("end GDT.Challenge", "end GDT.Expected")
     return st + "\n"
 
+USED_LEMMAS_LEAN = '''
+  -- RPI-DS-001e C9: GDT lemmas a theorem's proof term uses (kernel constants, not text).
+  -- Auxiliary constants of the theorem itself (`<thm>.proof_n`, `<thm>.match_n`, …) are
+  -- expanded; any other `GDT.Challenge.<x>…` or `GDT.Expected.<x>…` constant counts as a
+  -- use of `<x>` (reported with its namespace).
+  let usedLemmas (thm : Name) : List String := Id.run do
+    let start : List Name := match env.find? thm with
+      | some (.thmInfo t) => t.value.getUsedConstants.toList
+      | _ => []
+    let mut todo := start
+    let mut seen : NameSet := {}
+    let mut out : List String := []
+    for _ in [0:1000000] do
+      match todo with
+      | [] => break
+      | n :: rest =>
+        todo := rest
+        if seen.contains n then continue
+        seen := seen.insert n
+        let comps := n.components
+        if comps.length ≥ 3 && comps[0]! == `GDT && (comps[1]! == `Challenge || comps[1]! == `Expected) then
+          let base := (`GDT ++ comps[1]!) ++ comps[2]!
+          if base == thm && n != thm then
+            match env.find? n with
+            | some (.thmInfo t) => todo := t.value.getUsedConstants.toList ++ todo
+            | some (.defnInfo d) => todo := d.value.getUsedConstants.toList ++ todo
+            | _ => pure ()
+          else if base != thm then
+            let tag := (if comps[1]! == `Expected then "Expected." else "") ++ comps[2]!.toString
+            unless out.contains tag do out := out ++ [tag]
+    return out
+'''
+
 def check_block(name):
     short = name.split("/")[-1]
     return f'''
@@ -74,6 +110,7 @@ open Lean in
   let expected := `GDT.Expected.{short}
   let axiomsOf (c : Name) : Array Name :=
     (((Lean.Elab.Command.CollectAxioms.collect c).run env).run {{}}).2.axioms
+{USED_LEMMAS_LEAN}
   let localAxioms := env.constants.map₂.toList.filterMap fun (n, ci) =>
     if ci matches .axiomInfo _ then some n.toString else none
   let res ← match env.find? target, env.find? expected with
@@ -81,11 +118,18 @@ open Lean in
         ("present", toJson true), ("is_theorem", toJson (ci matches .thmInfo _)),
         ("type_alpha_equivalent", toJson (ci.type == eci.type)),
         ("axioms", toJson ((axiomsOf target).map toString)),
+        ("used_lemmas", toJson (usedLemmas target)),
         ("local_axioms", toJson localAxioms)])
     | none, _ => pure (Json.mkObj [("present", toJson false), ("local_axioms", toJson localAxioms)])
     | _, none => pure (Json.mkObj [("present", toJson false), ("expected_missing", toJson true)])
   IO.println ("@@RPI_CHECK " ++ res.compress)
 '''
+
+def direct_deps(item_id):
+    """Direct kernel dependencies (GDT lemmas) of an item, from the Stage 0 manifest."""
+    man = json.loads(DEPS_V2.read_text())
+    d = {x["short"]: x for x in man["declarations"]}[item_id.split("/")[-1]]
+    return sorted(x.split(".")[-1] for x in d["kernel_deps"] if x.startswith("GDT.Challenge."))
 
 def scan(text):
     code = re.sub(r"/-.*?-/", "", text, flags=re.S)
@@ -153,8 +197,10 @@ def assemble(item_id, candidate, mode, reference_deps=False):
         cand_part = head + body + "\n\nend GDT.Challenge\n"
         ctx, ctx_names = reference_context(item_id) if reference_deps else ("", [])
         rec["reference_context"] = ctx_names
+        rec["permitted_lemmas"] = direct_deps(item_id) if reference_deps else []
         source = prefix + expected_block(item) + "\n" + ctx + cand_part
     else:
+        rec["permitted_lemmas"] = []
         if not candidate.startswith(prefix):
             rec["checks"]["prefix"] = False
             rec = finalize(rec)
@@ -189,6 +235,13 @@ def apply_check_result(rec, chk_json):
     rec["local_axioms_compiler_specialisations"] = [a for a in res.get("local_axioms", []) if SPEC.search(a)]
     rec["local_axioms_declared"] = [a for a in res.get("local_axioms", []) if not SPEC.search(a)]
     rec["checks"]["C6_no_local_axioms"] = chk_json is not None and not rec["local_axioms_declared"]
+    # C9 (RPI-DS-001e): the proof uses only lemmas its condition exposes. C0/C1: none.
+    # C2 (reference_deps): the item's DIRECT dependencies, never the transitive rest of
+    # the verification context nor any GDT.Expected statement.
+    used = res.get("used_lemmas")
+    allowed = set(rec.get("permitted_lemmas", []))
+    rec["used_lemmas"] = used
+    rec["checks"]["C9_permitted_lemmas"] = used is not None and set(used) <= allowed
     return rec
 
 def verify(item_id, candidate, mode, use_l4c=False, reference_deps=False):
@@ -226,7 +279,7 @@ def verify(item_id, candidate, mode, use_l4c=False, reference_deps=False):
     return finalize(rec)
 
 REQUIRED = ["C1_compile", "C2_check_ran", "C3_present_theorem", "C4_statement",
-            "C5_axioms", "C6_no_local_axioms", "C7_options"]
+            "C5_axioms", "C6_no_local_axioms", "C7_options", "C9_permitted_lemmas"]
 
 def finalize(rec):
     checks = rec["checks"]

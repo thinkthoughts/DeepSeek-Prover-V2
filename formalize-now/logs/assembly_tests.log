@@ -7,8 +7,9 @@ M2_missing_target                          outcome=incomplete claim=none        
 M3_only_preliminary_candidate              outcome=incomplete claim=none                     PASS   ['rad_dvd_self']
 V1_invalid_sorry_marked_certified          outcome=rejected   claim=none                     PASS  ['all_axioms_whitelisted', 'lean4checker'] 
 V2_invalid_compile_error                   outcome=rejected   claim=none                     PASS  ['compile', 'all_axioms_whitelisted', 'lean4checker'] 
-V3_namespace_escape_injection              outcome=rejected   claim=none                     PASS  ['compile', 'all_present_theorems', 'all_statements_alpha_equivalent', 'all_axioms_whitelisted', 'lean4checker'] 
+V3_namespace_escape_injection              outcome=rejected   claim=none                     PASS  ['compile', 'all_present_theorems', 'all_statements_alpha_equivalent', 'all_axioms_whitelisted', 'all_use_only_direct_dependencies', 'lean4checker'] 
 V4_local_axiom_injection                   outcome=rejected   claim=none                     PASS  ['compile', 'all_axioms_whitelisted', 'no_declared_axioms', 'lean4checker'] 
+V5_member_uses_transitive_dependency       outcome=rejected   claim=none                     PASS  ['all_use_only_direct_dependencies', 'lean4checker'] 
 C1_conflict_same_sample_index              outcome=conflict   claim=none                     PASS   [{'lemma': 'rad_dvd_self', 'sample_index': 0}]
 C2_first_certified_selected                outcome=certified  claim=fixture_only             PASS   
 C3_lower_index_certified_but_wrong         outcome=rejected   claim=none                     PASS  ['compile', 'all_axioms_whitelisted', 'lean4checker'] 
@@ -21,6 +22,4 @@ S_gdt_density_reference_fixtures           outcome=certified  claim=fixture_only
 S_gdt_correction_factor_reference_fixtures outcome=certified  claim=fixture_only             PASS   
 S_general_divisor_theorem_reference_fixtures outcome=certified  claim=fixture_only             PASS   
 
-real	1m34.110s
-user	1m21.693s
-sys	0m12.275s
+# exit=0 wall_s=93.3 peak_tree_rss_kb=3951408

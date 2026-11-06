@@ -1,0 +1,14 @@
+I1_verify_model_pinned_tokenizer_passes                  PASS 
+I2_verify_model_corrupted_fails                          PASS 
+I3_verify_model_missing_weights_fails                    PASS 
+I4_budget_arithmetic                                     PASS 
+I5_budget_gate_pass_and_fail                             PASS 
+I6_budget_guard_stops_process                            PASS 
+I7_preflight_cpu_test_structure                          PASS 
+I8_live_gate_refusals                                    PASS 
+I9_interrupt_then_resume_no_duplicates                   PASS 
+I10_cost_records_valid_and_nulls_documented              PASS 
+I11_collect_results_archive_verifies                     PASS 
+I12_setup_script_syntax_and_dry_run                      PASS 
+
+# exit=0 wall_s=45.7 peak_tree_rss_kb=333112

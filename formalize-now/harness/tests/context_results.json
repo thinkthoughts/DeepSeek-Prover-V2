@@ -6,7 +6,7 @@
    "status": "certified",
    "reasons": [],
    "context": 0,
-   "wall_s": 5.8,
+   "wall_s": 4.3,
    "passed": true,
    "first_errors": []
   },
@@ -15,7 +15,7 @@
    "status": "certified",
    "reasons": [],
    "context": 7,
-   "wall_s": 6.1,
+   "wall_s": 4.6,
    "passed": true,
    "first_errors": []
   },
@@ -24,7 +24,7 @@
    "status": "certified",
    "reasons": [],
    "context": 21,
-   "wall_s": 6.4,
+   "wall_s": 5.4,
    "passed": true,
    "first_errors": []
   },
@@ -33,7 +33,7 @@
    "status": "certified",
    "reasons": [],
    "context": 22,
-   "wall_s": 6.7,
+   "wall_s": 6.0,
    "passed": true,
    "first_errors": []
   },
@@ -42,7 +42,7 @@
    "status": "certified",
    "reasons": [],
    "context": 25,
-   "wall_s": 7.1,
+   "wall_s": 5.9,
    "passed": true,
    "first_errors": []
   },
@@ -51,7 +51,7 @@
    "status": "certified",
    "reasons": [],
    "context": 8,
-   "wall_s": 5.6,
+   "wall_s": 4.6,
    "passed": true,
    "first_errors": []
   },
@@ -60,7 +60,7 @@
    "status": "certified",
    "reasons": [],
    "context": 33,
-   "wall_s": 7.9,
+   "wall_s": 7.5,
    "passed": true,
    "first_errors": []
   },
@@ -69,7 +69,7 @@
    "status": "certified",
    "reasons": [],
    "context": 0,
-   "wall_s": 5.6,
+   "wall_s": 5.3,
    "passed": true,
    "first_errors": []
   },
@@ -78,7 +78,7 @@
    "status": "certified",
    "reasons": [],
    "context": 1,
-   "wall_s": 5.7,
+   "wall_s": 5.3,
    "passed": true,
    "first_errors": []
   },
@@ -87,7 +87,7 @@
    "status": "certified",
    "reasons": [],
    "context": 0,
-   "wall_s": 5.5,
+   "wall_s": 5.3,
    "passed": true,
    "first_errors": []
   },
@@ -96,7 +96,7 @@
    "status": "certified",
    "reasons": [],
    "context": 1,
-   "wall_s": 5.6,
+   "wall_s": 5.4,
    "passed": true,
    "first_errors": []
   },
@@ -114,7 +114,7 @@
    "status": "certified",
    "reasons": [],
    "context": 5,
-   "wall_s": 5.4,
+   "wall_s": 4.4,
    "passed": true,
    "first_errors": []
   },
@@ -123,7 +123,7 @@
    "status": "certified",
    "reasons": [],
    "context": 0,
-   "wall_s": 5.5,
+   "wall_s": 4.6,
    "passed": true,
    "first_errors": []
   },
@@ -132,7 +132,7 @@
    "status": "certified",
    "reasons": [],
    "context": 1,
-   "wall_s": 5.6,
+   "wall_s": 4.3,
    "passed": true,
    "first_errors": []
   },
@@ -141,7 +141,7 @@
    "status": "certified",
    "reasons": [],
    "context": 0,
-   "wall_s": 5.6,
+   "wall_s": 4.3,
    "passed": true,
    "first_errors": []
   },
@@ -150,7 +150,7 @@
    "status": "certified",
    "reasons": [],
    "context": 5,
-   "wall_s": 5.7,
+   "wall_s": 4.3,
    "passed": true,
    "first_errors": []
   },
@@ -159,7 +159,7 @@
    "status": "certified",
    "reasons": [],
    "context": 0,
-   "wall_s": 5.7,
+   "wall_s": 4.3,
    "passed": true,
    "first_errors": []
   },
@@ -168,7 +168,7 @@
    "status": "certified",
    "reasons": [],
    "context": 0,
-   "wall_s": 5.6,
+   "wall_s": 4.5,
    "passed": true,
    "first_errors": []
   },
@@ -177,7 +177,7 @@
    "status": "certified",
    "reasons": [],
    "context": 7,
-   "wall_s": 5.5,
+   "wall_s": 4.6,
    "passed": true,
    "first_errors": []
   },
@@ -186,7 +186,7 @@
    "status": "certified",
    "reasons": [],
    "context": 6,
-   "wall_s": 5.9,
+   "wall_s": 4.4,
    "passed": true,
    "first_errors": []
   },
@@ -195,7 +195,7 @@
    "status": "certified",
    "reasons": [],
    "context": 0,
-   "wall_s": 5.8,
+   "wall_s": 4.1,
    "passed": true,
    "first_errors": []
   },
@@ -204,7 +204,7 @@
    "status": "certified",
    "reasons": [],
    "context": 3,
-   "wall_s": 5.4,
+   "wall_s": 4.4,
    "passed": true,
    "first_errors": []
   },
@@ -213,7 +213,7 @@
    "status": "certified",
    "reasons": [],
    "context": 10,
-   "wall_s": 5.8,
+   "wall_s": 4.4,
    "passed": true,
    "first_errors": []
   },
@@ -222,7 +222,7 @@
    "status": "certified",
    "reasons": [],
    "context": 8,
-   "wall_s": 5.5,
+   "wall_s": 4.8,
    "passed": true,
    "first_errors": []
   },
@@ -231,7 +231,7 @@
    "status": "certified",
    "reasons": [],
    "context": 0,
-   "wall_s": 5.6,
+   "wall_s": 4.3,
    "passed": true,
    "first_errors": []
   },
@@ -240,7 +240,7 @@
    "status": "certified",
    "reasons": [],
    "context": 14,
-   "wall_s": 6.2,
+   "wall_s": 4.6,
    "passed": true,
    "first_errors": []
   },
@@ -249,7 +249,7 @@
    "status": "certified",
    "reasons": [],
    "context": 1,
-   "wall_s": 5.7,
+   "wall_s": 4.5,
    "passed": true,
    "first_errors": []
   },
@@ -258,7 +258,7 @@
    "status": "certified",
    "reasons": [],
    "context": 15,
-   "wall_s": 6.3,
+   "wall_s": 5.3,
    "passed": true,
    "first_errors": []
   },
@@ -267,7 +267,7 @@
    "status": "certified",
    "reasons": [],
    "context": 0,
-   "wall_s": 5.5,
+   "wall_s": 4.8,
    "passed": true,
    "first_errors": []
   },
@@ -276,7 +276,7 @@
    "status": "certified",
    "reasons": [],
    "context": 5,
-   "wall_s": 5.8,
+   "wall_s": 4.8,
    "passed": true,
    "first_errors": []
   },
@@ -285,7 +285,7 @@
    "status": "certified",
    "reasons": [],
    "context": 10,
-   "wall_s": 6.0,
+   "wall_s": 5.3,
    "passed": true,
    "first_errors": []
   },
@@ -294,7 +294,7 @@
    "status": "certified",
    "reasons": [],
    "context": 0,
-   "wall_s": 5.5,
+   "wall_s": 4.7,
    "passed": true,
    "first_errors": []
   },
@@ -312,7 +312,7 @@
    "status": "certified",
    "reasons": [],
    "context": 18,
-   "wall_s": 6.3,
+   "wall_s": 5.9,
    "passed": true,
    "first_errors": []
   },
@@ -321,7 +321,7 @@
    "status": "certified",
    "reasons": [],
    "context": 0,
-   "wall_s": 5.6,
+   "wall_s": 4.8,
    "passed": true,
    "first_errors": []
   },
@@ -330,7 +330,7 @@
    "status": "certified",
    "reasons": [],
    "context": 0,
-   "wall_s": 5.2,
+   "wall_s": 4.4,
    "passed": true,
    "first_errors": []
   },
@@ -339,7 +339,7 @@
    "status": "certified",
    "reasons": [],
    "context": 4,
-   "wall_s": 5.6,
+   "wall_s": 4.9,
    "passed": true,
    "first_errors": []
   },
@@ -348,7 +348,7 @@
    "status": "certified",
    "reasons": [],
    "context": 1,
-   "wall_s": 5.9,
+   "wall_s": 4.4,
    "passed": true,
    "first_errors": []
   },
@@ -367,6 +367,14 @@
    "reasons": [
     "C1_compile",
     "C5_axioms"
+   ],
+   "passed": true
+  },
+  {
+   "case": "N3_uses_transitive_not_direct_dependency",
+   "status": "rejected",
+   "reasons": [
+    "C9_permitted_lemmas"
    ],
    "passed": true
   }

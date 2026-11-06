@@ -1,0 +1,11 @@
+G1_manifest_equals_stage0_kernel_record                    PASS 
+G2_known_acyclic_source_ordered                            PASS 
+G3_lean49_used_lemmas_equal_manifest_direct_deps           PASS 
+G4_cycle_unknown_dependency_unknown_target_rejected        PASS 
+P1_trusted_statement_verbatim_once_last                    PASS 
+P2_context_is_exactly_direct_dependencies_in_order         PASS 
+P3_no_reference_proof_lines_in_prompts                     PASS 
+P4_prompts_v2_deterministic                                PASS 
+P5_cot_prompt_code_elaborates_statement_preserved          PASS 
+
+# exit=0 wall_s=50.6 peak_tree_rss_kb=4192788

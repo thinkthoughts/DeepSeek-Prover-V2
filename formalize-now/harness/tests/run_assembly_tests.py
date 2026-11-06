@@ -52,6 +52,8 @@ CASES = [
   replace(ref_set(P), "coprime_add_mul_right", proof="simp\nend GDT.Challenge\n\ntheorem gdt_periodic : True := trivial"), "rejected", "none"),
  ("V4_local_axiom_injection", P,
   replace(ref_set(P), "rad_dvd_self", proof="exact rpi_cheat.elim\naxiom rpi_cheat : False"), "rejected", "none"),
+ ("V5_member_uses_transitive_dependency", P,
+  replace(ref_set(P), P, proof="have _t := @coprime_iff_coprime_rad\n" + ref_body(P)), "rejected", "none"),
  ("C1_conflict_same_sample_index", P,
   ref_set(P) + [cand("rad_dvd_self", "exact Nat.prod_primeFactors_dvd n", idx=0)], "conflict", "none"),
  ("C2_first_certified_selected", P,

@@ -8,6 +8,8 @@ R1–R39: every item's own reference proof body, placed under the trusted DeepSe
         (`import Mathlib`, `open BigOperators Real Nat Topology Rat`).
 N1:     a C2 candidate citing a lemma outside its dependency closure. Expected: rejected.
 N2:     without reference_deps, a body citing a dependency. Expected: rejected (C1).
+N3:     a C2 body that compiles but uses a transitive (non-direct) dependency present in
+        the verification context. Expected: rejected (C9, RPI-DS-001e).
 usage: run_context_tests.py  (needs LEAN4CHECKER; writes tests/context_results.json)
 """
 import json, sys, time
@@ -29,7 +31,9 @@ def main():
                          first_errors=[m["data"][:200] for m in r.get("messages", []) if m["severity"] == "error"][:2]))
         print(f"R {iid:48s} ctx={len(r.get('reference_context', [])):2d} {r['status']:10s} {'PASS' if ok else 'FAIL'} {r['reasons']}", flush=True)
     neg = [("N1_cites_lemma_outside_closure", "gdt/gcd_with_N_iff_gcd_with_R", "exact (gdt_periodic hN hm h 0).1", True),
-           ("N2_cites_dependency_without_context", "gdt/gcd_with_N_iff_gcd_with_R", ref_body("gcd_with_N_iff_gcd_with_R"), False)]
+           ("N2_cites_dependency_without_context", "gdt/gcd_with_N_iff_gcd_with_R", ref_body("gcd_with_N_iff_gcd_with_R"), False),
+           ("N3_uses_transitive_not_direct_dependency", "gdt/gdt_periodic",
+            "have _t := @coprime_iff_coprime_rad\n" + ref_body("gdt_periodic"), True)]
     for cid, iid, body, ctx in neg:
         r = vs.verify(iid, body, "proof", use_l4c=True, reference_deps=ctx)
         ok = r["status"] == "rejected"; fails += not ok

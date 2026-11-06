@@ -14,4 +14,4 @@ X13_noncot_trailing_commentary                     cat=extracted        final=ce
 X14_noncot_truncated                               cat=truncated        final=None       PASS  stmt_echo=None extra=None
 X15_cot_gdt_periodic_reference_body_needs_lemmas   cat=extracted        final=rejected   PASS  stmt_echo=True extra=[]
 
-# exit=0 wall_s=25.0 peak_tree_rss_kb=7796028
+# exit=0 wall_s=29.6 peak_tree_rss_kb=7828868

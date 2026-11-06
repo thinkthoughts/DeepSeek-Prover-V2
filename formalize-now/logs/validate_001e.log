@@ -1,0 +1,38 @@
+# exit=0 wall_s=3.8 peak_tree_rss_kb=2857832
+lean49_lake_build_001e=0
+# exit=0 wall_s=5.6 peak_tree_rss_kb=1577532
+lean49_sigcheck=0
+certified 39 / 39 | scan {} | sigs unchanged True
+certify=0
+# exit=0 wall_s=1.0 peak_tree_rss_kb=1236672
+lean4checker_GDTBench.SolutionRef=0
+# exit=0 wall_s=272.6 peak_tree_rss_kb=1659288
+lean4checker_fresh_GDTBench.SolutionRef=0
+# exit=0 wall_s=46.4 peak_tree_rss_kb=3908588
+strict_verifier_tests=0
+# exit=0 wall_s=64.6 peak_tree_rss_kb=7861476
+repl_adapter_tests=0
+# exit=0 wall_s=29.6 peak_tree_rss_kb=7828868
+extract_tests=0
+# exit=0 wall_s=198.0 peak_tree_rss_kb=3944984
+context_tests=0
+# exit=0 wall_s=93.3 peak_tree_rss_kb=3951408
+assembly_tests=0
+# exit=0 wall_s=50.6 peak_tree_rss_kb=4192788
+c2_condition_tests=0
+# exit=0 wall_s=45.7 peak_tree_rss_kb=333112
+infra_tests=0
+# exit=0 wall_s=0.5 peak_tree_rss_kb=11064
+prompts_v1_regen=0
+# exit=0 wall_s=0.5 peak_tree_rss_kb=11108
+prompts_v2_regen=0
+prompts_unchanged=0
+# exit=0 wall_s=5.1 peak_tree_rss_kb=3926400
+smoke_dry_cot=0
+# exit=0 wall_s=5.7 peak_tree_rss_kb=3930360
+smoke_dry_noncot=0
+
+real	13m43.230s
+user	12m15.475s
+sys	1m17.128s
+exit=0

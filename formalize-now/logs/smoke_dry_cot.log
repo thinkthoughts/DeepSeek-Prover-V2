@@ -1,0 +1,7 @@
+{"prompt_id": "C0/cot/gdt_periodic", "sample": 0, "category": "extracted", "status": "rejected"}
+{"prompt_id": "C0/cot/gdt_periodic", "sample": 1, "category": "no_code_block", "status": "no_code_block"}
+{"prompt_id": "C2/cot/gcd_with_N_iff_gcd_with_R", "sample": 0, "category": "extracted", "status": "rejected"}
+{"prompt_id": "C2/cot/gcd_with_N_iff_gcd_with_R", "sample": 1, "category": "extracted", "status": "rejected"}
+run dir: /home/claude/rpi/DeepSeek-Prover-V2/formalize-now/runs/smoke-dry-20261105T193014
+
+# exit=0 wall_s=5.1 peak_tree_rss_kb=3926400

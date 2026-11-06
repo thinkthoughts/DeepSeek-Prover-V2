@@ -1,0 +1,87 @@
+{
+ "schema": "rpi-ds-001e/gpu-pins/v1",
+ "note": "Single source of truth for the GPU smoke test. Changing any value is a pre-registration amendment.",
+ "model": {
+  "id": "deepseek-ai/DeepSeek-Prover-V2-7B",
+  "revision": "a8d9e14432b2e8dd9df2a4d4e70f1ba9bc8d9b7b",
+  "dtype": "bfloat16",
+  "files": {
+   "model-00001-of-000002.safetensors": {
+    "size": 8596557586,
+    "sha256": "f7eebe5f578ccfa90eea70b00c164adff6df2bdec511b9939c101234c3e3ae65"
+   },
+   "model-00002-of-000002.safetensors": {
+    "size": 5224205544,
+    "sha256": "7dd518c7ca44e82a7bda20f1959bd131b89f721c70fb3bc2e9ac0b53ad2c4ce9"
+   },
+   "config.json": {
+    "size": 833,
+    "git_blob_sha1": "24e7705f3f30c6efccf04dca8d5e906740cef78e"
+   },
+   "model.safetensors.index.json": {
+    "size": 22736,
+    "git_blob_sha1": "629136d2494fd5adeac9683eca246759e94b151d"
+   },
+   "tokenizer.json": {
+    "size": 4610628,
+    "git_blob_sha1": "ae8c6f0b4e0cdb2102a045267678e8f3d3d54ceb",
+    "sha256": "091b9dadb9845f0e8386c38bdb87e98db8adc7b0aacf36cb9257c00d0a668714"
+   },
+   "tokenizer_config.json": {
+    "size": 3883,
+    "git_blob_sha1": "a93ec11b38b56e5163e1400a0de16dea715933d8"
+   }
+  }
+ },
+ "python": {
+  "version": "3.12",
+  "packages": {
+   "vllm": "0.32.0",
+   "torch": "2.13.0",
+   "pynvml_package": "nvidia-ml-py"
+  },
+  "vllm_wheel_sha256_x86_64": "5e2ecdc5b0baf72921c288486417ca82778456a448e4fe60b62ee43c0dfc8611",
+  "note": "torch 2.13.0 (required by vllm 0.32.0) depends on cuda-toolkit 13.0.3"
+ },
+ "gpu": {
+  "min_memory_gb": 40,
+  "target": "NVIDIA RTX A6000 48 GB",
+  "min_driver_major": 580,
+  "driver_note": "CUDA 13.0 user-space libraries need an R580+ driver (verify against NVIDIA's CUDA 13.0 release notes on the instance); the preflight fails below this"
+ },
+ "host": {
+  "min_disk_free_gb": 60,
+  "min_ram_gb": 32
+ },
+ "lean": {
+  "toolchain": "leanprover/lean4:v4.9.0-rc1",
+  "mathlib": "d1d1e4b72c6e009edd97cabe1d661b021fe8eeae",
+  "lean4checker": "9da7f4a3b967af2b83038960652949e683db40a5",
+  "repl": "3334a97b268ecc67beb36a75787f7e831208a724"
+ },
+ "inference": {
+  "max_model_len": 20480,
+  "gpu_memory_utilization": 0.9,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "max_new_tokens": {
+   "cot": 16384,
+   "noncot": 8192
+  },
+  "smoke_max_outputs_per_target": 2
+ },
+ "budget": {
+  "currency": "USD",
+  "rate_per_hour": 1.09,
+  "cap": 5.0,
+  "warn_at": 3.0,
+  "stop_at": 4.0,
+  "max_setup_spend_before_inference": 1.5,
+  "reserve_for_collection_and_shutdown": 0.5,
+  "note": "Local guard only. It is NOT a provider-side spending cap; the instance bills until terminated in the provider console."
+ },
+ "repo": {
+  "url": "https://github.com/thinkthoughts/DeepSeek-Prover-V2",
+  "branch": "formalize-now/gdt-ladder-stage0"
+ }
+}

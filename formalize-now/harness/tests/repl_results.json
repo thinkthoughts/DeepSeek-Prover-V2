@@ -1,5 +1,5 @@
 {
- "repl_import_s": 2.7,
+ "repl_import_s": 1.9,
  "disagreements": 0,
  "comparison": [
   {
@@ -14,7 +14,8 @@
     "C4_statement": true,
     "C5_axioms": true,
     "C6_no_local_axioms": true,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": true
    },
    "repl_checks": {
     "C1_compile": true,
@@ -23,12 +24,13 @@
     "C4_statement": true,
     "C5_axioms": true,
     "C6_no_local_axioms": true,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": true
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": true,
-   "direct_wall_s": 3.2,
-   "repl_wall_s": 0.4
+   "direct_wall_s": 2.3,
+   "repl_wall_s": 0.6
   },
   {
    "case": "V2_valid_proof_coprime_add_mul_right",
@@ -42,7 +44,8 @@
     "C4_statement": true,
     "C5_axioms": true,
     "C6_no_local_axioms": true,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": true
    },
    "repl_checks": {
     "C1_compile": true,
@@ -51,12 +54,13 @@
     "C4_statement": true,
     "C5_axioms": true,
     "C6_no_local_axioms": true,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": true
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": true,
-   "direct_wall_s": 2.9,
-   "repl_wall_s": 0.3
+   "direct_wall_s": 2.3,
+   "repl_wall_s": 0.5
   },
   {
    "case": "V3_valid_full_code_gdt_empty",
@@ -71,6 +75,7 @@
     "C5_axioms": true,
     "C6_no_local_axioms": true,
     "C7_options": true,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_checks": {
@@ -81,12 +86,13 @@
     "C5_axioms": true,
     "C6_no_local_axioms": true,
     "C7_options": true,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": true,
-   "direct_wall_s": 2.9,
-   "repl_wall_s": 0.3
+   "direct_wall_s": 2.3,
+   "repl_wall_s": 0.5
   },
   {
    "case": "I1_sorry",
@@ -100,7 +106,8 @@
     "C4_statement": true,
     "C5_axioms": false,
     "C6_no_local_axioms": true,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": true
    },
    "repl_checks": {
     "C1_compile": true,
@@ -109,14 +116,15 @@
     "C4_statement": true,
     "C5_axioms": false,
     "C6_no_local_axioms": true,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": true
    },
    "repl_sorries_in_candidate": [
     55
    ],
    "v15_complete_on_repl_messages": false,
-   "direct_wall_s": 2.9,
-   "repl_wall_s": 0.2
+   "direct_wall_s": 2.2,
+   "repl_wall_s": 0.5
   },
   {
    "case": "I2_admit",
@@ -130,7 +138,8 @@
     "C4_statement": true,
     "C5_axioms": false,
     "C6_no_local_axioms": true,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": true
    },
    "repl_checks": {
     "C1_compile": true,
@@ -139,12 +148,13 @@
     "C4_statement": true,
     "C5_axioms": false,
     "C6_no_local_axioms": true,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": true
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": false,
-   "direct_wall_s": 2.8,
-   "repl_wall_s": 0.2
+   "direct_wall_s": 2.2,
+   "repl_wall_s": 0.5
   },
   {
    "case": "I3_compile_error",
@@ -158,7 +168,8 @@
     "C4_statement": true,
     "C5_axioms": false,
     "C6_no_local_axioms": true,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": true
    },
    "repl_checks": {
     "C1_compile": false,
@@ -167,12 +178,13 @@
     "C4_statement": true,
     "C5_axioms": false,
     "C6_no_local_axioms": true,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": true
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": false,
-   "direct_wall_s": 2.9,
-   "repl_wall_s": 0.2
+   "direct_wall_s": 2.3,
+   "repl_wall_s": 0.5
   },
   {
    "case": "I4_weakened_statement_full_code",
@@ -187,6 +199,7 @@
     "C5_axioms": true,
     "C6_no_local_axioms": true,
     "C7_options": true,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_checks": {
@@ -197,12 +210,13 @@
     "C5_axioms": true,
     "C6_no_local_axioms": true,
     "C7_options": true,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": true,
-   "direct_wall_s": 2.9,
-   "repl_wall_s": 0.2
+   "direct_wall_s": 2.3,
+   "repl_wall_s": 0.5
   },
   {
    "case": "I5_local_axiom_full_code",
@@ -217,6 +231,7 @@
     "C5_axioms": false,
     "C6_no_local_axioms": false,
     "C7_options": true,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_checks": {
@@ -227,12 +242,13 @@
     "C5_axioms": false,
     "C6_no_local_axioms": false,
     "C7_options": true,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": true,
-   "direct_wall_s": 2.8,
-   "repl_wall_s": 0.2
+   "direct_wall_s": 2.3,
+   "repl_wall_s": 0.5
   },
   {
    "case": "I6_exit_after_partial_proof",
@@ -246,7 +262,8 @@
     "C4_statement": false,
     "C5_axioms": false,
     "C6_no_local_axioms": false,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": false
    },
    "repl_checks": {
     "C1_compile": false,
@@ -255,11 +272,12 @@
     "C4_statement": false,
     "C5_axioms": false,
     "C6_no_local_axioms": false,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": false
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": false,
-   "direct_wall_s": 2.7,
+   "direct_wall_s": 2.1,
    "repl_wall_s": 0.1
   },
   {
@@ -275,6 +293,7 @@
     "C5_axioms": false,
     "C6_no_local_axioms": true,
     "C7_options": true,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_checks": {
@@ -285,12 +304,13 @@
     "C5_axioms": false,
     "C6_no_local_axioms": true,
     "C7_options": true,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": true,
-   "direct_wall_s": 2.9,
-   "repl_wall_s": 0.3
+   "direct_wall_s": 3.0,
+   "repl_wall_s": 0.6
   },
   {
    "case": "I8_renamed_theorem_full_code",
@@ -305,6 +325,7 @@
     "C5_axioms": false,
     "C6_no_local_axioms": true,
     "C7_options": true,
+    "C9_permitted_lemmas": false,
     "prefix": true
    },
    "repl_checks": {
@@ -315,12 +336,13 @@
     "C5_axioms": false,
     "C6_no_local_axioms": true,
     "C7_options": true,
+    "C9_permitted_lemmas": false,
     "prefix": true
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": true,
-   "direct_wall_s": 2.6,
-   "repl_wall_s": 0.2
+   "direct_wall_s": 2.9,
+   "repl_wall_s": 0.5
   },
   {
    "case": "I9_prefix_tampering_full_code",
@@ -335,6 +357,7 @@
     "C5_axioms": null,
     "C6_no_local_axioms": null,
     "C7_options": null,
+    "C9_permitted_lemmas": null,
     "prefix": false
    },
    "repl_checks": {
@@ -345,6 +368,7 @@
     "C5_axioms": null,
     "C6_no_local_axioms": null,
     "C7_options": null,
+    "C9_permitted_lemmas": null,
     "prefix": false
    },
    "repl_sorries_in_candidate": null,
@@ -365,6 +389,7 @@
     "C5_axioms": true,
     "C6_no_local_axioms": true,
     "C7_options": false,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_checks": {
@@ -375,12 +400,13 @@
     "C5_axioms": true,
     "C6_no_local_axioms": true,
     "C7_options": false,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": false,
-   "direct_wall_s": 3.1,
-   "repl_wall_s": 0.4
+   "direct_wall_s": 2.3,
+   "repl_wall_s": 0.6
   },
   {
    "case": "P1_valid_proof_without_kernel_replay",
@@ -394,7 +420,8 @@
     "C4_statement": true,
     "C5_axioms": true,
     "C6_no_local_axioms": true,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": true
    },
    "repl_checks": {
     "C1_compile": true,
@@ -403,12 +430,13 @@
     "C4_statement": true,
     "C5_axioms": true,
     "C6_no_local_axioms": true,
-    "C7_options": true
+    "C7_options": true,
+    "C9_permitted_lemmas": true
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": true,
-   "direct_wall_s": 3.0,
-   "repl_wall_s": 0.3
+   "direct_wall_s": 2.9,
+   "repl_wall_s": 0.6
   },
   {
    "case": "P2_valid_full_code_without_kernel_replay",
@@ -423,6 +451,7 @@
     "C5_axioms": true,
     "C6_no_local_axioms": true,
     "C7_options": true,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_checks": {
@@ -433,12 +462,13 @@
     "C5_axioms": true,
     "C6_no_local_axioms": true,
     "C7_options": true,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": true,
-   "direct_wall_s": 2.9,
-   "repl_wall_s": 0.3
+   "direct_wall_s": 2.8,
+   "repl_wall_s": 0.5
   },
   {
    "case": "P3_local_axiom_without_kernel_replay",
@@ -453,6 +483,7 @@
     "C5_axioms": false,
     "C6_no_local_axioms": false,
     "C7_options": true,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_checks": {
@@ -463,12 +494,13 @@
     "C5_axioms": false,
     "C6_no_local_axioms": false,
     "C7_options": true,
+    "C9_permitted_lemmas": true,
     "prefix": true
    },
    "repl_sorries_in_candidate": [],
    "v15_complete_on_repl_messages": true,
-   "direct_wall_s": 2.7,
-   "repl_wall_s": 0.2
+   "direct_wall_s": 2.8,
+   "repl_wall_s": 0.5
   }
  ],
  "certify_mode": [
