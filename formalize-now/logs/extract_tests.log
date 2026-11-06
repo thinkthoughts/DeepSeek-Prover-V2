@@ -1,0 +1,19 @@
+X1_cot_full_file_echo                              cat=extracted        final=certified  PASS  stmt_echo=True extra=[]
+X2_cot_header_drift_maxHeartbeats                  cat=extracted        final=certified  PASS  stmt_echo=True extra=[]
+X3_cot_weakened_statement_echo                     cat=extracted        final=rejected   PASS  stmt_echo=False extra=[]
+X4_cot_aux_lemma_before_target                     cat=extracted        final=rejected   PASS  stmt_echo=True extra=['theorem rpi_aux']
+X5_cot_no_code_block                               cat=no_code_block    final=None       PASS  stmt_echo=None extra=None
+X6_cot_truncated_open_block                        cat=truncated        final=None       PASS  stmt_echo=None extra=None
+X7_cot_target_missing                              cat=target_missing   final=None       PASS  stmt_echo=None extra=['theorem gdt_empty_v2']
+X8_cot_duplicate_target                            cat=ambiguous_target final=None       PASS  stmt_echo=None extra=[]
+X9_cot_term_mode                                   cat=term_mode_proof  final=None       PASS  stmt_echo=True extra=[]
+X10_cot_exit_inside_body                           cat=extracted        final=rejected   PASS  stmt_echo=True extra=[]
+X11_cot_sorry_body                                 cat=extracted        final=rejected   PASS  stmt_echo=True extra=[]
+X12_noncot_continuation                            cat=extracted        final=certified  PASS  stmt_echo=None extra=None
+X13_noncot_trailing_commentary                     cat=extracted        final=certified  PASS  stmt_echo=None extra=None
+X14_noncot_truncated                               cat=truncated        final=None       PASS  stmt_echo=None extra=None
+X15_cot_gdt_periodic_reference_body_needs_lemmas   cat=extracted        final=rejected   PASS  stmt_echo=True extra=[]
+
+real	0m27.281s
+user	0m23.397s
+sys	0m3.771s

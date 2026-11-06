@@ -1,5 +1,9 @@
 # Recommendation — RPI-DS-001d
 
+> **Correction (2026-11-05, RPI-DS-001d):** the pilot needs a GPU with ≥ 40 GB. A 24 GB
+> card cannot hold the KV cache for the pre-registered 16,384-token CoT budget alongside
+> the 13.8 GB of weights. See `SMOKE_INTERFACE_REVIEW_001d.md` §4.
+
 **Next experiment: a pilot run of the pre-registered design on one GPU, with C0 and C2 on
 `gdt_periodic` and its 7-lemma closure, followed directly by the full run if the pilot's
 pipeline checks pass.**

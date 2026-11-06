@@ -74,5 +74,50 @@
   "seed": "rpi-ds-001c-bootstrap"
  },
  "interpretation": "PREREGISTRATION.md section 10",
- "amendments": []
+ "amendments": [
+  {
+   "id": "A1",
+   "date": "2026-11-05",
+   "recorded_before_model_output": true,
+   "prompts_v2": {
+    "file": "benchmark/prompts_v2.jsonl",
+    "sha256": "b7d12b0424614c0f5bf918e4a409a4dfe2f1f5bdbad6f6626adf095fbcbe9e5e",
+    "change": "non-CoT prompts end at the target's ':= by\\n' (V1.5 non_cot_prompt convention); CoT prompts byte-identical to v1"
+   },
+   "extraction": {
+    "module": "harness/extract.py",
+    "rule": "proof-body extraction under trusted header/definitions/statement; generated specification text never compiled",
+    "categories": [
+     "no_code_block",
+     "truncated",
+     "target_missing",
+     "ambiguous_target",
+     "term_mode_proof",
+     "empty_proof",
+     "extracted"
+    ],
+    "retired": [
+     "prefix_mismatch"
+    ]
+   },
+   "unchanged": [
+    "verification C1-C8",
+    "axiom whitelist",
+    "statement alpha-equivalence",
+    "model revision",
+    "sampling",
+    "seeds",
+    "conditions",
+    "budgets",
+    "metrics",
+    "interpretation"
+   ],
+   "smoke_exclusion": {
+    "scope": "RPI-DS-001d smoke samples excluded from all confirmatory statistics",
+    "seed_prefix": "rpi-ds-001d-smoke"
+   },
+   "tests": "harness/tests/run_extract_tests.py 15/15"
+  }
+ ],
+ "original_sha256_before_amendments": "fb58a25dba660aac8a3e17eeba164bb9d75350eb87c5ebda9ad0214009f3989f"
 }

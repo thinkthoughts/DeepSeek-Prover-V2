@@ -12,12 +12,14 @@
 | Environment | Lean, REPL and Mathlib sources identical to DeepSeek's. Batteries differs by one linter commit, outside the proofs' closure. Exact fork build deferred |
 | Pre-registration | `PREREGISTRATION.md`, `preregistration.json` (sha256 `fb58a25d…`), prompts `benchmark/prompts_v1.jsonl` (184; 0 reference-proof matches) |
 | Instrumentation | `harness/instrument.py`. Tokens, attempts, GPU time and energy are filled at inference; RAPL and NVML are absent on this host and recorded as such |
-| Model inference | not started; gate in `reports/RECOMMENDATION_RPI-DS-001d.md` |
+| Model inference | not started. Smoke test (≤ 2 outputs) ready pending approval of a ≥ 40 GB GPU host; pilot on hold until the C2 assembler exists (`reports/SMOKE_INTERFACE_REVIEW_001d.md`) |
+| Pre-registration amendments | A1 (2026-11-05, before any output): non-CoT prompts v2, proof-body extraction, smoke exclusion |
 
 001c reports:
 
 - `reports/VPS_VERIFICATION_2026-11-05.md` (separately reported VPS 39/39 certification and kernel replay)
 - `reports/PLAN_RPI-DS-001d_SMOKE.md` (minimal GPU interface test; planning only)
+- `reports/SMOKE_INTERFACE_REVIEW_001d.md` (001d: output extraction, trusted assembly, C2 context, hardware estimate, go/no-go; Amendment A1)
 - `reports/CAUTO_BASELINE_001c.md`
 - `reports/ENVIRONMENT_COMPATIBILITY_001c.md`
 - `reports/RPI-DS-001c_BUILD_AND_VALIDATION.md`

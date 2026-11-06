@@ -1,0 +1,527 @@
+{
+ "failures": 0,
+ "cases": [
+  {
+   "case": "X1_cot_full_file_echo",
+   "item": "gdt/gdt_empty",
+   "format": "cot",
+   "category": "extracted",
+   "expected_category": "extracted",
+   "diagnostics": {
+    "format": "cot",
+    "finish_reason": "stop",
+    "completion_chars": 2494,
+    "code_blocks": 1,
+    "declarations_in_block": [
+     "def rad",
+     "def d",
+     "def R",
+     "def Tmin",
+     "def Admissible",
+     "def accepted",
+     "instance acceptedDecidable",
+     "def S",
+     "def IsPeriod",
+     "theorem gdt_empty"
+    ],
+    "echoed_trusted_declarations": [
+     "Admissible",
+     "IsPeriod",
+     "R",
+     "S",
+     "Tmin",
+     "accepted",
+     "acceptedDecidable",
+     "d",
+     "rad"
+    ],
+    "extra_declarations": [],
+    "header_echo_matches": true,
+    "statement_echo_matches": true
+   },
+   "repl_status": "preliminary",
+   "final_status": "certified",
+   "reasons": [],
+   "passed": true
+  },
+  {
+   "case": "X2_cot_header_drift_maxHeartbeats",
+   "item": "gdt/gdt_empty",
+   "format": "cot",
+   "category": "extracted",
+   "expected_category": "extracted",
+   "diagnostics": {
+    "format": "cot",
+    "finish_reason": "stop",
+    "completion_chars": 2499,
+    "code_blocks": 1,
+    "declarations_in_block": [
+     "def rad",
+     "def d",
+     "def R",
+     "def Tmin",
+     "def Admissible",
+     "def accepted",
+     "instance acceptedDecidable",
+     "def S",
+     "def IsPeriod",
+     "theorem gdt_empty"
+    ],
+    "echoed_trusted_declarations": [
+     "Admissible",
+     "IsPeriod",
+     "R",
+     "S",
+     "Tmin",
+     "accepted",
+     "acceptedDecidable",
+     "d",
+     "rad"
+    ],
+    "extra_declarations": [],
+    "header_echo_matches": false,
+    "statement_echo_matches": true
+   },
+   "repl_status": "preliminary",
+   "final_status": "certified",
+   "reasons": [],
+   "passed": true
+  },
+  {
+   "case": "X3_cot_weakened_statement_echo",
+   "item": "gdt/gdt_empty",
+   "format": "cot",
+   "category": "extracted",
+   "expected_category": "extracted",
+   "diagnostics": {
+    "format": "cot",
+    "finish_reason": "stop",
+    "completion_chars": 1083,
+    "code_blocks": 1,
+    "declarations_in_block": [
+     "def rad",
+     "def d",
+     "def R",
+     "def Tmin",
+     "def Admissible",
+     "def accepted",
+     "instance acceptedDecidable",
+     "def S",
+     "def IsPeriod",
+     "theorem gdt_empty"
+    ],
+    "echoed_trusted_declarations": [
+     "Admissible",
+     "IsPeriod",
+     "R",
+     "S",
+     "Tmin",
+     "accepted",
+     "acceptedDecidable",
+     "d",
+     "rad"
+    ],
+    "extra_declarations": [],
+    "header_echo_matches": true,
+    "statement_echo_matches": false
+   },
+   "repl_status": "rejected",
+   "final_status": "rejected",
+   "reasons": [
+    "C1_compile",
+    "C5_axioms"
+   ],
+   "passed": true
+  },
+  {
+   "case": "X4_cot_aux_lemma_before_target",
+   "item": "gdt/coprime_add_mul_right",
+   "format": "cot",
+   "category": "extracted",
+   "expected_category": "extracted",
+   "diagnostics": {
+    "format": "cot",
+    "finish_reason": "stop",
+    "completion_chars": 1150,
+    "code_blocks": 1,
+    "declarations_in_block": [
+     "def rad",
+     "def d",
+     "def R",
+     "def Tmin",
+     "def Admissible",
+     "def accepted",
+     "instance acceptedDecidable",
+     "def S",
+     "def IsPeriod",
+     "theorem rpi_aux",
+     "lemma coprime_add_mul_right"
+    ],
+    "echoed_trusted_declarations": [
+     "Admissible",
+     "IsPeriod",
+     "R",
+     "S",
+     "Tmin",
+     "accepted",
+     "acceptedDecidable",
+     "d",
+     "rad"
+    ],
+    "extra_declarations": [
+     "theorem rpi_aux"
+    ],
+    "header_echo_matches": true,
+    "statement_echo_matches": true
+   },
+   "repl_status": "rejected",
+   "final_status": "rejected",
+   "reasons": [
+    "C1_compile",
+    "C5_axioms"
+   ],
+   "passed": true
+  },
+  {
+   "case": "X5_cot_no_code_block",
+   "item": "gdt/gdt_empty",
+   "format": "cot",
+   "category": "no_code_block",
+   "expected_category": "no_code_block",
+   "diagnostics": {
+    "format": "cot",
+    "finish_reason": "stop",
+    "completion_chars": 98
+   },
+   "final_status": null,
+   "passed": true
+  },
+  {
+   "case": "X6_cot_truncated_open_block",
+   "item": "gdt/gdt_empty",
+   "format": "cot",
+   "category": "truncated",
+   "expected_category": "truncated",
+   "diagnostics": {
+    "format": "cot",
+    "finish_reason": "length",
+    "completion_chars": 2466
+   },
+   "final_status": null,
+   "passed": true
+  },
+  {
+   "case": "X7_cot_target_missing",
+   "item": "gdt/gdt_empty",
+   "format": "cot",
+   "category": "target_missing",
+   "expected_category": "target_missing",
+   "diagnostics": {
+    "format": "cot",
+    "finish_reason": "stop",
+    "completion_chars": 2497,
+    "code_blocks": 1,
+    "declarations_in_block": [
+     "def rad",
+     "def d",
+     "def R",
+     "def Tmin",
+     "def Admissible",
+     "def accepted",
+     "instance acceptedDecidable",
+     "def S",
+     "def IsPeriod",
+     "theorem gdt_empty_v2"
+    ],
+    "echoed_trusted_declarations": [
+     "Admissible",
+     "IsPeriod",
+     "R",
+     "S",
+     "Tmin",
+     "accepted",
+     "acceptedDecidable",
+     "d",
+     "rad"
+    ],
+    "extra_declarations": [
+     "theorem gdt_empty_v2"
+    ],
+    "header_echo_matches": true
+   },
+   "final_status": null,
+   "passed": true
+  },
+  {
+   "case": "X8_cot_duplicate_target",
+   "item": "gdt/gdt_empty",
+   "format": "cot",
+   "category": "ambiguous_target",
+   "expected_category": "ambiguous_target",
+   "diagnostics": {
+    "format": "cot",
+    "finish_reason": "stop",
+    "completion_chars": 2531,
+    "code_blocks": 1,
+    "declarations_in_block": [
+     "def rad",
+     "def d",
+     "def R",
+     "def Tmin",
+     "def Admissible",
+     "def accepted",
+     "instance acceptedDecidable",
+     "def S",
+     "def IsPeriod",
+     "theorem gdt_empty",
+     "theorem gdt_empty"
+    ],
+    "echoed_trusted_declarations": [
+     "Admissible",
+     "IsPeriod",
+     "R",
+     "S",
+     "Tmin",
+     "accepted",
+     "acceptedDecidable",
+     "d",
+     "rad"
+    ],
+    "extra_declarations": [],
+    "header_echo_matches": true
+   },
+   "final_status": null,
+   "passed": true
+  },
+  {
+   "case": "X9_cot_term_mode",
+   "item": "gdt/gdt_empty",
+   "format": "cot",
+   "category": "term_mode_proof",
+   "expected_category": "term_mode_proof",
+   "diagnostics": {
+    "format": "cot",
+    "finish_reason": "stop",
+    "completion_chars": 2491,
+    "code_blocks": 1,
+    "declarations_in_block": [
+     "def rad",
+     "def d",
+     "def R",
+     "def Tmin",
+     "def Admissible",
+     "def accepted",
+     "instance acceptedDecidable",
+     "def S",
+     "def IsPeriod",
+     "theorem gdt_empty"
+    ],
+    "echoed_trusted_declarations": [
+     "Admissible",
+     "IsPeriod",
+     "R",
+     "S",
+     "Tmin",
+     "accepted",
+     "acceptedDecidable",
+     "d",
+     "rad"
+    ],
+    "extra_declarations": [],
+    "header_echo_matches": true,
+    "statement_echo_matches": true
+   },
+   "final_status": null,
+   "passed": true
+  },
+  {
+   "case": "X10_cot_exit_inside_body",
+   "item": "gdt/gdt_empty",
+   "format": "cot",
+   "category": "extracted",
+   "expected_category": "extracted",
+   "diagnostics": {
+    "format": "cot",
+    "finish_reason": "stop",
+    "completion_chars": 1084,
+    "code_blocks": 1,
+    "declarations_in_block": [
+     "def rad",
+     "def d",
+     "def R",
+     "def Tmin",
+     "def Admissible",
+     "def accepted",
+     "instance acceptedDecidable",
+     "def S",
+     "def IsPeriod",
+     "theorem gdt_empty"
+    ],
+    "echoed_trusted_declarations": [
+     "Admissible",
+     "IsPeriod",
+     "R",
+     "S",
+     "Tmin",
+     "accepted",
+     "acceptedDecidable",
+     "d",
+     "rad"
+    ],
+    "extra_declarations": [],
+    "header_echo_matches": true,
+    "statement_echo_matches": true
+   },
+   "repl_status": "rejected",
+   "final_status": "rejected",
+   "reasons": [
+    "C1_compile",
+    "C2_check_ran",
+    "C3_present_theorem",
+    "C4_statement",
+    "C5_axioms",
+    "C6_no_local_axioms"
+   ],
+   "passed": true
+  },
+  {
+   "case": "X11_cot_sorry_body",
+   "item": "gdt/gdt_empty",
+   "format": "cot",
+   "category": "extracted",
+   "expected_category": "extracted",
+   "diagnostics": {
+    "format": "cot",
+    "finish_reason": "stop",
+    "completion_chars": 1077,
+    "code_blocks": 1,
+    "declarations_in_block": [
+     "def rad",
+     "def d",
+     "def R",
+     "def Tmin",
+     "def Admissible",
+     "def accepted",
+     "instance acceptedDecidable",
+     "def S",
+     "def IsPeriod",
+     "theorem gdt_empty"
+    ],
+    "echoed_trusted_declarations": [
+     "Admissible",
+     "IsPeriod",
+     "R",
+     "S",
+     "Tmin",
+     "accepted",
+     "acceptedDecidable",
+     "d",
+     "rad"
+    ],
+    "extra_declarations": [],
+    "header_echo_matches": true,
+    "statement_echo_matches": true
+   },
+   "repl_status": "rejected",
+   "final_status": "rejected",
+   "reasons": [
+    "C5_axioms"
+   ],
+   "passed": true
+  },
+  {
+   "case": "X12_noncot_continuation",
+   "item": "gdt/coprime_add_mul_right",
+   "format": "noncot",
+   "category": "extracted",
+   "expected_category": "extracted",
+   "diagnostics": {
+    "format": "noncot",
+    "finish_reason": "stop",
+    "completion_chars": 1119,
+    "trailing_text_after_proof_chars": 3
+   },
+   "repl_status": "preliminary",
+   "final_status": "certified",
+   "reasons": [],
+   "passed": true
+  },
+  {
+   "case": "X13_noncot_trailing_commentary",
+   "item": "gdt/coprime_add_mul_right",
+   "format": "noncot",
+   "category": "extracted",
+   "expected_category": "extracted",
+   "diagnostics": {
+    "format": "noncot",
+    "finish_reason": "stop",
+    "completion_chars": 1146,
+    "trailing_text_after_proof_chars": 30
+   },
+   "repl_status": "preliminary",
+   "final_status": "certified",
+   "reasons": [],
+   "passed": true
+  },
+  {
+   "case": "X14_noncot_truncated",
+   "item": "gdt/coprime_add_mul_right",
+   "format": "noncot",
+   "category": "truncated",
+   "expected_category": "truncated",
+   "diagnostics": {
+    "format": "noncot",
+    "finish_reason": "length",
+    "completion_chars": 1115
+   },
+   "final_status": null,
+   "passed": true
+  },
+  {
+   "case": "X15_cot_gdt_periodic_reference_body_needs_lemmas",
+   "item": "gdt/gdt_periodic",
+   "format": "cot",
+   "category": "extracted",
+   "expected_category": "extracted",
+   "diagnostics": {
+    "format": "cot",
+    "finish_reason": "stop",
+    "completion_chars": 2472,
+    "code_blocks": 1,
+    "declarations_in_block": [
+     "def rad",
+     "def d",
+     "def R",
+     "def Tmin",
+     "def Admissible",
+     "def accepted",
+     "instance acceptedDecidable",
+     "def S",
+     "def IsPeriod",
+     "theorem gdt_periodic"
+    ],
+    "echoed_trusted_declarations": [
+     "Admissible",
+     "IsPeriod",
+     "R",
+     "S",
+     "Tmin",
+     "accepted",
+     "acceptedDecidable",
+     "d",
+     "rad"
+    ],
+    "extra_declarations": [],
+    "header_echo_matches": true,
+    "statement_echo_matches": true
+   },
+   "repl_status": "rejected",
+   "final_status": "rejected",
+   "reasons": [
+    "C1_compile",
+    "C5_axioms"
+   ],
+   "passed": true
+  }
+ ]
+}

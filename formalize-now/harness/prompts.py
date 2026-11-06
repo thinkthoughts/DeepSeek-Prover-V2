@@ -8,7 +8,13 @@ Sources used: benchmark/gdt_items_v2.jsonl (header, definitions, statements) and
 ladder statements; SolutionRef.lean is read ONLY to check that none of its proof
 lines appears in any prompt.
 
-usage: prompts.py  -> benchmark/prompts_v1.jsonl, benchmark/prompts_v1.manifest.json
+usage: prompts.py [--version 1|2]  -> benchmark/prompts_v<N>.jsonl, benchmark/prompts_v<N>.manifest.json
+
+Version 2 (Amendment A1, 2026-11-05, before any model output): non-CoT prompts end
+right after the target's `:= by\n` inside the open code block, as in DeepSeek-Prover-
+V1.5's `non_cot_prompt` (its datasets' `formal_statement` fields all end in `:= by\n`),
+so the completion is the proof continuation. Version 1 included the trailing
+`  sorry` / `end GDT.Challenge` in non-CoT prompts. CoT prompts are identical in v1 and v2.
 """
 import hashlib, json, re
 from pathlib import Path
@@ -48,6 +54,8 @@ def code(short, cond):
     raise ValueError(cond)
 
 def main():
+    import sys
+    version = int(sys.argv[sys.argv.index("--version") + 1]) if "--version" in sys.argv else 1
     challenge = [d["short"] for d in man["declarations"] if d["role"] == "challenge_theorem"]
     plan = [(c, s) for c in ("C0", "C0h") for s in challenge] + [(c, s) for c in ("C1", "C2") for s in order]
     ref = (F / "lean49/GDTBench/SolutionRef.lean").read_text()
@@ -67,17 +75,22 @@ def main():
     for cond, short in plan:
         c = code(short, cond)
         for mode, tpl in (("cot", TEMPLATE_COT), ("noncot", TEMPLATE_NONCOT)):
-            p = tpl.format(c)
+            cc = c
+            if version >= 2 and mode == "noncot":
+                assert cc.count(":= by\n  sorry") >= 1
+                cc = cc.rsplit(":= by\n  sorry", 1)[0] + ":= by\n"
+            p = tpl.format(cc)
             norm = {" ".join(l.split()) for l in p.split("\n")}
             hit = sorted(norm & proof_lines)
             if hit: leaks.append(dict(condition=cond, item=short, mode=mode, lines=hit[:3]))
             out.append(dict(id=f"{cond}/{mode}/{short}", condition=cond, mode=mode, item=f"gdt/{short}",
                             context_lemmas=(closure(short) if cond == "C0h" else deps[short] if cond == "C2" else []),
                             prompt_chars=len(p), prompt_sha256=hashlib.sha256(p.encode()).hexdigest(), prompt=p))
-    with open(F / "benchmark/prompts_v1.jsonl", "w") as f:
+    name = f"prompts_v{version}"
+    with open(F / f"benchmark/{name}.jsonl", "w") as f:
         for o in out: f.write(json.dumps(o, ensure_ascii=False) + "\n")
-    blob = (F / "benchmark/prompts_v1.jsonl").read_bytes()
-    (F / "benchmark/prompts_v1.manifest.json").write_text(json.dumps(dict(
+    blob = (F / f"benchmark/{name}.jsonl").read_bytes()
+    (F / f"benchmark/{name}.manifest.json").write_text(json.dumps(dict(version=version,
         prompts=len(out), sha256=hashlib.sha256(blob).hexdigest(), reference_proof_lines_checked=len(proof_lines),
         leaks=leaks, closure_sizes={s: len(closure(s)) for s in challenge}), indent=1) + "\n")
     print(len(out), "prompts; reference lines checked:", len(proof_lines), "; leaks:", len(leaks))

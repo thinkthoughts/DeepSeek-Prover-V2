@@ -1,0 +1,374 @@
+{
+ "failures": 0,
+ "cases": [
+  {
+   "case": "R_gdt/gdt_empty",
+   "status": "certified",
+   "reasons": [],
+   "context": 0,
+   "wall_s": 5.8,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/gdt_periodic",
+   "status": "certified",
+   "reasons": [],
+   "context": 7,
+   "wall_s": 6.1,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/gdt_minimal_period",
+   "status": "certified",
+   "reasons": [],
+   "context": 21,
+   "wall_s": 6.4,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/gdt_count_per_period",
+   "status": "certified",
+   "reasons": [],
+   "context": 22,
+   "wall_s": 6.7,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/gdt_density",
+   "status": "certified",
+   "reasons": [],
+   "context": 25,
+   "wall_s": 7.1,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/gdt_correction_factor",
+   "status": "certified",
+   "reasons": [],
+   "context": 8,
+   "wall_s": 5.6,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/general_divisor_theorem",
+   "status": "certified",
+   "reasons": [],
+   "context": 33,
+   "wall_s": 7.9,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/d_dvd_rad",
+   "status": "certified",
+   "reasons": [],
+   "context": 0,
+   "wall_s": 5.6,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/d_mul_R_eq_rad",
+   "status": "certified",
+   "reasons": [],
+   "context": 1,
+   "wall_s": 5.7,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/prime_coprime_prod",
+   "status": "certified",
+   "reasons": [],
+   "context": 0,
+   "wall_s": 5.5,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/prod_primes_squarefree",
+   "status": "certified",
+   "reasons": [],
+   "context": 1,
+   "wall_s": 5.6,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/rad_squarefree",
+   "status": "certified",
+   "reasons": [],
+   "context": 2,
+   "wall_s": 5.0,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/coprime_d_R",
+   "status": "certified",
+   "reasons": [],
+   "context": 5,
+   "wall_s": 5.4,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/rad_dvd_self",
+   "status": "certified",
+   "reasons": [],
+   "context": 0,
+   "wall_s": 5.5,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/coprime_iff_coprime_rad",
+   "status": "certified",
+   "reasons": [],
+   "context": 1,
+   "wall_s": 5.6,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/coprime_of_modEq_natAbs",
+   "status": "certified",
+   "reasons": [],
+   "context": 0,
+   "wall_s": 5.6,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/gcd_with_N_iff_gcd_with_R",
+   "status": "certified",
+   "reasons": [],
+   "context": 5,
+   "wall_s": 5.7,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/coprime_add_mul_right",
+   "status": "certified",
+   "reasons": [],
+   "context": 0,
+   "wall_s": 5.7,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/periodic_window_card_eq",
+   "status": "certified",
+   "reasons": [],
+   "context": 0,
+   "wall_s": 5.6,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/coprime_m_R",
+   "status": "certified",
+   "reasons": [],
+   "context": 7,
+   "wall_s": 5.5,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/accepted_iff_coprime_R",
+   "status": "certified",
+   "reasons": [],
+   "context": 6,
+   "wall_s": 5.9,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/rad_pos",
+   "status": "certified",
+   "reasons": [],
+   "context": 0,
+   "wall_s": 5.8,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/R_pos",
+   "status": "certified",
+   "reasons": [],
+   "context": 3,
+   "wall_s": 5.4,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/exists_repr_mod_R",
+   "status": "certified",
+   "reasons": [],
+   "context": 10,
+   "wall_s": 5.8,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/repr_unique",
+   "status": "certified",
+   "reasons": [],
+   "context": 8,
+   "wall_s": 5.5,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/gcd_mod_eq",
+   "status": "certified",
+   "reasons": [],
+   "context": 0,
+   "wall_s": 5.6,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/exists_accepted",
+   "status": "certified",
+   "reasons": [],
+   "context": 14,
+   "wall_s": 6.2,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/primeFactors_forall_dvd_imp_dvd",
+   "status": "certified",
+   "reasons": [],
+   "context": 1,
+   "wall_s": 5.7,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/exists_witness_avoiding_dvd",
+   "status": "certified",
+   "reasons": [],
+   "context": 15,
+   "wall_s": 6.3,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/squarefree_prime_dvd_split",
+   "status": "certified",
+   "reasons": [],
+   "context": 0,
+   "wall_s": 5.5,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/R_squarefree",
+   "status": "certified",
+   "reasons": [],
+   "context": 5,
+   "wall_s": 5.8,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/exists_coprime_R_neg_t_mod_p",
+   "status": "certified",
+   "reasons": [],
+   "context": 10,
+   "wall_s": 6.0,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/rad_eq_self_of_squarefree",
+   "status": "certified",
+   "reasons": [],
+   "context": 0,
+   "wall_s": 5.5,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/canonical_window_card_eq_range_coprime",
+   "status": "certified",
+   "reasons": [],
+   "context": 13,
+   "wall_s": 5.8,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/count_canonical_period",
+   "status": "certified",
+   "reasons": [],
+   "context": 18,
+   "wall_s": 6.3,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/card_filter_Ico_split",
+   "status": "certified",
+   "reasons": [],
+   "context": 0,
+   "wall_s": 5.6,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/S_eq_filter_Ico",
+   "status": "certified",
+   "reasons": [],
+   "context": 0,
+   "wall_s": 5.2,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/rad_factorization_eq_one",
+   "status": "certified",
+   "reasons": [],
+   "context": 4,
+   "wall_s": 5.6,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "R_gdt/totient_rad_mul",
+   "status": "certified",
+   "reasons": [],
+   "context": 1,
+   "wall_s": 5.9,
+   "passed": true,
+   "first_errors": []
+  },
+  {
+   "case": "N1_cites_lemma_outside_closure",
+   "status": "rejected",
+   "reasons": [
+    "C1_compile",
+    "C5_axioms"
+   ],
+   "passed": true
+  },
+  {
+   "case": "N2_cites_dependency_without_context",
+   "status": "rejected",
+   "reasons": [
+    "C1_compile",
+    "C5_axioms"
+   ],
+   "passed": true
+  }
+ ]
+}

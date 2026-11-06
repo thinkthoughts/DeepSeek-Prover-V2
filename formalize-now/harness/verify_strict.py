@@ -110,7 +110,35 @@ def parse_messages(out):
         res.append(dict(severity=m["sev"], line=int(m["line"]), data=out[m.end():end].strip()))
     return res
 
-def assemble(item_id, candidate, mode):
+REF = F / "lean49/GDTBench/SolutionRef.lean"
+DEPS_V2 = F / "manifest/gdt_manifest_v2.json"
+
+def reference_context(item_id):
+    """RPI-DS-001d: trusted verification-only context for C2 (PREREGISTRATION.md §5).
+    Returns the certified reference declarations of the item's full kernel-dependency
+    closure, in source order, wrapped in `namespace GDT.Challenge`. Never used in prompts."""
+    import re as _re
+    man = json.loads(DEPS_V2.read_text())
+    deps = {d["short"]: [x.split(".")[-1] for x in d["kernel_deps"] if x.startswith("GDT.Challenge.")]
+            for d in man["declarations"] if d["kind"] == "theorem"}
+    order = [d["short"] for d in sorted((d for d in man["declarations"] if d["kind"] == "theorem"), key=lambda d: d["source_line"])]
+    seen, todo = set(), list(deps[item_id.split("/")[-1]])
+    while todo:
+        x = todo.pop()
+        if x not in seen: seen.add(x); todo += deps[x]
+    ref = REF.read_text()
+    starts = [(m.start(), m.group(2)) for m in _re.finditer(r"^(theorem|lemma)\s+(\S+)", ref, _re.M)]
+    ends = [m.start() for m in _re.finditer(r"^(theorem|lemma|/--|end GDT)", ref, _re.M)]
+    blocks = {}
+    for pos, name in starts:
+        nxt = min(e for e in ends if e > pos)
+        blocks[name] = ref[pos:nxt].rstrip() + "\n"
+    names = [n for n in order if n in seen]
+    if not names:
+        return "", []
+    return ("namespace GDT.Challenge\nopen GDT\n\n" + "\n".join(blocks[n] for n in names) + "\nend GDT.Challenge\n\n"), names
+
+def assemble(item_id, candidate, mode, reference_deps=False):
     """Trusted assembly shared by the direct path and the REPL adapter.
     Returns (item, prefix, source, rec); source is None when the full-code prefix
     check fails (rec is then already final)."""
@@ -123,7 +151,9 @@ def assemble(item_id, candidate, mode):
         head = stmt.rsplit(":= by\n  sorry", 1)[0] + ":= by\n"
         body = "\n".join("  " + l if l.strip() else l for l in candidate.rstrip("\n").split("\n"))
         cand_part = head + body + "\n\nend GDT.Challenge\n"
-        source = prefix + expected_block(item) + "\n" + cand_part
+        ctx, ctx_names = reference_context(item_id) if reference_deps else ("", [])
+        rec["reference_context"] = ctx_names
+        source = prefix + expected_block(item) + "\n" + ctx + cand_part
     else:
         if not candidate.startswith(prefix):
             rec["checks"]["prefix"] = False
@@ -161,8 +191,8 @@ def apply_check_result(rec, chk_json):
     rec["checks"]["C6_no_local_axioms"] = chk_json is not None and not rec["local_axioms_declared"]
     return rec
 
-def verify(item_id, candidate, mode, use_l4c=False):
-    item, prefix, source, rec = assemble(item_id, candidate, mode)
+def verify(item_id, candidate, mode, use_l4c=False, reference_deps=False):
+    item, prefix, source, rec = assemble(item_id, candidate, mode, reference_deps)
     if source is None:
         return rec
     with tempfile.TemporaryDirectory(dir=LEAN49) as td:

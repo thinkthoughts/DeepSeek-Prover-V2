@@ -54,8 +54,8 @@ class Repl:
         try: self.p.stdin.close(); self.p.wait(timeout=30)
         except Exception: self.p.kill()
 
-def verify_repl(repl, item_id, candidate, mode, certify=False):
-    item, prefix, source, rec = vs.assemble(item_id, candidate, mode)
+def verify_repl(repl, item_id, candidate, mode, certify=False, reference_deps=False):
+    item, prefix, source, rec = vs.assemble(item_id, candidate, mode, reference_deps)
     rec["path"] = "repl"
     if source is None:
         return rec
@@ -80,7 +80,7 @@ def verify_repl(repl, item_id, candidate, mode, certify=False):
     rec["v15_complete_equivalent"] = vs.v15_complete(cand, bool(rec["repl_sorries_in_candidate"]))
     rec = vs.finalize(rec)                        # at most `preliminary`: no C8 on this path
     if certify and rec["status"] == "preliminary":
-        d = vs.verify(item_id, candidate, mode, use_l4c=True)
+        d = vs.verify(item_id, candidate, mode, use_l4c=True, reference_deps=reference_deps)
         agree = all(d["checks"].get(k) == rec["checks"].get(k) for k in vs.REQUIRED)
         rec["direct_recheck"] = dict(status=d["status"], checks=d["checks"], agree_on_C1_C7=agree)
         rec["checks"]["C8_lean4checker"] = d["checks"].get("C8_lean4checker", False) and agree

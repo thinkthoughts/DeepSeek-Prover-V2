@@ -32,7 +32,7 @@ budget?
 | Model | `deepseek-ai/DeepSeek-Prover-V2-7B`, revision `a8d9e14432b2e8dd9df2a4d4e70f1ba9bc8d9b7b` (HF metadata, 2025-04-30); weights loaded at that revision only |
 | Precision | bf16; a quantized model counts as a different model and is out of scope |
 | Inference engine | vLLM; exact version, CUDA version and GPU model recorded in the run manifest |
-| Prompts | `benchmark/prompts_v1.jsonl` (184 prompts, sha256 `de8143b2…`, full value in `prompts_v1.manifest.json`), built by `harness/prompts.py` from the V2 README template |
+| Prompts | `benchmark/prompts_v1.jsonl` (184 prompts, sha256 `de8143b2…`, full value in `prompts_v1.manifest.json`), built by `harness/prompts.py` from the V2 README template; superseded for non-CoT by `prompts_v2` (Amendment A1) |
 | Primary mode | CoT (V2 README prompt) |
 | Secondary mode | non-CoT (`Complete the following Lean 4 code:` + code) |
 | Sampling | temperature 1.0, top_p 0.95, max_new_tokens 8192 (non-CoT) / 16384 (CoT) |
@@ -155,4 +155,46 @@ Environment: Lean 4.9.0-rc1, Mathlib `d1d1e4b7`, lean4checker `9da7f4a3`, REPL
 
 ## 12. Amendments
 
-None.
+### A1 — 2026-11-05, recorded before any model output (RPI-DS-001d interface review)
+
+Found by inspecting the prompt and verifier interfaces against DeepSeek-Prover-V1.5's
+`prover/utils.py` and datasets; no generation had been run.
+
+1. **Non-CoT prompt format.** V1.5's non-CoT prompt ends inside an open code block,
+   right after the statement's `:= by\n`: all 488 miniF2F `formal_statement` fields end
+   that way. `prompts_v1` non-CoT prompts continued with `  sorry` and
+   `end GDT.Challenge`. `benchmark/prompts_v2.jsonl` (sha256 `b7d12b04…`, full value in
+   `prompts_v2.manifest.json`) ends every non-CoT prompt at the target's `:= by\n`. All
+   92 CoT prompts are byte-identical to v1, and the 0-leak check is unchanged.
+   `prompts_v1` stays in the repository, reproducible byte for byte.
+2. **Extraction (replaces §7's "last `lean4` block, full-code mode" rule).**
+   `harness/extract.py` takes only the target theorem's tactic proof from the completion.
+   - CoT: the proof after the unique `theorem|lemma <target>`'s top-level `:= by` in the
+     last closed `lean`/`lean4` block.
+   - non-CoT: the continuation up to the closing fence.
+
+   `verify_strict.assemble(..., "proof")` then places that proof under the trusted
+   header, definitions and statement. Generated headers, definitions, statements and
+   helper declarations are never compiled. They are recorded as diagnostics
+   (`header_echo_matches`, `statement_echo_matches`, `extra_declarations`).
+
+   Categories: `no_code_block`, `truncated`, `target_missing`, `ambiguous_target`,
+   `term_mode_proof`, `empty_proof`, `extracted`; `prefix_mismatch` is retired.
+
+   Reason: under the old rule a correct CoT proof was rejected whenever the model's echo
+   of the 40-line definitions block drifted by one byte (whitespace, a changed
+   `maxHeartbeats`). That counts output formatting as proof failure. The trust property
+   the prefix check protected is now enforced structurally, because the specification
+   text always comes from the item.
+3. **Unchanged:** verification C1–C8 (kernel replay mandatory), axiom whitelist,
+   statement alpha-equivalence, model revision, sampling parameters, seeds, conditions,
+   budgets, metrics and interpretation rules.
+4. **Smoke test exclusion.** RPI-DS-001d smoke samples are engineering runs. They are
+   excluded from every confirmatory count, budget and statistic. Their seeds use the
+   prefix `"rpi-ds-001d-smoke"` in place of `"rpi-ds-001c"`, so no smoke seed coincides
+   with a confirmatory seed.
+5. **Hardware consequence (no design change):** `max_new_tokens` 16384 (CoT) plus the
+   prompt needs a GPU with ≥ 40 GB. See `reports/SMOKE_INTERFACE_REVIEW_001d.md`.
+
+Tests: `harness/tests/run_extract_tests.py`, 15/15 synthetic completions
+(`harness/tests/extract_results.json`).
