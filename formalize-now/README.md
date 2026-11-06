@@ -16,6 +16,8 @@
 
 001c reports:
 
+- `reports/VPS_VERIFICATION_2026-11-05.md` (separately reported VPS 39/39 certification and kernel replay)
+- `reports/PLAN_RPI-DS-001d_SMOKE.md` (minimal GPU interface test; planning only)
 - `reports/CAUTO_BASELINE_001c.md`
 - `reports/ENVIRONMENT_COMPATIBILITY_001c.md`
 - `reports/RPI-DS-001c_BUILD_AND_VALIDATION.md`
