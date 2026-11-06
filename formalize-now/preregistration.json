@@ -117,6 +117,23 @@
     "seed_prefix": "rpi-ds-001d-smoke"
    },
    "tests": "harness/tests/run_extract_tests.py 15/15"
+  },
+  {
+   "id": "A2",
+   "date": "2026-11-05",
+   "recorded_before_model_output": true,
+   "scope": "theorem-level C2 assembly (PREREGISTRATION.md section 5) made operational; outcome definitions and metrics unchanged",
+   "module": "harness/assemble_c2.py",
+   "order": "topological over Stage 0 kernel dependencies; source line tie-break",
+   "selection": "smallest sample_index < b with per-item status certified; conflict and incomplete count as unsolved; no substitution",
+   "certification": "every member: present theorem, alpha-equivalent to trusted expected statement, axioms within whitelist; no declared axioms or weakening options; lean4checker replay of the assembled module",
+   "claim_levels": {
+    "c2_success": "only level counted as C2-solved",
+    "fixture_only": "tests only",
+    "reference_text_detected": "unsolved in primary analysis; reported separately",
+    "none": "not certified"
+   },
+   "tests": "harness/tests/run_assembly_tests.py 22/22"
   }
  ],
  "original_sha256_before_amendments": "fb58a25dba660aac8a3e17eeba164bb9d75350eb87c5ebda9ad0214009f3989f"

@@ -1,0 +1,3616 @@
+{
+ "failures": 0,
+ "cases": [
+  {
+   "case": "A1_success_reference_fixtures",
+   "target": "gdt_periodic",
+   "expected": [
+    "certified",
+    "fixture_only"
+   ],
+   "outcome": "certified",
+   "claim": "fixture_only",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": {
+    "d_dvd_rad": [
+     "Nat.primeFactors_mono hdvd hN.ne'",
+     "exact Finset.prod_dvd_prod_of_subset _ _ id hsub",
+     "have hdvd : Nat.gcd m N ∣ N := Nat.gcd_dvd_right m N"
+    ],
+    "d_mul_R_eq_rad": [
+     "exact Nat.mul_div_cancel' (d_dvd_rad hN)"
+    ],
+    "rad_dvd_self": [
+     "exact Nat.prod_primeFactors_dvd n"
+    ],
+    "coprime_iff_coprime_rad": [
+     "(fun q hq => Nat.prime_of_mem_primeFactors hq)]",
+     "Nat.dvd_gcd hpk hprad",
+     "Nat.dvd_of_mem_primeFactors hprad_mem"
+    ],
+    "coprime_of_modEq_natAbs": [
+     "exact absurd (Nat.le_of_dvd one_pos hcontra) (not_le.mpr hp.one_lt)",
+     "have h := Int.natAbs_dvd_natAbs.mpr hpa_int",
+     "have ha0 : a ≡ 0 [ZMOD (p : ℤ)] := hkp.symm.trans hk0"
+    ],
+    "gcd_with_N_iff_gcd_with_R": [
+     "(rad_dvd_self (Nat.gcd m N)).trans (Nat.gcd_dvd_left m N)",
+     "Int.ModEq.of_dvd (Int.natCast_dvd_natCast.mpr hd_dvd_m) hk",
+     "coprime_iff_coprime_rad hN.ne'"
+    ],
+    "coprime_add_mul_right": [
+     "exact absurd (Nat.le_of_dvd one_pos hcontra) (not_le.mpr hp.one_lt)",
+     "have hcontra : p ∣ Nat.gcd (k + e * c) e := Nat.dvd_gcd hpsum hpe",
+     "have hcontra : p ∣ Nat.gcd k e := Nat.dvd_gcd hpk hpe"
+    ],
+    "gdt_periodic": [
+     "(gcd_with_N_iff_gcd_with_R hN hm h hmod).mp hgcd",
+     "Int.modEq_zero_iff_dvd.mpr hm_dvd_Tmin",
+     "exact (gcd_with_N_iff_gcd_with_R hN hm h hmod').mpr hR1"
+    ]
+   },
+   "checks": {
+    "compile": true,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": true,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": true
+   },
+   "errors": [],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_dvd_self": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_dvd_self",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_iff_coprime_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_iff_coprime_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_of_modEq_natAbs": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_of_modEq_natAbs",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gcd_with_N_iff_gcd_with_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_with_N_iff_gcd_with_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_add_mul_right": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_add_mul_right",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gdt_periodic": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_periodic",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    }
+   },
+   "compile_wall_s": 3.3,
+   "lean4checker_wall_s": 1.7,
+   "simulated_provenance": false
+  },
+  {
+   "case": "A2_success_independent_simulated_model",
+   "target": "d_mul_R_eq_rad",
+   "expected": [
+    "certified",
+    "c2_success"
+   ],
+   "outcome": "certified",
+   "claim": "c2_success",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": {},
+   "checks": {
+    "compile": true,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": true,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": true
+   },
+   "errors": [],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    }
+   },
+   "compile_wall_s": 2.7,
+   "lean4checker_wall_s": 1.7,
+   "simulated_provenance": true
+  },
+  {
+   "case": "A3_simulated_model_with_reference_text",
+   "target": "d_mul_R_eq_rad",
+   "expected": [
+    "certified",
+    "reference_text_detected"
+   ],
+   "outcome": "certified",
+   "claim": "reference_text_detected",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": {
+    "d_dvd_rad": [
+     "Nat.primeFactors_mono hdvd hN.ne'",
+     "exact Finset.prod_dvd_prod_of_subset _ _ id hsub",
+     "have hdvd : Nat.gcd m N ∣ N := Nat.gcd_dvd_right m N"
+    ]
+   },
+   "checks": {
+    "compile": true,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": true,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": true
+   },
+   "errors": [],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    }
+   },
+   "compile_wall_s": 2.8,
+   "lean4checker_wall_s": 2.1,
+   "simulated_provenance": true
+  },
+  {
+   "case": "A4_mixed_fixture_and_simulated_model",
+   "target": "d_mul_R_eq_rad",
+   "expected": [
+    "certified",
+    "fixture_only"
+   ],
+   "outcome": "certified",
+   "claim": "fixture_only",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": {},
+   "checks": {
+    "compile": true,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": true,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": true
+   },
+   "errors": [],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    }
+   },
+   "compile_wall_s": 3.0,
+   "lean4checker_wall_s": 1.9,
+   "simulated_provenance": true
+  },
+  {
+   "case": "M1_missing_lemma_no_fallback",
+   "target": "gdt_periodic",
+   "expected": [
+    "incomplete",
+    "none"
+   ],
+   "outcome": "incomplete",
+   "claim": "none",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic"
+   ],
+   "missing": [
+    "gcd_with_N_iff_gcd_with_R"
+   ],
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": null,
+   "checks": null,
+   "errors": [],
+   "members": null,
+   "compile_wall_s": null,
+   "lean4checker_wall_s": null,
+   "simulated_provenance": false
+  },
+  {
+   "case": "M2_missing_target",
+   "target": "gdt_periodic",
+   "expected": [
+    "incomplete",
+    "none"
+   ],
+   "outcome": "incomplete",
+   "claim": "none",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic"
+   ],
+   "missing": [
+    "gdt_periodic"
+   ],
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": null,
+   "checks": null,
+   "errors": [],
+   "members": null,
+   "compile_wall_s": null,
+   "lean4checker_wall_s": null,
+   "simulated_provenance": false
+  },
+  {
+   "case": "M3_only_preliminary_candidate",
+   "target": "gdt_periodic",
+   "expected": [
+    "incomplete",
+    "none"
+   ],
+   "outcome": "incomplete",
+   "claim": "none",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic"
+   ],
+   "missing": [
+    "rad_dvd_self"
+   ],
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": null,
+   "checks": null,
+   "errors": [],
+   "members": null,
+   "compile_wall_s": null,
+   "lean4checker_wall_s": null,
+   "simulated_provenance": false
+  },
+  {
+   "case": "V1_invalid_sorry_marked_certified",
+   "target": "gdt_periodic",
+   "expected": [
+    "rejected",
+    "none"
+   ],
+   "outcome": "rejected",
+   "claim": "none",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": null,
+   "checks": {
+    "compile": true,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": false,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": false
+   },
+   "errors": [],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_dvd_self": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_dvd_self",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_iff_coprime_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_iff_coprime_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_of_modEq_natAbs": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_of_modEq_natAbs",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gcd_with_N_iff_gcd_with_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_with_N_iff_gcd_with_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_add_mul_right": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_add_mul_right",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "sorryAx"
+     ]
+    },
+    "gdt_periodic": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_periodic",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "sorryAx"
+     ]
+    }
+   },
+   "compile_wall_s": 3.1,
+   "lean4checker_wall_s": null,
+   "simulated_provenance": false
+  },
+  {
+   "case": "V2_invalid_compile_error",
+   "target": "gdt_periodic",
+   "expected": [
+    "rejected",
+    "none"
+   ],
+   "outcome": "rejected",
+   "claim": "none",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": null,
+   "checks": {
+    "compile": false,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": false,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": false
+   },
+   "errors": [
+    {
+     "line": 93,
+     "data": "unknown identifier 'foo_bar_baz'\n@@RPI_ASSEMBLY {\"members\":[{\"type_alpha_equivalent\":true,\"present\":true,\"name\":\"d_dvd_rad\",\"is_theorem\":true,\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]},{\"type_alpha_equivalent\":true,\"present\":true,\"name\":\"d_mul_R_eq_rad\",\"is_theorem\":true,\"axioms\":[\"propex"
+    }
+   ],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_dvd_self": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_dvd_self",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "sorryAx"
+     ]
+    },
+    "coprime_iff_coprime_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_iff_coprime_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "sorryAx"
+     ]
+    },
+    "coprime_of_modEq_natAbs": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_of_modEq_natAbs",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gcd_with_N_iff_gcd_with_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_with_N_iff_gcd_with_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "sorryAx"
+     ]
+    },
+    "coprime_add_mul_right": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_add_mul_right",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gdt_periodic": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_periodic",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "sorryAx"
+     ]
+    }
+   },
+   "compile_wall_s": 3.1,
+   "lean4checker_wall_s": null,
+   "simulated_provenance": false
+  },
+  {
+   "case": "V3_namespace_escape_injection",
+   "target": "gdt_periodic",
+   "expected": [
+    "rejected",
+    "none"
+   ],
+   "outcome": "rejected",
+   "claim": "none",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": null,
+   "checks": {
+    "compile": false,
+    "check_ran": true,
+    "all_present_theorems": false,
+    "all_statements_alpha_equivalent": false,
+    "all_axioms_whitelisted": false,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": false
+   },
+   "errors": [
+    {
+     "line": 179,
+     "data": "'gdt_periodic' has already been declared"
+    },
+    {
+     "line": 220,
+     "data": "invalid 'end', insufficient scopes\n@@RPI_ASSEMBLY {\"members\":[{\"type_alpha_equivalent\":true,\"present\":true,\"name\":\"d_dvd_rad\",\"is_theorem\":true,\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]},{\"type_alpha_equivalent\":true,\"present\":true,\"name\":\"d_mul_R_eq_rad\",\"is_theorem\":true,\"axioms\":[\"prop"
+    }
+   ],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_dvd_self": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_dvd_self",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_iff_coprime_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_iff_coprime_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_of_modEq_natAbs": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_of_modEq_natAbs",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gcd_with_N_iff_gcd_with_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_with_N_iff_gcd_with_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_add_mul_right": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_add_mul_right",
+     "is_theorem": true,
+     "axioms": [
+      "propext"
+     ]
+    },
+    "gdt_periodic": {
+     "present": false,
+     "name": "gdt_periodic"
+    }
+   },
+   "compile_wall_s": 3.5,
+   "lean4checker_wall_s": null,
+   "simulated_provenance": false
+  },
+  {
+   "case": "V4_local_axiom_injection",
+   "target": "gdt_periodic",
+   "expected": [
+    "rejected",
+    "none"
+   ],
+   "outcome": "rejected",
+   "claim": "none",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": null,
+   "checks": {
+    "compile": false,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": false,
+    "no_declared_axioms": false,
+    "no_weakening_options": true,
+    "lean4checker": false
+   },
+   "errors": [
+    {
+     "line": 93,
+     "data": "unknown identifier 'rpi_cheat.elim'\n@@RPI_ASSEMBLY {\"members\":[{\"type_alpha_equivalent\":true,\"present\":true,\"name\":\"d_dvd_rad\",\"is_theorem\":true,\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]},{\"type_alpha_equivalent\":true,\"present\":true,\"name\":\"d_mul_R_eq_rad\",\"is_theorem\":true,\"axioms\":[\"pro"
+    }
+   ],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_dvd_self": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_dvd_self",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "sorryAx"
+     ]
+    },
+    "coprime_iff_coprime_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_iff_coprime_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "sorryAx"
+     ]
+    },
+    "coprime_of_modEq_natAbs": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_of_modEq_natAbs",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gcd_with_N_iff_gcd_with_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_with_N_iff_gcd_with_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "sorryAx"
+     ]
+    },
+    "coprime_add_mul_right": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_add_mul_right",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gdt_periodic": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_periodic",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "sorryAx"
+     ]
+    }
+   },
+   "compile_wall_s": 3.0,
+   "lean4checker_wall_s": null,
+   "simulated_provenance": false
+  },
+  {
+   "case": "C1_conflict_same_sample_index",
+   "target": "gdt_periodic",
+   "expected": [
+    "conflict",
+    "none"
+   ],
+   "outcome": "conflict",
+   "claim": "none",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic"
+   ],
+   "missing": null,
+   "conflicts": [
+    {
+     "lemma": "rad_dvd_self",
+     "sample_index": 0
+    }
+   ],
+   "extraneous": [],
+   "reference_text_hits": null,
+   "checks": null,
+   "errors": [],
+   "members": null,
+   "compile_wall_s": null,
+   "lean4checker_wall_s": null,
+   "simulated_provenance": false
+  },
+  {
+   "case": "C2_first_certified_selected",
+   "target": "gdt_periodic",
+   "expected": [
+    "certified",
+    "fixture_only"
+   ],
+   "outcome": "certified",
+   "claim": "fixture_only",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": {
+    "d_dvd_rad": [
+     "Nat.primeFactors_mono hdvd hN.ne'",
+     "exact Finset.prod_dvd_prod_of_subset _ _ id hsub",
+     "have hdvd : Nat.gcd m N ∣ N := Nat.gcd_dvd_right m N"
+    ],
+    "d_mul_R_eq_rad": [
+     "exact Nat.mul_div_cancel' (d_dvd_rad hN)"
+    ],
+    "rad_dvd_self": [
+     "exact Nat.prod_primeFactors_dvd n"
+    ],
+    "coprime_iff_coprime_rad": [
+     "(fun q hq => Nat.prime_of_mem_primeFactors hq)]",
+     "Nat.dvd_gcd hpk hprad",
+     "Nat.dvd_of_mem_primeFactors hprad_mem"
+    ],
+    "coprime_of_modEq_natAbs": [
+     "exact absurd (Nat.le_of_dvd one_pos hcontra) (not_le.mpr hp.one_lt)",
+     "have h := Int.natAbs_dvd_natAbs.mpr hpa_int",
+     "have ha0 : a ≡ 0 [ZMOD (p : ℤ)] := hkp.symm.trans hk0"
+    ],
+    "gcd_with_N_iff_gcd_with_R": [
+     "(rad_dvd_self (Nat.gcd m N)).trans (Nat.gcd_dvd_left m N)",
+     "Int.ModEq.of_dvd (Int.natCast_dvd_natCast.mpr hd_dvd_m) hk",
+     "coprime_iff_coprime_rad hN.ne'"
+    ],
+    "coprime_add_mul_right": [
+     "exact absurd (Nat.le_of_dvd one_pos hcontra) (not_le.mpr hp.one_lt)",
+     "have hcontra : p ∣ Nat.gcd (k + e * c) e := Nat.dvd_gcd hpsum hpe",
+     "have hcontra : p ∣ Nat.gcd k e := Nat.dvd_gcd hpk hpe"
+    ],
+    "gdt_periodic": [
+     "(gcd_with_N_iff_gcd_with_R hN hm h hmod).mp hgcd",
+     "Int.modEq_zero_iff_dvd.mpr hm_dvd_Tmin",
+     "exact (gcd_with_N_iff_gcd_with_R hN hm h hmod').mpr hR1"
+    ]
+   },
+   "checks": {
+    "compile": true,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": true,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": true
+   },
+   "errors": [],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_dvd_self": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_dvd_self",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_iff_coprime_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_iff_coprime_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_of_modEq_natAbs": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_of_modEq_natAbs",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gcd_with_N_iff_gcd_with_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_with_N_iff_gcd_with_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_add_mul_right": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_add_mul_right",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gdt_periodic": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_periodic",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    }
+   },
+   "compile_wall_s": 3.1,
+   "lean4checker_wall_s": 2.0,
+   "simulated_provenance": false
+  },
+  {
+   "case": "C3_lower_index_certified_but_wrong",
+   "target": "gdt_periodic",
+   "expected": [
+    "rejected",
+    "none"
+   ],
+   "outcome": "rejected",
+   "claim": "none",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": null,
+   "checks": {
+    "compile": false,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": false,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": false
+   },
+   "errors": [
+    {
+     "line": 93,
+     "data": "unknown identifier 'foo_bar_baz'\n@@RPI_ASSEMBLY {\"members\":[{\"type_alpha_equivalent\":true,\"present\":true,\"name\":\"d_dvd_rad\",\"is_theorem\":true,\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]},{\"type_alpha_equivalent\":true,\"present\":true,\"name\":\"d_mul_R_eq_rad\",\"is_theorem\":true,\"axioms\":[\"propex"
+    }
+   ],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_dvd_self": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_dvd_self",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "sorryAx"
+     ]
+    },
+    "coprime_iff_coprime_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_iff_coprime_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "sorryAx"
+     ]
+    },
+    "coprime_of_modEq_natAbs": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_of_modEq_natAbs",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gcd_with_N_iff_gcd_with_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_with_N_iff_gcd_with_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "sorryAx"
+     ]
+    },
+    "coprime_add_mul_right": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_add_mul_right",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gdt_periodic": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_periodic",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "sorryAx"
+     ]
+    }
+   },
+   "compile_wall_s": 3.0,
+   "lean4checker_wall_s": null,
+   "simulated_provenance": false
+  },
+  {
+   "case": "O1_shuffled_with_extraneous",
+   "target": "gdt_periodic",
+   "expected": [
+    "certified",
+    "fixture_only"
+   ],
+   "outcome": "certified",
+   "claim": "fixture_only",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [
+    "rad_pos",
+    "totient_rad_mul"
+   ],
+   "reference_text_hits": {
+    "d_dvd_rad": [
+     "Nat.primeFactors_mono hdvd hN.ne'",
+     "exact Finset.prod_dvd_prod_of_subset _ _ id hsub",
+     "have hdvd : Nat.gcd m N ∣ N := Nat.gcd_dvd_right m N"
+    ],
+    "d_mul_R_eq_rad": [
+     "exact Nat.mul_div_cancel' (d_dvd_rad hN)"
+    ],
+    "rad_dvd_self": [
+     "exact Nat.prod_primeFactors_dvd n"
+    ],
+    "coprime_iff_coprime_rad": [
+     "(fun q hq => Nat.prime_of_mem_primeFactors hq)]",
+     "Nat.dvd_gcd hpk hprad",
+     "Nat.dvd_of_mem_primeFactors hprad_mem"
+    ],
+    "coprime_of_modEq_natAbs": [
+     "exact absurd (Nat.le_of_dvd one_pos hcontra) (not_le.mpr hp.one_lt)",
+     "have h := Int.natAbs_dvd_natAbs.mpr hpa_int",
+     "have ha0 : a ≡ 0 [ZMOD (p : ℤ)] := hkp.symm.trans hk0"
+    ],
+    "gcd_with_N_iff_gcd_with_R": [
+     "(rad_dvd_self (Nat.gcd m N)).trans (Nat.gcd_dvd_left m N)",
+     "Int.ModEq.of_dvd (Int.natCast_dvd_natCast.mpr hd_dvd_m) hk",
+     "coprime_iff_coprime_rad hN.ne'"
+    ],
+    "coprime_add_mul_right": [
+     "exact absurd (Nat.le_of_dvd one_pos hcontra) (not_le.mpr hp.one_lt)",
+     "have hcontra : p ∣ Nat.gcd (k + e * c) e := Nat.dvd_gcd hpsum hpe",
+     "have hcontra : p ∣ Nat.gcd k e := Nat.dvd_gcd hpk hpe"
+    ],
+    "gdt_periodic": [
+     "(gcd_with_N_iff_gcd_with_R hN hm h hmod).mp hgcd",
+     "Int.modEq_zero_iff_dvd.mpr hm_dvd_Tmin",
+     "exact (gcd_with_N_iff_gcd_with_R hN hm h hmod').mpr hR1"
+    ]
+   },
+   "checks": {
+    "compile": true,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": true,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": true
+   },
+   "errors": [],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_dvd_self": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_dvd_self",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_iff_coprime_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_iff_coprime_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_of_modEq_natAbs": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_of_modEq_natAbs",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gcd_with_N_iff_gcd_with_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_with_N_iff_gcd_with_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_add_mul_right": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_add_mul_right",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gdt_periodic": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_periodic",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    }
+   },
+   "compile_wall_s": 3.2,
+   "lean4checker_wall_s": 1.7,
+   "simulated_provenance": false
+  },
+  {
+   "case": "E1_unknown_target",
+   "target": "no_such_theorem",
+   "expected": [
+    "error",
+    "none"
+   ],
+   "outcome": "error",
+   "claim": "none",
+   "passed": true,
+   "order": null,
+   "missing": null,
+   "conflicts": null,
+   "extraneous": null,
+   "reference_text_hits": null,
+   "checks": null,
+   "errors": [],
+   "members": null,
+   "compile_wall_s": null,
+   "lean4checker_wall_s": null,
+   "simulated_provenance": false
+  },
+  {
+   "case": "S_gdt_empty_reference_fixtures",
+   "target": "gdt_empty",
+   "expected": [
+    "certified",
+    "fixture_only"
+   ],
+   "outcome": "certified",
+   "claim": "fixture_only",
+   "passed": true,
+   "order": [
+    "gdt_empty"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": {
+    "gdt_empty": [
+     "Int.ModEq.of_dvd (Int.natCast_dvd_natCast.mpr hpm) hmod",
+     "Nat.prod_primeFactors_dvd (Nat.gcd m N)",
+     "apply Finset.eq_empty_iff_forall_not_mem.mpr"
+    ]
+   },
+   "checks": {
+    "compile": true,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": true,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": true
+   },
+   "errors": [],
+   "members": {
+    "gdt_empty": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_empty",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    }
+   },
+   "compile_wall_s": 2.5,
+   "lean4checker_wall_s": 2.0,
+   "simulated_provenance": false
+  },
+  {
+   "case": "S_gdt_minimal_period_reference_fixtures",
+   "target": "gdt_minimal_period",
+   "expected": [
+    "certified",
+    "fixture_only"
+   ],
+   "outcome": "certified",
+   "claim": "fixture_only",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "prime_coprime_prod",
+    "prod_primes_squarefree",
+    "rad_squarefree",
+    "coprime_d_R",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_m_R",
+    "rad_pos",
+    "R_pos",
+    "exists_repr_mod_R",
+    "gcd_mod_eq",
+    "exists_accepted",
+    "primeFactors_forall_dvd_imp_dvd",
+    "squarefree_prime_dvd_split",
+    "R_squarefree",
+    "exists_coprime_R_neg_t_mod_p",
+    "rad_eq_self_of_squarefree",
+    "gdt_minimal_period"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": {
+    "d_dvd_rad": [
+     "Nat.primeFactors_mono hdvd hN.ne'",
+     "exact Finset.prod_dvd_prod_of_subset _ _ id hsub",
+     "have hdvd : Nat.gcd m N ∣ N := Nat.gcd_dvd_right m N"
+    ],
+    "d_mul_R_eq_rad": [
+     "exact Nat.mul_div_cancel' (d_dvd_rad hN)"
+    ],
+    "prime_coprime_prod": [
+     "(Nat.coprime_primes ha hbprime).mpr habne",
+     "exact ha_not (Finset.mem_insert_of_mem hat)",
+     "exact ha_not (Finset.mem_insert_self a t)"
+    ],
+    "prod_primes_squarefree": [
+     "exact Nat.squarefree_mul_iff.mpr",
+     "exact hs p (Finset.mem_insert_of_mem hp)",
+     "have hcop : Nat.Coprime a (∏ p ∈ s, p) :="
+    ],
+    "rad_squarefree": [
+     "(fun p hp => Nat.prime_of_mem_primeFactors hp)",
+     "exact prod_primes_squarefree"
+    ],
+    "coprime_d_R": [
+     "exact (Nat.squarefree_mul_iff.mp hsf).1",
+     "have heq : d N m * R N m = rad N := d_mul_R_eq_rad hN",
+     "have hsf : Squarefree (d N m * R N m) := heq ▸ rad_squarefree N"
+    ],
+    "rad_dvd_self": [
+     "exact Nat.prod_primeFactors_dvd n"
+    ],
+    "coprime_iff_coprime_rad": [
+     "(fun q hq => Nat.prime_of_mem_primeFactors hq)]",
+     "Nat.dvd_gcd hpk hprad",
+     "Nat.dvd_of_mem_primeFactors hprad_mem"
+    ],
+    "coprime_of_modEq_natAbs": [
+     "exact absurd (Nat.le_of_dvd one_pos hcontra) (not_le.mpr hp.one_lt)",
+     "have h := Int.natAbs_dvd_natAbs.mpr hpa_int",
+     "have ha0 : a ≡ 0 [ZMOD (p : ℤ)] := hkp.symm.trans hk0"
+    ],
+    "gcd_with_N_iff_gcd_with_R": [
+     "(rad_dvd_self (Nat.gcd m N)).trans (Nat.gcd_dvd_left m N)",
+     "Int.ModEq.of_dvd (Int.natCast_dvd_natCast.mpr hd_dvd_m) hk",
+     "coprime_iff_coprime_rad hN.ne'"
+    ],
+    "coprime_m_R": [
+     "(Nat.le_of_dvd one_pos hcontra)",
+     "(fun q hq => Nat.prime_of_mem_primeFactors hq)]",
+     "(not_le.mpr hp.one_lt)"
+    ],
+    "rad_pos": [
+     "(fun p hp => (Nat.prime_of_mem_primeFactors hp).pos)",
+     "exact Finset.prod_pos"
+    ],
+    "R_pos": [
+     "have heq := d_mul_R_eq_rad (N := N) (m := m) hN",
+     "have hrad_pos := rad_pos N",
+     "rcases Nat.eq_zero_or_pos (R N m) with hR0 | hR"
+    ],
+    "exists_repr_mod_R": [
+     "((k % Tmin N m : ℕ) : ℤ) ≡ (aN : ℤ) [ZMOD (m : ℤ)] := by",
+     "Int.emod_nonneg a (by exact_mod_cast hm.ne')",
+     "Int.toNat_of_nonneg haN_nonneg"
+    ],
+    "gcd_mod_eq": [
+     "rw [Nat.gcd_comm n R, Nat.gcd_rec R n]"
+    ],
+    "exists_accepted": [
+     "Int.emod_nonneg a (by exact_mod_cast hm.ne')",
+     "Int.toNat_of_nonneg haN_nonneg",
+     "Nat.chineseRemainder (coprime_m_R hN) aN 1"
+    ],
+    "primeFactors_forall_dvd_imp_dvd": [
+     "(∀ p ∈ s, p ∣ t) → s.prod id ∣ t := by",
+     "Nat.prime_of_mem_primeFactors hp_mem_n",
+     "exact Nat.Coprime.mul_dvd_of_dvd_of_dvd hcop hpdvd hsdvd"
+    ],
+    "squarefree_prime_dvd_split": [
+     "(Nat.squarefree_mul_iff.mp hsf').1",
+     "exact ⟨hcop, hk.symm⟩",
+     "have hcop : Nat.Coprime p k :="
+    ],
+    "R_squarefree": [
+     "exact (rad_squarefree N).squarefree_of_dvd hdvd",
+     "have hdvd : R N m ∣ rad N := ⟨d N m, by rw [← d_mul_R_eq_rad hN]; ring⟩"
+    ],
+    "exists_coprime_R_neg_t_mod_p": [
+     "(Nat.le_of_dvd (Nat.pos_of_ne_zero hrp_ne_zero) hdvd)",
+     "(hp.coprime_iff_not_dvd.mpr (fun hdvd =>",
+     "(not_le.mpr hrp_lt))).symm"
+    ],
+    "rad_eq_self_of_squarefree": [
+     "exact Nat.prod_primeFactors_of_squarefree hsf"
+    ],
+    "gdt_minimal_period": [
+     "((n0 : ℤ) + (t : ℤ)) ≡ (n0 : ℤ) [ZMOD (m : ℤ)] := by",
+     "(Nat.le_of_dvd one_pos hp_one)",
+     "(coprime_m_R hN) hmt hRt"
+    ]
+   },
+   "checks": {
+    "compile": true,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": true,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": true
+   },
+   "errors": [],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "prime_coprime_prod": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "prime_coprime_prod",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "prod_primes_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "prod_primes_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_d_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_d_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_dvd_self": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_dvd_self",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_iff_coprime_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_iff_coprime_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_of_modEq_natAbs": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_of_modEq_natAbs",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gcd_with_N_iff_gcd_with_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_with_N_iff_gcd_with_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_m_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_m_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_pos": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_pos",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "R_pos": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "R_pos",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "exists_repr_mod_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "exists_repr_mod_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "gcd_mod_eq": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_mod_eq",
+     "is_theorem": true,
+     "axioms": [
+      "propext"
+     ]
+    },
+    "exists_accepted": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "exists_accepted",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "primeFactors_forall_dvd_imp_dvd": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "primeFactors_forall_dvd_imp_dvd",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "squarefree_prime_dvd_split": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "squarefree_prime_dvd_split",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "R_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "R_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "exists_coprime_R_neg_t_mod_p": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "exists_coprime_R_neg_t_mod_p",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_eq_self_of_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_eq_self_of_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "gdt_minimal_period": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_minimal_period",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    }
+   },
+   "compile_wall_s": 6.2,
+   "lean4checker_wall_s": 2.1,
+   "simulated_provenance": false
+  },
+  {
+   "case": "S_gdt_count_per_period_reference_fixtures",
+   "target": "gdt_count_per_period",
+   "expected": [
+    "certified",
+    "fixture_only"
+   ],
+   "outcome": "certified",
+   "claim": "fixture_only",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "prime_coprime_prod",
+    "prod_primes_squarefree",
+    "rad_squarefree",
+    "coprime_d_R",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic",
+    "periodic_window_card_eq",
+    "coprime_m_R",
+    "accepted_iff_coprime_R",
+    "rad_pos",
+    "R_pos",
+    "exists_repr_mod_R",
+    "repr_unique",
+    "gcd_mod_eq",
+    "canonical_window_card_eq_range_coprime",
+    "count_canonical_period",
+    "gdt_count_per_period"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": {
+    "d_dvd_rad": [
+     "Nat.primeFactors_mono hdvd hN.ne'",
+     "exact Finset.prod_dvd_prod_of_subset _ _ id hsub",
+     "have hdvd : Nat.gcd m N ∣ N := Nat.gcd_dvd_right m N"
+    ],
+    "d_mul_R_eq_rad": [
+     "exact Nat.mul_div_cancel' (d_dvd_rad hN)"
+    ],
+    "prime_coprime_prod": [
+     "(Nat.coprime_primes ha hbprime).mpr habne",
+     "exact ha_not (Finset.mem_insert_of_mem hat)",
+     "exact ha_not (Finset.mem_insert_self a t)"
+    ],
+    "prod_primes_squarefree": [
+     "exact Nat.squarefree_mul_iff.mpr",
+     "exact hs p (Finset.mem_insert_of_mem hp)",
+     "have hcop : Nat.Coprime a (∏ p ∈ s, p) :="
+    ],
+    "rad_squarefree": [
+     "(fun p hp => Nat.prime_of_mem_primeFactors hp)",
+     "exact prod_primes_squarefree"
+    ],
+    "coprime_d_R": [
+     "exact (Nat.squarefree_mul_iff.mp hsf).1",
+     "have heq : d N m * R N m = rad N := d_mul_R_eq_rad hN",
+     "have hsf : Squarefree (d N m * R N m) := heq ▸ rad_squarefree N"
+    ],
+    "rad_dvd_self": [
+     "exact Nat.prod_primeFactors_dvd n"
+    ],
+    "coprime_iff_coprime_rad": [
+     "(fun q hq => Nat.prime_of_mem_primeFactors hq)]",
+     "Nat.dvd_gcd hpk hprad",
+     "Nat.dvd_of_mem_primeFactors hprad_mem"
+    ],
+    "coprime_of_modEq_natAbs": [
+     "exact absurd (Nat.le_of_dvd one_pos hcontra) (not_le.mpr hp.one_lt)",
+     "have h := Int.natAbs_dvd_natAbs.mpr hpa_int",
+     "have ha0 : a ≡ 0 [ZMOD (p : ℤ)] := hkp.symm.trans hk0"
+    ],
+    "gcd_with_N_iff_gcd_with_R": [
+     "(rad_dvd_self (Nat.gcd m N)).trans (Nat.gcd_dvd_left m N)",
+     "Int.ModEq.of_dvd (Int.natCast_dvd_natCast.mpr hd_dvd_m) hk",
+     "coprime_iff_coprime_rad hN.ne'"
+    ],
+    "coprime_add_mul_right": [
+     "exact absurd (Nat.le_of_dvd one_pos hcontra) (not_le.mpr hp.one_lt)",
+     "have hcontra : p ∣ Nat.gcd (k + e * c) e := Nat.dvd_gcd hpsum hpe",
+     "have hcontra : p ∣ Nat.gcd k e := Nat.dvd_gcd hpk hpe"
+    ],
+    "gdt_periodic": [
+     "(gcd_with_N_iff_gcd_with_R hN hm h hmod).mp hgcd",
+     "Int.modEq_zero_iff_dvd.mpr hm_dvd_Tmin",
+     "exact (gcd_with_N_iff_gcd_with_R hN hm h hmod').mpr hR1"
+    ],
+    "periodic_window_card_eq": [
+     "((Finset.Ico (k + 1) (k + 1 + T)).filter P).card",
+     "((Finset.Ico (k + 1) (k + 1 + T)).filter P).card =",
+     "((Finset.Ico (k + 1) (k + T)).filter P).card +"
+    ],
+    "coprime_m_R": [
+     "(Nat.le_of_dvd one_pos hcontra)",
+     "(fun q hq => Nat.prime_of_mem_primeFactors hq)]",
+     "(not_le.mpr hp.one_lt)"
+    ],
+    "accepted_iff_coprime_R": [
+     "exact ⟨hmod, (gcd_with_N_iff_gcd_with_R hN hm h hmod).mp hgcd⟩",
+     "exact ⟨hmod, (gcd_with_N_iff_gcd_with_R hN hm h hmod).mpr hgcdR⟩",
+     "· rintro ⟨hmod, hgcdR⟩"
+    ],
+    "rad_pos": [
+     "(fun p hp => (Nat.prime_of_mem_primeFactors hp).pos)",
+     "exact Finset.prod_pos"
+    ],
+    "R_pos": [
+     "have heq := d_mul_R_eq_rad (N := N) (m := m) hN",
+     "have hrad_pos := rad_pos N",
+     "rcases Nat.eq_zero_or_pos (R N m) with hR0 | hR"
+    ],
+    "exists_repr_mod_R": [
+     "((k % Tmin N m : ℕ) : ℤ) ≡ (aN : ℤ) [ZMOD (m : ℤ)] := by",
+     "Int.emod_nonneg a (by exact_mod_cast hm.ne')",
+     "Int.toNat_of_nonneg haN_nonneg"
+    ],
+    "repr_unique": [
+     "(Nat.modEq_and_modEq_iff_modEq_mul (coprime_m_R hN)).mp",
+     "exact Int.natCast_modEq_iff.mp h",
+     "have h : (n1 : ℤ) ≡ (n2 : ℤ) [ZMOD (m : ℤ)] :="
+    ],
+    "gcd_mod_eq": [
+     "rw [Nat.gcd_comm n R, Nat.gcd_rec R n]"
+    ],
+    "canonical_window_card_eq_range_coprime": [
+     "apply Finset.card_bij (fun n _ => n % R N m)",
+     "exact repr_unique hN hm hlt1 hlt2 hmod1 hmod2 heq",
+     "exact ⟨Nat.mod_lt n (R_pos hN), by rwa [← gcd_mod_eq]⟩"
+    ],
+    "count_canonical_period": [
+     "Nat.totient_eq_card_coprime]",
+     "apply congrArg Finset.card",
+     "canonical_window_card_eq_range_coprime hN hm h,"
+    ],
+    "gdt_count_per_period": [
+     "exact count_canonical_period hN hm h",
+     "rw [periodic_window_card_eq (gdt_periodic hN hm h) b]"
+    ]
+   },
+   "checks": {
+    "compile": true,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": true,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": true
+   },
+   "errors": [],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "prime_coprime_prod": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "prime_coprime_prod",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "prod_primes_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "prod_primes_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_d_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_d_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_dvd_self": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_dvd_self",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_iff_coprime_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_iff_coprime_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_of_modEq_natAbs": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_of_modEq_natAbs",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gcd_with_N_iff_gcd_with_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_with_N_iff_gcd_with_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_add_mul_right": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_add_mul_right",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gdt_periodic": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_periodic",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "periodic_window_card_eq": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "periodic_window_card_eq",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_m_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_m_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "accepted_iff_coprime_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "accepted_iff_coprime_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_pos": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_pos",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "R_pos": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "R_pos",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "exists_repr_mod_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "exists_repr_mod_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "repr_unique": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "repr_unique",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "gcd_mod_eq": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_mod_eq",
+     "is_theorem": true,
+     "axioms": [
+      "propext"
+     ]
+    },
+    "canonical_window_card_eq_range_coprime": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "canonical_window_card_eq_range_coprime",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "count_canonical_period": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "count_canonical_period",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "gdt_count_per_period": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_count_per_period",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    }
+   },
+   "compile_wall_s": 5.7,
+   "lean4checker_wall_s": 2.0,
+   "simulated_provenance": false
+  },
+  {
+   "case": "S_gdt_density_reference_fixtures",
+   "target": "gdt_density",
+   "expected": [
+    "certified",
+    "fixture_only"
+   ],
+   "outcome": "certified",
+   "claim": "fixture_only",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "prime_coprime_prod",
+    "prod_primes_squarefree",
+    "rad_squarefree",
+    "coprime_d_R",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic",
+    "periodic_window_card_eq",
+    "coprime_m_R",
+    "accepted_iff_coprime_R",
+    "rad_pos",
+    "R_pos",
+    "exists_repr_mod_R",
+    "repr_unique",
+    "gcd_mod_eq",
+    "canonical_window_card_eq_range_coprime",
+    "count_canonical_period",
+    "gdt_count_per_period",
+    "card_filter_Ico_split",
+    "S_eq_filter_Ico",
+    "gdt_density"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": {
+    "d_dvd_rad": [
+     "Nat.primeFactors_mono hdvd hN.ne'",
+     "exact Finset.prod_dvd_prod_of_subset _ _ id hsub",
+     "have hdvd : Nat.gcd m N ∣ N := Nat.gcd_dvd_right m N"
+    ],
+    "d_mul_R_eq_rad": [
+     "exact Nat.mul_div_cancel' (d_dvd_rad hN)"
+    ],
+    "prime_coprime_prod": [
+     "(Nat.coprime_primes ha hbprime).mpr habne",
+     "exact ha_not (Finset.mem_insert_of_mem hat)",
+     "exact ha_not (Finset.mem_insert_self a t)"
+    ],
+    "prod_primes_squarefree": [
+     "exact Nat.squarefree_mul_iff.mpr",
+     "exact hs p (Finset.mem_insert_of_mem hp)",
+     "have hcop : Nat.Coprime a (∏ p ∈ s, p) :="
+    ],
+    "rad_squarefree": [
+     "(fun p hp => Nat.prime_of_mem_primeFactors hp)",
+     "exact prod_primes_squarefree"
+    ],
+    "coprime_d_R": [
+     "exact (Nat.squarefree_mul_iff.mp hsf).1",
+     "have heq : d N m * R N m = rad N := d_mul_R_eq_rad hN",
+     "have hsf : Squarefree (d N m * R N m) := heq ▸ rad_squarefree N"
+    ],
+    "rad_dvd_self": [
+     "exact Nat.prod_primeFactors_dvd n"
+    ],
+    "coprime_iff_coprime_rad": [
+     "(fun q hq => Nat.prime_of_mem_primeFactors hq)]",
+     "Nat.dvd_gcd hpk hprad",
+     "Nat.dvd_of_mem_primeFactors hprad_mem"
+    ],
+    "coprime_of_modEq_natAbs": [
+     "exact absurd (Nat.le_of_dvd one_pos hcontra) (not_le.mpr hp.one_lt)",
+     "have h := Int.natAbs_dvd_natAbs.mpr hpa_int",
+     "have ha0 : a ≡ 0 [ZMOD (p : ℤ)] := hkp.symm.trans hk0"
+    ],
+    "gcd_with_N_iff_gcd_with_R": [
+     "(rad_dvd_self (Nat.gcd m N)).trans (Nat.gcd_dvd_left m N)",
+     "Int.ModEq.of_dvd (Int.natCast_dvd_natCast.mpr hd_dvd_m) hk",
+     "coprime_iff_coprime_rad hN.ne'"
+    ],
+    "coprime_add_mul_right": [
+     "exact absurd (Nat.le_of_dvd one_pos hcontra) (not_le.mpr hp.one_lt)",
+     "have hcontra : p ∣ Nat.gcd (k + e * c) e := Nat.dvd_gcd hpsum hpe",
+     "have hcontra : p ∣ Nat.gcd k e := Nat.dvd_gcd hpk hpe"
+    ],
+    "gdt_periodic": [
+     "(gcd_with_N_iff_gcd_with_R hN hm h hmod).mp hgcd",
+     "Int.modEq_zero_iff_dvd.mpr hm_dvd_Tmin",
+     "exact (gcd_with_N_iff_gcd_with_R hN hm h hmod').mpr hR1"
+    ],
+    "periodic_window_card_eq": [
+     "((Finset.Ico (k + 1) (k + 1 + T)).filter P).card",
+     "((Finset.Ico (k + 1) (k + 1 + T)).filter P).card =",
+     "((Finset.Ico (k + 1) (k + T)).filter P).card +"
+    ],
+    "coprime_m_R": [
+     "(Nat.le_of_dvd one_pos hcontra)",
+     "(fun q hq => Nat.prime_of_mem_primeFactors hq)]",
+     "(not_le.mpr hp.one_lt)"
+    ],
+    "accepted_iff_coprime_R": [
+     "exact ⟨hmod, (gcd_with_N_iff_gcd_with_R hN hm h hmod).mp hgcd⟩",
+     "exact ⟨hmod, (gcd_with_N_iff_gcd_with_R hN hm h hmod).mpr hgcdR⟩",
+     "· rintro ⟨hmod, hgcdR⟩"
+    ],
+    "rad_pos": [
+     "(fun p hp => (Nat.prime_of_mem_primeFactors hp).pos)",
+     "exact Finset.prod_pos"
+    ],
+    "R_pos": [
+     "have heq := d_mul_R_eq_rad (N := N) (m := m) hN",
+     "have hrad_pos := rad_pos N",
+     "rcases Nat.eq_zero_or_pos (R N m) with hR0 | hR"
+    ],
+    "exists_repr_mod_R": [
+     "((k % Tmin N m : ℕ) : ℤ) ≡ (aN : ℤ) [ZMOD (m : ℤ)] := by",
+     "Int.emod_nonneg a (by exact_mod_cast hm.ne')",
+     "Int.toNat_of_nonneg haN_nonneg"
+    ],
+    "repr_unique": [
+     "(Nat.modEq_and_modEq_iff_modEq_mul (coprime_m_R hN)).mp",
+     "exact Int.natCast_modEq_iff.mp h",
+     "have h : (n1 : ℤ) ≡ (n2 : ℤ) [ZMOD (m : ℤ)] :="
+    ],
+    "gcd_mod_eq": [
+     "rw [Nat.gcd_comm n R, Nat.gcd_rec R n]"
+    ],
+    "canonical_window_card_eq_range_coprime": [
+     "apply Finset.card_bij (fun n _ => n % R N m)",
+     "exact repr_unique hN hm hlt1 hlt2 hmod1 hmod2 heq",
+     "exact ⟨Nat.mod_lt n (R_pos hN), by rwa [← gcd_mod_eq]⟩"
+    ],
+    "count_canonical_period": [
+     "Nat.totient_eq_card_coprime]",
+     "apply congrArg Finset.card",
+     "canonical_window_card_eq_range_coprime hN hm h,"
+    ],
+    "gdt_count_per_period": [
+     "exact count_canonical_period hN hm h",
+     "rw [periodic_window_card_eq (gdt_periodic hN hm h) b]"
+    ],
+    "card_filter_Ico_split": [
+     "(hdisj.mono (Finset.filter_subset _ _) (Finset.filter_subset _ _))]",
+     "Finset.card_union_of_disjoint",
+     "have hdisj : Disjoint (Finset.Ico a b) (Finset.Ico b c) := by"
+    ],
+    "S_eq_filter_Ico": [
+     "simp only [Finset.mem_filter, Finset.mem_Icc, Finset.mem_Ico]"
+    ],
+    "gdt_density": [
+     "((Finset.Ico (k * Tmin N m + s + 1)",
+     "((Finset.Ico 1 (k * Tmin N m + s + 1)).filter",
+     "(Nat.le_add_left 1 _) (Nat.add_le_add_right (Nat.le_add_right _ _) 1)]"
+    ]
+   },
+   "checks": {
+    "compile": true,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": true,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": true
+   },
+   "errors": [],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "prime_coprime_prod": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "prime_coprime_prod",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "prod_primes_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "prod_primes_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_d_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_d_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_dvd_self": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_dvd_self",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_iff_coprime_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_iff_coprime_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_of_modEq_natAbs": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_of_modEq_natAbs",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gcd_with_N_iff_gcd_with_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_with_N_iff_gcd_with_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_add_mul_right": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_add_mul_right",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gdt_periodic": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_periodic",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "periodic_window_card_eq": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "periodic_window_card_eq",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_m_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_m_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "accepted_iff_coprime_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "accepted_iff_coprime_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_pos": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_pos",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "R_pos": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "R_pos",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "exists_repr_mod_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "exists_repr_mod_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "repr_unique": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "repr_unique",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "gcd_mod_eq": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_mod_eq",
+     "is_theorem": true,
+     "axioms": [
+      "propext"
+     ]
+    },
+    "canonical_window_card_eq_range_coprime": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "canonical_window_card_eq_range_coprime",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "count_canonical_period": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "count_canonical_period",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "gdt_count_per_period": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_count_per_period",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "card_filter_Ico_split": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "card_filter_Ico_split",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "S_eq_filter_Ico": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "S_eq_filter_Ico",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "gdt_density": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_density",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    }
+   },
+   "compile_wall_s": 6.2,
+   "lean4checker_wall_s": 2.0,
+   "simulated_provenance": false
+  },
+  {
+   "case": "S_gdt_correction_factor_reference_fixtures",
+   "target": "gdt_correction_factor",
+   "expected": [
+    "certified",
+    "fixture_only"
+   ],
+   "outcome": "certified",
+   "claim": "fixture_only",
+   "passed": true,
+   "order": [
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "prime_coprime_prod",
+    "prod_primes_squarefree",
+    "rad_squarefree",
+    "coprime_d_R",
+    "rad_pos",
+    "totient_rad_mul",
+    "gdt_correction_factor"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": {
+    "d_dvd_rad": [
+     "Nat.primeFactors_mono hdvd hN.ne'",
+     "exact Finset.prod_dvd_prod_of_subset _ _ id hsub",
+     "have hdvd : Nat.gcd m N ∣ N := Nat.gcd_dvd_right m N"
+    ],
+    "d_mul_R_eq_rad": [
+     "exact Nat.mul_div_cancel' (d_dvd_rad hN)"
+    ],
+    "prime_coprime_prod": [
+     "(Nat.coprime_primes ha hbprime).mpr habne",
+     "exact ha_not (Finset.mem_insert_of_mem hat)",
+     "exact ha_not (Finset.mem_insert_self a t)"
+    ],
+    "prod_primes_squarefree": [
+     "exact Nat.squarefree_mul_iff.mpr",
+     "exact hs p (Finset.mem_insert_of_mem hp)",
+     "have hcop : Nat.Coprime a (∏ p ∈ s, p) :="
+    ],
+    "rad_squarefree": [
+     "(fun p hp => Nat.prime_of_mem_primeFactors hp)",
+     "exact prod_primes_squarefree"
+    ],
+    "coprime_d_R": [
+     "exact (Nat.squarefree_mul_iff.mp hsf).1",
+     "have heq : d N m * R N m = rad N := d_mul_R_eq_rad hN",
+     "have hsf : Squarefree (d N m * R N m) := heq ▸ rad_squarefree N"
+    ],
+    "rad_pos": [
+     "(fun p hp => (Nat.prime_of_mem_primeFactors hp).pos)",
+     "exact Finset.prod_pos"
+    ],
+    "totient_rad_mul": [
+     "(fun p hp => Nat.prime_of_mem_primeFactors hp)]",
+     "(∏ p ∈ n.primeFactors, (p - 1)) * rad n := by",
+     "= n * ∏ p ∈ n.primeFactors, (p - 1) := by"
+    ],
+    "gdt_correction_factor": [
+     "= N * (Nat.totient (d N m) * Nat.totient (R N m)) := by",
+     "Nat.totient (R N m) * N * Nat.totient (d N m)",
+     "_ = N * Nat.totient (d N m * R N m) := by"
+    ]
+   },
+   "checks": {
+    "compile": true,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": true,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": true
+   },
+   "errors": [],
+   "members": {
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "prime_coprime_prod": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "prime_coprime_prod",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "prod_primes_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "prod_primes_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_d_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_d_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_pos": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_pos",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "totient_rad_mul": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "totient_rad_mul",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "gdt_correction_factor": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_correction_factor",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    }
+   },
+   "compile_wall_s": 3.7,
+   "lean4checker_wall_s": 1.8,
+   "simulated_provenance": false
+  },
+  {
+   "case": "S_general_divisor_theorem_reference_fixtures",
+   "target": "general_divisor_theorem",
+   "expected": [
+    "certified",
+    "fixture_only"
+   ],
+   "outcome": "certified",
+   "claim": "fixture_only",
+   "passed": true,
+   "order": [
+    "gdt_empty",
+    "d_dvd_rad",
+    "d_mul_R_eq_rad",
+    "prime_coprime_prod",
+    "prod_primes_squarefree",
+    "rad_squarefree",
+    "coprime_d_R",
+    "rad_dvd_self",
+    "coprime_iff_coprime_rad",
+    "coprime_of_modEq_natAbs",
+    "gcd_with_N_iff_gcd_with_R",
+    "coprime_add_mul_right",
+    "gdt_periodic",
+    "periodic_window_card_eq",
+    "coprime_m_R",
+    "accepted_iff_coprime_R",
+    "rad_pos",
+    "R_pos",
+    "exists_repr_mod_R",
+    "repr_unique",
+    "gcd_mod_eq",
+    "exists_accepted",
+    "primeFactors_forall_dvd_imp_dvd",
+    "squarefree_prime_dvd_split",
+    "R_squarefree",
+    "exists_coprime_R_neg_t_mod_p",
+    "rad_eq_self_of_squarefree",
+    "gdt_minimal_period",
+    "canonical_window_card_eq_range_coprime",
+    "count_canonical_period",
+    "gdt_count_per_period",
+    "totient_rad_mul",
+    "gdt_correction_factor",
+    "general_divisor_theorem"
+   ],
+   "missing": null,
+   "conflicts": null,
+   "extraneous": [],
+   "reference_text_hits": {
+    "gdt_empty": [
+     "Int.ModEq.of_dvd (Int.natCast_dvd_natCast.mpr hpm) hmod",
+     "Nat.prod_primeFactors_dvd (Nat.gcd m N)",
+     "apply Finset.eq_empty_iff_forall_not_mem.mpr"
+    ],
+    "d_dvd_rad": [
+     "Nat.primeFactors_mono hdvd hN.ne'",
+     "exact Finset.prod_dvd_prod_of_subset _ _ id hsub",
+     "have hdvd : Nat.gcd m N ∣ N := Nat.gcd_dvd_right m N"
+    ],
+    "d_mul_R_eq_rad": [
+     "exact Nat.mul_div_cancel' (d_dvd_rad hN)"
+    ],
+    "prime_coprime_prod": [
+     "(Nat.coprime_primes ha hbprime).mpr habne",
+     "exact ha_not (Finset.mem_insert_of_mem hat)",
+     "exact ha_not (Finset.mem_insert_self a t)"
+    ],
+    "prod_primes_squarefree": [
+     "exact Nat.squarefree_mul_iff.mpr",
+     "exact hs p (Finset.mem_insert_of_mem hp)",
+     "have hcop : Nat.Coprime a (∏ p ∈ s, p) :="
+    ],
+    "rad_squarefree": [
+     "(fun p hp => Nat.prime_of_mem_primeFactors hp)",
+     "exact prod_primes_squarefree"
+    ],
+    "coprime_d_R": [
+     "exact (Nat.squarefree_mul_iff.mp hsf).1",
+     "have heq : d N m * R N m = rad N := d_mul_R_eq_rad hN",
+     "have hsf : Squarefree (d N m * R N m) := heq ▸ rad_squarefree N"
+    ],
+    "rad_dvd_self": [
+     "exact Nat.prod_primeFactors_dvd n"
+    ],
+    "coprime_iff_coprime_rad": [
+     "(fun q hq => Nat.prime_of_mem_primeFactors hq)]",
+     "Nat.dvd_gcd hpk hprad",
+     "Nat.dvd_of_mem_primeFactors hprad_mem"
+    ],
+    "coprime_of_modEq_natAbs": [
+     "exact absurd (Nat.le_of_dvd one_pos hcontra) (not_le.mpr hp.one_lt)",
+     "have h := Int.natAbs_dvd_natAbs.mpr hpa_int",
+     "have ha0 : a ≡ 0 [ZMOD (p : ℤ)] := hkp.symm.trans hk0"
+    ],
+    "gcd_with_N_iff_gcd_with_R": [
+     "(rad_dvd_self (Nat.gcd m N)).trans (Nat.gcd_dvd_left m N)",
+     "Int.ModEq.of_dvd (Int.natCast_dvd_natCast.mpr hd_dvd_m) hk",
+     "coprime_iff_coprime_rad hN.ne'"
+    ],
+    "coprime_add_mul_right": [
+     "exact absurd (Nat.le_of_dvd one_pos hcontra) (not_le.mpr hp.one_lt)",
+     "have hcontra : p ∣ Nat.gcd (k + e * c) e := Nat.dvd_gcd hpsum hpe",
+     "have hcontra : p ∣ Nat.gcd k e := Nat.dvd_gcd hpk hpe"
+    ],
+    "gdt_periodic": [
+     "(gcd_with_N_iff_gcd_with_R hN hm h hmod).mp hgcd",
+     "Int.modEq_zero_iff_dvd.mpr hm_dvd_Tmin",
+     "exact (gcd_with_N_iff_gcd_with_R hN hm h hmod').mpr hR1"
+    ],
+    "periodic_window_card_eq": [
+     "((Finset.Ico (k + 1) (k + 1 + T)).filter P).card",
+     "((Finset.Ico (k + 1) (k + 1 + T)).filter P).card =",
+     "((Finset.Ico (k + 1) (k + T)).filter P).card +"
+    ],
+    "coprime_m_R": [
+     "(Nat.le_of_dvd one_pos hcontra)",
+     "(fun q hq => Nat.prime_of_mem_primeFactors hq)]",
+     "(not_le.mpr hp.one_lt)"
+    ],
+    "accepted_iff_coprime_R": [
+     "exact ⟨hmod, (gcd_with_N_iff_gcd_with_R hN hm h hmod).mp hgcd⟩",
+     "exact ⟨hmod, (gcd_with_N_iff_gcd_with_R hN hm h hmod).mpr hgcdR⟩",
+     "· rintro ⟨hmod, hgcdR⟩"
+    ],
+    "rad_pos": [
+     "(fun p hp => (Nat.prime_of_mem_primeFactors hp).pos)",
+     "exact Finset.prod_pos"
+    ],
+    "R_pos": [
+     "have heq := d_mul_R_eq_rad (N := N) (m := m) hN",
+     "have hrad_pos := rad_pos N",
+     "rcases Nat.eq_zero_or_pos (R N m) with hR0 | hR"
+    ],
+    "exists_repr_mod_R": [
+     "((k % Tmin N m : ℕ) : ℤ) ≡ (aN : ℤ) [ZMOD (m : ℤ)] := by",
+     "Int.emod_nonneg a (by exact_mod_cast hm.ne')",
+     "Int.toNat_of_nonneg haN_nonneg"
+    ],
+    "repr_unique": [
+     "(Nat.modEq_and_modEq_iff_modEq_mul (coprime_m_R hN)).mp",
+     "exact Int.natCast_modEq_iff.mp h",
+     "have h : (n1 : ℤ) ≡ (n2 : ℤ) [ZMOD (m : ℤ)] :="
+    ],
+    "gcd_mod_eq": [
+     "rw [Nat.gcd_comm n R, Nat.gcd_rec R n]"
+    ],
+    "exists_accepted": [
+     "Int.emod_nonneg a (by exact_mod_cast hm.ne')",
+     "Int.toNat_of_nonneg haN_nonneg",
+     "Nat.chineseRemainder (coprime_m_R hN) aN 1"
+    ],
+    "primeFactors_forall_dvd_imp_dvd": [
+     "(∀ p ∈ s, p ∣ t) → s.prod id ∣ t := by",
+     "Nat.prime_of_mem_primeFactors hp_mem_n",
+     "exact Nat.Coprime.mul_dvd_of_dvd_of_dvd hcop hpdvd hsdvd"
+    ],
+    "squarefree_prime_dvd_split": [
+     "(Nat.squarefree_mul_iff.mp hsf').1",
+     "exact ⟨hcop, hk.symm⟩",
+     "have hcop : Nat.Coprime p k :="
+    ],
+    "R_squarefree": [
+     "exact (rad_squarefree N).squarefree_of_dvd hdvd",
+     "have hdvd : R N m ∣ rad N := ⟨d N m, by rw [← d_mul_R_eq_rad hN]; ring⟩"
+    ],
+    "exists_coprime_R_neg_t_mod_p": [
+     "(Nat.le_of_dvd (Nat.pos_of_ne_zero hrp_ne_zero) hdvd)",
+     "(hp.coprime_iff_not_dvd.mpr (fun hdvd =>",
+     "(not_le.mpr hrp_lt))).symm"
+    ],
+    "rad_eq_self_of_squarefree": [
+     "exact Nat.prod_primeFactors_of_squarefree hsf"
+    ],
+    "gdt_minimal_period": [
+     "((n0 : ℤ) + (t : ℤ)) ≡ (n0 : ℤ) [ZMOD (m : ℤ)] := by",
+     "(Nat.le_of_dvd one_pos hp_one)",
+     "(coprime_m_R hN) hmt hRt"
+    ],
+    "canonical_window_card_eq_range_coprime": [
+     "apply Finset.card_bij (fun n _ => n % R N m)",
+     "exact repr_unique hN hm hlt1 hlt2 hmod1 hmod2 heq",
+     "exact ⟨Nat.mod_lt n (R_pos hN), by rwa [← gcd_mod_eq]⟩"
+    ],
+    "count_canonical_period": [
+     "Nat.totient_eq_card_coprime]",
+     "apply congrArg Finset.card",
+     "canonical_window_card_eq_range_coprime hN hm h,"
+    ],
+    "gdt_count_per_period": [
+     "exact count_canonical_period hN hm h",
+     "rw [periodic_window_card_eq (gdt_periodic hN hm h) b]"
+    ],
+    "totient_rad_mul": [
+     "(fun p hp => Nat.prime_of_mem_primeFactors hp)]",
+     "(∏ p ∈ n.primeFactors, (p - 1)) * rad n := by",
+     "= n * ∏ p ∈ n.primeFactors, (p - 1) := by"
+    ],
+    "gdt_correction_factor": [
+     "= N * (Nat.totient (d N m) * Nat.totient (R N m)) := by",
+     "Nat.totient (R N m) * N * Nat.totient (d N m)",
+     "_ = N * Nat.totient (d N m * R N m) := by"
+    ],
+    "general_divisor_theorem": [
+     "exact gdt_count_per_period hN hm h b",
+     "exact gdt_empty hN hm h",
+     "exact gdt_minimal_period hN hm h ht hp"
+    ]
+   },
+   "checks": {
+    "compile": true,
+    "check_ran": true,
+    "all_present_theorems": true,
+    "all_statements_alpha_equivalent": true,
+    "all_axioms_whitelisted": true,
+    "no_declared_axioms": true,
+    "no_weakening_options": true,
+    "lean4checker": true
+   },
+   "errors": [],
+   "members": {
+    "gdt_empty": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_empty",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_dvd_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_dvd_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "d_mul_R_eq_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "d_mul_R_eq_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "prime_coprime_prod": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "prime_coprime_prod",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "prod_primes_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "prod_primes_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_d_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_d_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_dvd_self": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_dvd_self",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_iff_coprime_rad": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_iff_coprime_rad",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_of_modEq_natAbs": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_of_modEq_natAbs",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gcd_with_N_iff_gcd_with_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_with_N_iff_gcd_with_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_add_mul_right": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_add_mul_right",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "gdt_periodic": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_periodic",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "periodic_window_card_eq": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "periodic_window_card_eq",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "coprime_m_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "coprime_m_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "accepted_iff_coprime_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "accepted_iff_coprime_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_pos": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_pos",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "R_pos": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "R_pos",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "exists_repr_mod_R": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "exists_repr_mod_R",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "repr_unique": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "repr_unique",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "gcd_mod_eq": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gcd_mod_eq",
+     "is_theorem": true,
+     "axioms": [
+      "propext"
+     ]
+    },
+    "exists_accepted": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "exists_accepted",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "primeFactors_forall_dvd_imp_dvd": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "primeFactors_forall_dvd_imp_dvd",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "squarefree_prime_dvd_split": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "squarefree_prime_dvd_split",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "R_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "R_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "exists_coprime_R_neg_t_mod_p": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "exists_coprime_R_neg_t_mod_p",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "rad_eq_self_of_squarefree": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "rad_eq_self_of_squarefree",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "gdt_minimal_period": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_minimal_period",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "canonical_window_card_eq_range_coprime": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "canonical_window_card_eq_range_coprime",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "count_canonical_period": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "count_canonical_period",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "gdt_count_per_period": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_count_per_period",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "totient_rad_mul": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "totient_rad_mul",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "gdt_correction_factor": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "gdt_correction_factor",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    },
+    "general_divisor_theorem": {
+     "type_alpha_equivalent": true,
+     "present": true,
+     "name": "general_divisor_theorem",
+     "is_theorem": true,
+     "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+     ]
+    }
+   },
+   "compile_wall_s": 8.9,
+   "lean4checker_wall_s": 1.6,
+   "simulated_provenance": false
+  }
+ ]
+}

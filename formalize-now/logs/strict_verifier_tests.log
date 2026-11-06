@@ -17,4 +17,4 @@ P3_local_axiom_without_kernel_replay         expect=rejected    got=rejected    
 T1_only_certified_counted                    PASS  got=1
 T2_forged_certified_status_raises            PASS  got=ValueError
 
-# exit=0 wall_s=52.3 peak_tree_rss_kb=3894388
+# exit=0 wall_s=45.9 peak_tree_rss_kb=3894204

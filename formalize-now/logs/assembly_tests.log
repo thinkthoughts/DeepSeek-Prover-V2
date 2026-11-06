@@ -1,0 +1,26 @@
+A1_success_reference_fixtures              outcome=certified  claim=fixture_only             PASS   
+A2_success_independent_simulated_model     outcome=certified  claim=c2_success               PASS   
+A3_simulated_model_with_reference_text     outcome=certified  claim=reference_text_detected  PASS   
+A4_mixed_fixture_and_simulated_model       outcome=certified  claim=fixture_only             PASS   
+M1_missing_lemma_no_fallback               outcome=incomplete claim=none                     PASS   ['gcd_with_N_iff_gcd_with_R']
+M2_missing_target                          outcome=incomplete claim=none                     PASS   ['gdt_periodic']
+M3_only_preliminary_candidate              outcome=incomplete claim=none                     PASS   ['rad_dvd_self']
+V1_invalid_sorry_marked_certified          outcome=rejected   claim=none                     PASS  ['all_axioms_whitelisted', 'lean4checker'] 
+V2_invalid_compile_error                   outcome=rejected   claim=none                     PASS  ['compile', 'all_axioms_whitelisted', 'lean4checker'] 
+V3_namespace_escape_injection              outcome=rejected   claim=none                     PASS  ['compile', 'all_present_theorems', 'all_statements_alpha_equivalent', 'all_axioms_whitelisted', 'lean4checker'] 
+V4_local_axiom_injection                   outcome=rejected   claim=none                     PASS  ['compile', 'all_axioms_whitelisted', 'no_declared_axioms', 'lean4checker'] 
+C1_conflict_same_sample_index              outcome=conflict   claim=none                     PASS   [{'lemma': 'rad_dvd_self', 'sample_index': 0}]
+C2_first_certified_selected                outcome=certified  claim=fixture_only             PASS   
+C3_lower_index_certified_but_wrong         outcome=rejected   claim=none                     PASS  ['compile', 'all_axioms_whitelisted', 'lean4checker'] 
+O1_shuffled_with_extraneous                outcome=certified  claim=fixture_only             PASS   
+E1_unknown_target                          outcome=error      claim=none                     PASS   unknown target no_such_theorem
+S_gdt_empty_reference_fixtures             outcome=certified  claim=fixture_only             PASS   
+S_gdt_minimal_period_reference_fixtures    outcome=certified  claim=fixture_only             PASS   
+S_gdt_count_per_period_reference_fixtures  outcome=certified  claim=fixture_only             PASS   
+S_gdt_density_reference_fixtures           outcome=certified  claim=fixture_only             PASS   
+S_gdt_correction_factor_reference_fixtures outcome=certified  claim=fixture_only             PASS   
+S_general_divisor_theorem_reference_fixtures outcome=certified  claim=fixture_only             PASS   
+
+real	1m34.110s
+user	1m21.693s
+sys	0m12.275s

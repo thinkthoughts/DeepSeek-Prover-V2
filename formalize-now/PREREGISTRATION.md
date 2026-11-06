@@ -198,3 +198,38 @@ Found by inspecting the prompt and verifier interfaces against DeepSeek-Prover-V
 
 Tests: `harness/tests/run_extract_tests.py`, 15/15 synthetic completions
 (`harness/tests/extract_results.json`).
+
+### A2 — 2026-11-05, recorded before any model output (RPI-DS-001d.2, theorem-level C2 assembler)
+
+This amendment makes §5 operational in `harness/assemble_c2.py`; the outcome definitions
+and metrics are unchanged.
+
+1. **Order.** The members are closure(T) ∪ {T}, taken from the Stage 0 *kernel*
+   dependencies (`manifest/gdt_manifest_v2.json`). They are assembled in topological
+   order, with source line as tie-break. An unknown name or a cycle is an assembly error.
+2. **Selection at budget b.** For each member, the candidate with the smallest
+   `sample_index < b` whose per-item C2 status is `certified` (§5 "first certified").
+   - Two different proofs at the same (member, sample_index) are a `conflict`. The
+     theorem counts as unsolved, and the pipeline defect is logged.
+   - A member without a certified candidate makes the assembly `incomplete`. No proof of
+     any other origin is substituted.
+3. **Assembled-file certification (stricter than §5's wording).** The file contains
+   trusted expected statements for *every* member, elaborated before any candidate text.
+   *Every* member must be present as a theorem, alpha-equivalent to its expected
+   statement, and within the axiom whitelist. The file may declare no axioms and set no
+   weakening options, and the module must replay through lean4checker.
+4. **Claim levels.** Only `c2_success` counts as C2-solved in any confirmatory analysis.
+   - `c2_success`: certified; every member has provenance `model` with a generation id;
+     no member body contains a reference-proof line. The line set is the one used by the
+     prompt leak check: proof lines of at least 20 characters, public statement text
+     excluded.
+   - `fixture_only`: certified with a fixture member. This occurs only in tests.
+   - `reference_text_detected`: certified, claimed as model output, but containing a
+     reference-proof line. It counts as unsolved in the primary analysis and is reported
+     separately for manual review.
+   - `none`: not certified.
+5. **Tests.** `harness/tests/run_assembly_tests.py`: 22/22 controlled fixtures. They cover
+   successful, missing, invalid, injected, conflicting, re-ordered and extraneous
+   candidates, and all 7 challenge theorems with reference fixtures
+   (`harness/tests/assembly_results.json`). Model provenance appears in those tests only
+   as a labelled simulation.

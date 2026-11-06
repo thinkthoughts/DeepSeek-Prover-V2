@@ -70,7 +70,7 @@
      "Quot.sound"
     ]
    },
-   "wall_s": 3.1,
+   "wall_s": 2.9,
    "checks": {
     "C7_options": true,
     "C1_compile": true,
@@ -111,7 +111,7 @@
      "Classical.choice"
     ]
    },
-   "wall_s": 3.1,
+   "wall_s": 2.8,
    "checks": {
     "prefix": true,
     "C7_options": true,
@@ -158,7 +158,7 @@
      "sorryAx"
     ]
    },
-   "wall_s": 3.0,
+   "wall_s": 2.2,
    "checks": {
     "C7_options": true,
     "C1_compile": true,
@@ -203,7 +203,7 @@
      "sorryAx"
     ]
    },
-   "wall_s": 2.9,
+   "wall_s": 2.2,
    "checks": {
     "C7_options": true,
     "C1_compile": true,
@@ -247,7 +247,7 @@
      "sorryAx"
     ]
    },
-   "wall_s": 2.8,
+   "wall_s": 2.4,
    "checks": {
     "C7_options": true,
     "C1_compile": false,
@@ -339,7 +339,7 @@
      "rpi_cheat"
     ]
    },
-   "wall_s": 2.8,
+   "wall_s": 2.3,
    "checks": {
     "prefix": true,
     "C7_options": true,
@@ -374,7 +374,7 @@
     "#exit": 1
    },
    "lean_check": {},
-   "wall_s": 2.8,
+   "wall_s": 2.1,
    "checks": {
     "C7_options": true,
     "C1_compile": false,
@@ -421,7 +421,7 @@
      "Lean.ofReduceBool"
     ]
    },
-   "wall_s": 2.8,
+   "wall_s": 2.4,
    "checks": {
     "prefix": true,
     "C7_options": true,
@@ -459,7 +459,7 @@
      "Multiset.filter._at.GDT.S._spec_3"
     ]
    },
-   "wall_s": 3.0,
+   "wall_s": 2.9,
    "checks": {
     "prefix": true,
     "C7_options": true,
@@ -526,7 +526,7 @@
      "Classical.choice"
     ]
    },
-   "wall_s": 3.1,
+   "wall_s": 2.7,
    "checks": {
     "prefix": true,
     "C7_options": false,
@@ -571,7 +571,7 @@
      "Classical.choice"
     ]
    },
-   "wall_s": 3.0,
+   "wall_s": 2.7,
    "checks": {
     "C7_options": true,
     "C1_compile": true,
@@ -613,7 +613,7 @@
      "Classical.choice"
     ]
    },
-   "wall_s": 2.8,
+   "wall_s": 2.7,
    "checks": {
     "prefix": true,
     "C7_options": true,
@@ -661,7 +661,7 @@
      "rpi_cheat"
     ]
    },
-   "wall_s": 3.0,
+   "wall_s": 2.6,
    "checks": {
     "prefix": true,
     "C7_options": true,

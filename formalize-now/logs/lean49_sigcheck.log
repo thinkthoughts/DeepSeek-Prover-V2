@@ -324,4 +324,4 @@
  "certified": 39}
 @@RPI_JSON_END
 
-# exit=0 wall_s=7.3 peak_tree_rss_kb=1577220
+# exit=0 wall_s=6.2 peak_tree_rss_kb=1577404
