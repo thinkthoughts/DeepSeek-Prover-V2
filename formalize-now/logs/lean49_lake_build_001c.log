@@ -1,0 +1,110 @@
+✔ [1201/1206] Built GDTBench.Defs
+⚠ [1202/1206] Built GDTBench.Challenge
+warning: ././././GDTBench/Challenge.lean:27:8: declaration uses 'sorry'
+warning: ././././GDTBench/Challenge.lean:33:8: declaration uses 'sorry'
+warning: ././././GDTBench/Challenge.lean:40:8: declaration uses 'sorry'
+warning: ././././GDTBench/Challenge.lean:48:8: declaration uses 'sorry'
+warning: ././././GDTBench/Challenge.lean:58:8: declaration uses 'sorry'
+warning: ././././GDTBench/Challenge.lean:67:8: declaration uses 'sorry'
+warning: ././././GDTBench/Challenge.lean:73:8: declaration uses 'sorry'
+⚠ [1203/1206] Built GDTBench.Ladder
+warning: ././././GDTBench/Ladder.lean:13:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:17:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:21:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:27:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:32:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:36:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:41:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:45:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:50:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:56:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:64:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:69:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:76:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:81:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:88:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:92:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:96:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:104:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:112:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:117:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:122:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:127:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:133:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:138:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:142:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:148:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:153:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:162:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:169:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:177:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:183:6: declaration uses 'sorry'
+warning: ././././GDTBench/Ladder.lean:189:6: declaration uses 'sorry'
+⚠ [1204/1206] Built GDTBench.Expected
+warning: ././././GDTBench/Expected.lean:29:8: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:35:8: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:42:8: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:50:8: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:60:8: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:69:8: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:75:8: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:98:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:102:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:106:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:112:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:117:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:121:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:126:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:130:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:135:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:141:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:149:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:154:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:161:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:166:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:173:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:177:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:181:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:189:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:197:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:202:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:207:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:212:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:218:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:223:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:227:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:233:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:238:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:247:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:254:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:262:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:268:6: declaration uses 'sorry'
+warning: ././././GDTBench/Expected.lean:274:6: declaration uses 'sorry'
+⚠ [1205/1206] Built GDTBench.SolutionRef
+warning: ././././GDTBench/SolutionRef.lean:77:12: unused variable `hs`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././GDTBench/SolutionRef.lean:77:15: unused variable `ha_not`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././GDTBench/SolutionRef.lean:435:41: unused variable `haN_def`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././GDTBench/SolutionRef.lean:497:41: unused variable `haN_def`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././GDTBench/SolutionRef.lean:542:14: unused variable `hsub`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././GDTBench/SolutionRef.lean:542:19: unused variable `hall'`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././GDTBench/SolutionRef.lean:615:27: unused variable `hR'_def`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././GDTBench/SolutionRef.lean:616:50: unused variable `hrp_def`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././GDTBench/SolutionRef.lean:653:33: unused variable `hr_def`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././GDTBench/SolutionRef.lean:708:16: unused variable `hn1lt`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././GDTBench/SolutionRef.lean:784:16: unused variable `hlt`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././GDTBench/SolutionRef.lean:784:22: unused variable `hmod`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully.
+
+# exit=0 wall_s=4.9 peak_tree_rss_kb=2862116

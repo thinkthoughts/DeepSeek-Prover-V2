@@ -1,0 +1,20 @@
+V1_valid_proof_gdt_empty                     expect=certified   got=certified   PASS  v15=True  []
+V2_valid_proof_coprime_add_mul_right         expect=certified   got=certified   PASS  v15=True  []
+V3_valid_full_code_gdt_empty                 expect=certified   got=certified   PASS  v15=True  []
+I1_sorry                                     expect=rejected    got=rejected    PASS  v15=False  ['C5_axioms']
+I2_admit                                     expect=rejected    got=rejected    PASS  v15=False  ['C5_axioms']
+I3_compile_error                             expect=rejected    got=rejected    PASS  v15=False  ['C1_compile', 'C5_axioms']
+I4_weakened_statement_full_code              expect=rejected    got=rejected    PASS  v15=True  ['C4_statement']
+I5_local_axiom_full_code                     expect=rejected    got=rejected    PASS  v15=True  ['C5_axioms', 'C6_no_local_axioms']
+I6_exit_after_partial_proof                  expect=rejected    got=rejected    PASS  v15=False  ['C1_compile', 'C2_check_ran', 'C3_present_theorem', 'C4_statement', 'C5_axioms', 'C6_no_local_axioms']
+I7_native_decide_dependency                  expect=rejected    got=rejected    PASS  v15=True  ['C5_axioms']
+I8_renamed_theorem_full_code                 expect=rejected    got=rejected    PASS  v15=True  ['C3_present_theorem', 'C4_statement', 'C5_axioms']
+I9_prefix_tampering_full_code                expect=rejected    got=rejected    PASS  v15=None  ['prefix: full-code candidate does not start with the trusted header and definitions']
+I10_skipKernelTC_option                      expect=rejected    got=rejected    PASS  v15=False  ['C7_options', 'C1_compile']
+P1_valid_proof_without_kernel_replay         expect=preliminary got=preliminary PASS  v15=True  ['C8_lean4checker_not_run']
+P2_valid_full_code_without_kernel_replay     expect=preliminary got=preliminary PASS  v15=True  ['C8_lean4checker_not_run']
+P3_local_axiom_without_kernel_replay         expect=rejected    got=rejected    PASS  v15=True  ['C5_axioms', 'C6_no_local_axioms']
+T1_only_certified_counted                    PASS  got=1
+T2_forged_certified_status_raises            PASS  got=ValueError
+
+# exit=0 wall_s=44.4 peak_tree_rss_kb=3906088

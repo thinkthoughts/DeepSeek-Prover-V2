@@ -1,0 +1,15 @@
+{
+ "prompts": 184,
+ "sha256": "de8143b2b3bd95e5e4252912c6c04d91eab3f3ac103094cdb5796743bfc9caea",
+ "reference_proof_lines_checked": 471,
+ "leaks": [],
+ "closure_sizes": {
+  "gdt_correction_factor": 8,
+  "gdt_count_per_period": 22,
+  "gdt_density": 25,
+  "gdt_empty": 0,
+  "gdt_minimal_period": 21,
+  "gdt_periodic": 7,
+  "general_divisor_theorem": 33
+ }
+}

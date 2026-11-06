@@ -1,0 +1,149 @@
+@@T begin gdt/gdt_empty 1211217
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:48:2: error: simp_all made no progress
+@@T end gdt/gdt_empty 1211248
+@@T begin gdt/gdt_periodic 1211258
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:63:2: error: simp_all made no progress
+@@T end gdt/gdt_periodic 1211285
+@@T begin gdt/gdt_minimal_period 1211296
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:78:2: error: simp_all made no progress
+@@T end gdt/gdt_minimal_period 1211341
+@@T begin gdt/gdt_count_per_period 1211353
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:94:2: error: simp_all made no progress
+@@T end gdt/gdt_count_per_period 1211440
+@@T begin gdt/gdt_density 1211450
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:110:2: error: simp_all made no progress
+@@T end gdt/gdt_density 1211497
+@@T begin gdt/gdt_correction_factor 1211507
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:125:2: error: simp_all made no progress
+@@T end gdt/gdt_correction_factor 1211566
+@@T begin gdt/general_divisor_theorem 1211576
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:147:2: error: simp_all made no progress
+@@T end gdt/general_divisor_theorem 1211774
+@@T begin gdt/d_dvd_rad 1211784
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:160:2: error: simp_all made no progress
+@@T end gdt/d_dvd_rad 1211817
+@@T begin gdt/d_mul_R_eq_rad 1211828
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:173:2: error: simp_all made no progress
+@@T end gdt/d_mul_R_eq_rad 1211870
+@@T begin gdt/prime_coprime_prod 1211880
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:188:2: error: simp_all made no progress
+@@T end gdt/prime_coprime_prod 1211919
+@@T begin gdt/prod_primes_squarefree 1211929
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:202:2: error: simp_all made no progress
+@@T end gdt/prod_primes_squarefree 1211988
+@@T begin gdt/rad_squarefree 1211998
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:215:2: error: simp_all made no progress
+@@T end gdt/rad_squarefree 1212023
+@@T begin gdt/coprime_d_R 1212033
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:229:2: error: simp_all made no progress
+@@T end gdt/coprime_d_R 1212058
+@@T begin gdt/rad_dvd_self 1212068
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:242:2: error: simp_all made no progress
+@@T end gdt/rad_dvd_self 1212093
+@@T begin gdt/coprime_iff_coprime_rad 1212104
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:255:47: error: unsolved goals
+k n : ℕ
+hn : ¬n = 0
+⊢ k.Coprime n ↔ k.Coprime (rad n)
+@@T end gdt/coprime_iff_coprime_rad 1212133
+@@T begin gdt/coprime_of_modEq_natAbs 1212143
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:271:2: error: simp_all made no progress
+@@T end gdt/coprime_of_modEq_natAbs 1212182
+@@T begin gdt/gcd_with_N_iff_gcd_with_R 1212193
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:288:2: error: simp_all made no progress
+@@T end gdt/gcd_with_N_iff_gcd_with_R 1212232
+@@T begin gdt/coprime_add_mul_right 1212242
+@@T end gdt/coprime_add_mul_right 1212266
+@@T begin gdt/periodic_window_card_eq 1212276
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:317:42: error: unsolved goals
+P : ℕ → Prop
+inst✝ : DecidablePred P
+T : ℕ
+hP : ∀ (n : ℕ), P (n + T) ↔ P n
+b : ℕ
+⊢ (Finset.filter P (Finset.Ico b (b + T))).card = (Finset.filter P (Finset.range T)).card
+@@T end gdt/periodic_window_card_eq 1212408
+@@T begin gdt/coprime_m_R 1212418
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:332:2: error: simp_all made no progress
+@@T end gdt/coprime_m_R 1212440
+@@T begin gdt/accepted_iff_coprime_R 1212450
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:348:2: error: simp_all made no progress
+@@T end gdt/accepted_iff_coprime_R 1212489
+@@T begin gdt/rad_pos 1212502
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:361:2: error: simp_all made no progress
+@@T end gdt/rad_pos 1212523
+@@T begin gdt/R_pos 1212537
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:374:2: error: simp_all made no progress
+@@T end gdt/R_pos 1212564
+@@T begin gdt/exists_repr_mod_R 1212575
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:391:2: error: simp_all made no progress
+@@T end gdt/exists_repr_mod_R 1212627
+@@T begin gdt/repr_unique 1212638
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:408:2: error: simp_all made no progress
+@@T end gdt/repr_unique 1212697
+@@T begin gdt/gcd_mod_eq 1212708
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:422:2: error: simp_all made no progress
+@@T end gdt/gcd_mod_eq 1212725
+@@T begin gdt/exists_accepted 1212735
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:436:2: error: simp_all made no progress
+@@T end gdt/exists_accepted 1212765
+@@T begin gdt/primeFactors_forall_dvd_imp_dvd 1212775
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:449:56: error: unsolved goals
+n t : ℕ
+_hn : 0 < n
+hall : ∀ (p : ℕ), p.Prime → p ∣ n → ¬n = 0 → p ∣ t
+⊢ rad n ∣ t
+@@T end gdt/primeFactors_forall_dvd_imp_dvd 1213075
+@@T begin gdt/exists_witness_avoiding_dvd 1213087
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:465:2: error: simp_all made no progress
+@@T end gdt/exists_witness_avoiding_dvd 1213143
+@@T begin gdt/squarefree_prime_dvd_split 1213153
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:479:2: error: simp_all made no progress
+@@T end gdt/squarefree_prime_dvd_split 1213216
+@@T begin gdt/R_squarefree 1213226
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:492:2: error: simp_all made no progress
+@@T end gdt/R_squarefree 1213261
+@@T begin gdt/exists_coprime_R_neg_t_mod_p 1213270
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:507:2: error: simp_all made no progress
+@@T end gdt/exists_coprime_R_neg_t_mod_p 1213366
+@@T begin gdt/rad_eq_self_of_squarefree 1213376
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:521:2: error: simp_all made no progress
+@@T end gdt/rad_eq_self_of_squarefree 1213410
+@@T begin gdt/canonical_window_card_eq_range_coprime 1213421
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:538:50: error: unsolved goals
+N m : ℕ
+hN : 0 < N
+hm : 0 < m
+a : ℤ
+_h : Admissible N m a
+⊢ (Finset.filter (fun n => ↑n ≡ a [ZMOD ↑m] ∧ n.gcd (R N m) = 1) (Finset.range (Tmin N m))).card =
+    (Finset.filter (fun r => r.gcd (R N m) = 1) (Finset.range (R N m))).card
+@@T end gdt/canonical_window_card_eq_range_coprime 1213517
+@@T begin gdt/count_canonical_period 1213528
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:554:29: error: unsolved goals
+N m : ℕ
+hN : 0 < N
+hm : 0 < m
+a : ℤ
+h : Admissible N m a
+⊢ (Finset.filter (accepted N m a) (Finset.range (Tmin N m))).card = φ (R N m)
+@@T end gdt/count_canonical_period 1213585
+@@T begin gdt/card_filter_Ico_split 1213595
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:572:2: error: simp_all made no progress
+@@T end gdt/card_filter_Ico_split 1213657
+@@T begin gdt/S_eq_filter_Ico 1213668
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:587:2: error: simp_all made no progress
+@@T end gdt/S_eq_filter_Ico 1213728
+@@T begin gdt/rad_factorization_eq_one 1213738
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:601:35: error: unsolved goals
+n : ℕ
+_hn : 0 < n
+p : ℕ
+hp : p.Prime ∧ p ∣ n ∧ ¬n = 0
+⊢ (rad n).factorization p = 1
+@@T end gdt/rad_factorization_eq_one 1213815
+@@T begin gdt/totient_rad_mul 1213825
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_simp_all.lean:616:2: error: simp_all made no progress
+@@T end gdt/totient_rad_mul 1213878
+
+# exit=1 wall_s=5.0

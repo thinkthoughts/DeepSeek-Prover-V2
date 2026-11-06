@@ -1,0 +1,19 @@
+# exit=0 wall_s=4.9 peak_tree_rss_kb=2862116
+build=0
+# exit=0 wall_s=7.7 peak_tree_rss_kb=1579612
+sigcheck=0
+certified 39 / 39 | scan {} | sigs unchanged True
+certify=0
+# exit=0 wall_s=1.5 peak_tree_rss_kb=1523864
+l4c=0
+# exit=0 wall_s=300.2 peak_tree_rss_kb=1660684
+l4c_fresh=0
+# exit=0 wall_s=44.4 peak_tree_rss_kb=3906088
+strict_tests=0
+# exit=0 wall_s=62.1 peak_tree_rss_kb=7841996
+repl_tests=0
+
+real	7m0.985s
+user	6m50.073s
+sys	0m23.364s
+exit=0

@@ -1,0 +1,2564 @@
+{
+ "schema": "rpi-ds-001c/cauto/v1",
+ "heartbeats_per_declaration": 200000,
+ "tactics": {
+  "simp": "simp",
+  "simp_all": "simp_all",
+  "omega": "omega",
+  "norm_num": "norm_num",
+  "decide": "decide",
+  "aesop": "aesop",
+  "linarith": "linarith",
+  "simp_all_defs": "simp_all [GDT.rad, GDT.d, GDT.R, GDT.Tmin, GDT.Admissible, GDT.accepted, GDT.S, GDT.IsPeriod]",
+  "intros_simp_all_defs_omega": "intros; simp_all [GDT.rad, GDT.d, GDT.R, GDT.Tmin, GDT.Admissible, GDT.accepted, GDT.S, GDT.IsPeriod] <;> omega",
+  "norm_num_defs_aesop": "norm_num [GDT.rad, GDT.d, GDT.R, GDT.Tmin, GDT.Admissible, GDT.accepted, GDT.S, GDT.IsPeriod] <;> aesop"
+ },
+ "runs": {
+  "simp": {
+   "tactic": "simp",
+   "file_wall_s": 4.3,
+   "exit": 1
+  },
+  "simp_all": {
+   "tactic": "simp_all",
+   "file_wall_s": 5.0,
+   "exit": 1
+  },
+  "omega": {
+   "tactic": "omega",
+   "file_wall_s": 3.4,
+   "exit": 1
+  },
+  "norm_num": {
+   "tactic": "norm_num",
+   "file_wall_s": 4.5,
+   "exit": 1
+  },
+  "decide": {
+   "tactic": "decide",
+   "file_wall_s": 3.4,
+   "exit": 1
+  },
+  "aesop": {
+   "tactic": "aesop",
+   "file_wall_s": 8.0,
+   "exit": 1
+  },
+  "linarith": {
+   "tactic": "linarith",
+   "file_wall_s": 4.9,
+   "exit": 1
+  },
+  "simp_all_defs": {
+   "tactic": "simp_all [GDT.rad, GDT.d, GDT.R, GDT.Tmin, GDT.Admissible, GDT.accepted, GDT.S, GDT.IsPeriod]",
+   "file_wall_s": 10.6,
+   "exit": 1
+  },
+  "intros_simp_all_defs_omega": {
+   "tactic": "intros; simp_all [GDT.rad, GDT.d, GDT.R, GDT.Tmin, GDT.Admissible, GDT.accepted, GDT.S, GDT.IsPeriod] <;> omega",
+   "file_wall_s": 10.7,
+   "exit": 1
+  },
+  "norm_num_defs_aesop": {
+   "tactic": "norm_num [GDT.rad, GDT.d, GDT.R, GDT.Tmin, GDT.Admissible, GDT.accepted, GDT.S, GDT.IsPeriod] <;> aesop",
+   "file_wall_s": 17.5,
+   "exit": 1
+  }
+ },
+ "items": 39,
+ "solved_items": [
+  "gdt/S_eq_filter_Ico",
+  "gdt/coprime_add_mul_right"
+ ],
+ "solved_count": 2,
+ "solved_by": {
+  "gdt/gdt_empty": [],
+  "gdt/gdt_periodic": [],
+  "gdt/gdt_minimal_period": [],
+  "gdt/gdt_count_per_period": [],
+  "gdt/gdt_density": [],
+  "gdt/gdt_correction_factor": [],
+  "gdt/general_divisor_theorem": [],
+  "gdt/d_dvd_rad": [],
+  "gdt/d_mul_R_eq_rad": [],
+  "gdt/prime_coprime_prod": [],
+  "gdt/prod_primes_squarefree": [],
+  "gdt/rad_squarefree": [],
+  "gdt/coprime_d_R": [],
+  "gdt/rad_dvd_self": [],
+  "gdt/coprime_iff_coprime_rad": [],
+  "gdt/coprime_of_modEq_natAbs": [],
+  "gdt/gcd_with_N_iff_gcd_with_R": [],
+  "gdt/coprime_add_mul_right": [
+   "aesop",
+   "intros_simp_all_defs_omega",
+   "norm_num",
+   "norm_num_defs_aesop",
+   "simp",
+   "simp_all",
+   "simp_all_defs"
+  ],
+  "gdt/periodic_window_card_eq": [],
+  "gdt/coprime_m_R": [],
+  "gdt/accepted_iff_coprime_R": [],
+  "gdt/rad_pos": [],
+  "gdt/R_pos": [],
+  "gdt/exists_repr_mod_R": [],
+  "gdt/repr_unique": [],
+  "gdt/gcd_mod_eq": [],
+  "gdt/exists_accepted": [],
+  "gdt/primeFactors_forall_dvd_imp_dvd": [],
+  "gdt/exists_witness_avoiding_dvd": [],
+  "gdt/squarefree_prime_dvd_split": [],
+  "gdt/R_squarefree": [],
+  "gdt/exists_coprime_R_neg_t_mod_p": [],
+  "gdt/rad_eq_self_of_squarefree": [],
+  "gdt/canonical_window_card_eq_range_coprime": [],
+  "gdt/count_canonical_period": [],
+  "gdt/card_filter_Ico_split": [],
+  "gdt/S_eq_filter_Ico": [
+   "aesop",
+   "norm_num_defs_aesop"
+  ],
+  "gdt/rad_factorization_eq_one": [],
+  "gdt/totient_rad_mul": []
+ },
+ "table": {
+  "gdt/gdt_empty": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 31,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 20,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 21,
+    "first_error": "unsolved goals\nN m L : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : ¬Admissible N m a\n⊢ S N L m a = ∅"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "expected type must not contain free or meta variables\n  S N L m a = ∅"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 989,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m L : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : ¬Admissible N m a\n  ⊢ S N L m a = ∅"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 19,
+    "first_error": "failed to synthesize\n  LinearOrder (Finset ℕ)\nuse `set_option diagnostics true` to get diagnostic information"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 110,
+    "first_error": "unsolved goals\nN m L : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : ¬a.natAbs.gcd (∏ x ∈ (m.gcd N).primeFactors, x) = 1\n⊢ Finset.filter (accepted N m a) (Finset.Icc 1 L) = ∅"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 116,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 2811,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m L : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : ¬Admissible N m a\n  ⊢ Finset.filter (accepted N m a) (Finset.Icc 1 L) = ∅"
+   }
+  },
+  "gdt/gdt_periodic": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 27,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 18,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\n⊢ IsPeriod N m a (Tmin N m)"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "expected type must not contain free or meta variables\n  IsPeriod N m a (Tmin N m)"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 38,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : Admissible N m a\n  ⊢ IsPeriod N m a (Tmin N m)"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 64,
+    "first_error": "linarith failed to find a contradiction\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 312,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : a.natAbs.gcd (∏ x ∈ (m.gcd N).primeFactors, x) = 1\n⊢ ∀ (n : ℕ),\n    ↑n + ↑m * ((∏ i ∈ N.primeFactors, ↑i) / ∏ i ∈ (m.gcd N).primeFactors, ↑i) ≡ a"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 299,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 855,
+    "first_error": "unsolved goals\ncase mp.left\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\nn : ℕ\nleft : ↑n + ↑m * ((∏ i ∈ N.primeFactors, ↑i) / ∏ i ∈ (m.gcd N).primeFactors, ↑i) ≡ a [ZMOD ↑m]\nright : (n + m"
+   }
+  },
+  "gdt/gdt_minimal_period": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 27,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 45,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  e ≥ 1\n  f ≥ 1\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m\n e := ↑t\n f := ↑t % ↑(Tmin N m)"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 30,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\nt : ℕ\nht : 0 < t\nhp : IsPeriod N m a t\n⊢ Tmin N m ∣ t"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "expected type must not contain free or meta variables\n  Tmin N m ∣ t"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 54,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : Admissible N m a\n  t : ℕ\n  ht : 0 < t\n  hp : IsPeriod N m a t\n  ⊢ Tmin N m ∣ t"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 68,
+    "first_error": "linarith failed to find a contradiction\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\nt : ℕ\nht : 0 < t\nhp : IsPeriod N m a t\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 325,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nt : ℕ\nh : a.natAbs.gcd (∏ x ∈ (m.gcd N).primeFactors, x) = 1\nht : 0 < t\nhp : ∀ (n : ℕ), ↑n + ↑t ≡ a [ZMOD ↑m] ∧ (n + t).gcd N = 1 ↔ ↑n ≡ a [ZMOD ↑m]"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 314,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  f ≥ 1\n  e ≥ 1\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m\n e := ↑t\n f := ↑t % ↑(m * ((∏ x ∈ N.primeFactors, x) / ∏ x"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 277,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : Admissible N m a\n  t : ℕ\n  ht : 0 < t\n  hp : IsPeriod N m a t\n  ⊢ m * ((∏ x ∈ N.primeFactors, x)"
+   }
+  },
+  "gdt/gdt_count_per_period": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 75,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 87,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 23,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  f ≥ 0\n  g ≥ 0\n  e ≥ 1\n  f - g ≥ 1\n  c ≥ 1\nwhere\n c := ↑N\n e := ↑m\n f := ↑(φ (R N m))\n g := ↑(Finset.filter (acce"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 86,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\nb : ℕ\n⊢ (Finset.filter (accepted N m a) (Finset.Ico b (b + Tmin N m))).card = φ (R N m)"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 20,
+    "first_error": "expected type must not contain free or meta variables\n  (Finset.filter (accepted N m a) (Finset.Ico b (b + Tmin N m))).card = φ (R N m)"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 111,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : Admissible N m a\n  b : ℕ\n  ⊢ (Finset.filter (accepted N m a) (Finset.Ico b (b + Tmin N m))).card"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 75,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\nb : ℕ\na✝ : (Finset.filter (accepted N m a) (Finset.Ico b (b + Tmin N m))).card < φ (R N m)\n⊢"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 273,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nb : ℕ\nh : a.natAbs.gcd (∏ x ∈ (m.gcd N).primeFactors, x) = 1\n⊢ (Finset.filter (accepted N m a)\n        (Finset.Ico b (b + m * ((∏ x ∈ N.primeFactors,"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 256,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  g ≥ 0\n  f ≥ 0\n  f - g ≥ 1\n  e ≥ 1\n  c ≥ 1\nwhere\n c := ↑N\n e := ↑m\n f := ↑(φ ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ ("
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 277,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : Admissible N m a\n  b : ℕ\n  ⊢ (Finset.filter (accepted N m a)\n          (Finset.Ico b (b + m * (("
+   }
+  },
+  "gdt/gdt_density": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 36,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 47,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 20,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  e ≥ 0\n  i ≥ 0\n  f ≥ 0\n  j ≥ 0\n  c ≥ 1\n  e - f ≥ 1\n  b ≥ 1\n  g + i - j ≥ 1\nwhere\n b := ↑N\n c := ↑m\n e := ↑(Tmin N"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 42,
+    "first_error": "unsolved goals\nN m q s : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\nhs : s < Tmin N m\n⊢ (S N (q * Tmin N m + s) m a).card = q * φ (R N m) + (S N s m a).card\n@@T"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 20,
+    "first_error": "expected type must not contain free or meta variables\n  (S N (q * Tmin N m + s) m a).card = q * φ (R N m) + (S N s m a).card"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 68,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m q s : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : Admissible N m a\n  hs : s < Tmin N m\n  ⊢ (S N (q * Tmin N m + s) m a).card = q * φ (R N m) +"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 99,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nN m q s : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\nhs : s < Tmin N m\na✝ : (S N (q * Tmin N m + s) m a).card < q * φ (R N m) + (S N s m a).ca"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 347,
+    "first_error": "unsolved goals\nN m q s : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : a.natAbs.gcd (∏ x ∈ (m.gcd N).primeFactors, x) = 1\nhs : s < m * ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x)\n⊢ (Finset.filte"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 329,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  j ≥ 0\n  f ≥ 0\n  e - f ≥ 1\n  i ≥ 0\n  c ≥ 1\n  g + i - j ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m\n e := ↑m * ↑((∏ x ∈ N."
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 347,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m q s : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : Admissible N m a\n  hs : s < Tmin N m\n  ⊢ (Finset.filter (accepted N m a)\n          (Finset.I"
+   }
+  },
+  "gdt/gdt_correction_factor": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 45,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 59,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 20,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 1\n  c - e ≥ 1\n  a ≥ 1\nwhere\n a := ↑N\n b := ↑m\n c := ↑(d N m * R N m) * ↑(φ N)\n e := ↑(φ (R N m) * N) * ↑(φ ("
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 55,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\n⊢ φ (R N m) * N * φ (d N m) = d N m * R N m * φ N"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 18,
+    "first_error": "expected type must not contain free or meta variables\n  φ (R N m) * N * φ (d N m) = d N m * R N m * φ N"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 74,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  ⊢ φ (R N m) * N * φ (d N m) = d N m * R N m * φ N"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 97,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na✝ : φ (R N m) * N * φ (d N m) < d N m * R N m * φ N\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 128,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\n⊢ φ ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x) * N * φ (∏ x ∈ (m.gcd N).primeFactors, x) =\n    (∏ x ∈ (m.gcd N).primeFactors, x) * ((∏ x"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 129,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 1\n  c - e ≥ 1\n  a ≥ 1\nwhere\n a := ↑N\n b := ↑m\n c := ↑((∏ x ∈ (m.gcd N).primeFactors, x) * ((∏ x ∈ N.primeFac"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 163,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  ⊢ φ ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x) * N * φ (∏ x ∈ (m.gcd N).primeFactors, x)"
+   }
+  },
+  "gdt/general_divisor_theorem": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 171,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 198,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 30,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 215,
+    "first_error": "unsolved goals\nN m L : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\n⊢ (¬Admissible N m a → S N L m a = ∅) ∧\n    (Admissible N m a →\n        IsPeriod N m a (Tmin N m) ∧\n          (∀ (t : ℕ), 0 < t → IsPeriod N m a t"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 29,
+    "first_error": "expected type must not contain free or meta variables\n  (¬Admissible N m a → S N L m a = ∅) ∧\n    (Admissible N m a →\n        IsPeriod N m a (Tmin N m) ∧\n          (∀ (t : ℕ), 0 < t → IsPeriod N m a t"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 663,
+    "first_error": "unsolved goals\ncase left\nN m L : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\na_1 : ¬Admissible N m a\n⊢ S N L m a = ∅\n\ncase right.left.left\nN m L : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\na_1 : Admissible N m a\n⊢ IsPeriod N m"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 67,
+    "first_error": "linarith failed to find a contradiction\nN m L : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 2142,
+    "first_error": "unsolved goals\nN m L : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\n⊢ (¬a.natAbs.gcd (∏ x ∈ (m.gcd N).primeFactors, x) = 1 → Finset.filter (accepted N m a) (Finset.Icc 1 L) = ∅) ∧\n    (a.natAbs.gcd (∏ x ∈ (m.gcd N)."
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 2097,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 4411,
+    "first_error": "unsolved goals\ncase left\nN m L : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\na_1 : ¬a.natAbs.gcd (∏ x ∈ (m.gcd N).primeFactors, x) = 1\n⊢ Finset.filter (accepted N m a) (Finset.Icc 1 L) = ∅\n\ncase right.left.left.mp."
+   }
+  },
+  "gdt/d_dvd_rad": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 26,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 33,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 1\n  a ≥ 1\nwhere\n a := ↑N\n b := ↑(rad N) % ↑(d N m)"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 28,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n⊢ d N m ∣ rad N"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 14,
+    "first_error": "expected type must not contain free or meta variables\n  d N m ∣ rad N"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 42,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  ⊢ d N m ∣ rad N"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 48,
+    "first_error": "linarith failed to find a contradiction\nN m : ℕ\nhN : 0 < N\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 97,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n⊢ ∏ x ∈ (m.gcd N).primeFactors, x ∣ ∏ x ∈ N.primeFactors, x"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 96,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 1\n  a ≥ 1\nwhere\n a := ↑N\n b := ↑(∏ x ∈ N.primeFactors, x) % ↑(∏ x ∈ (m.gcd N).primeFactors, x)"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 124,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  ⊢ ∏ x ∈ (m.gcd N).primeFactors, x ∣ ∏ x ∈ N.primeFactors, x"
+   }
+  },
+  "gdt/d_mul_R_eq_rad": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 34,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 42,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 0\n  a ≥ 1\n  b - c ≥ 1\nwhere\n a := ↑N\n b := ↑(rad N)\n c := ↑(d N m) * ↑(R N m)"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 38,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n⊢ d N m * R N m = rad N"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "expected type must not contain free or meta variables\n  d N m * R N m = rad N"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 55,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  ⊢ d N m * R N m = rad N"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 64,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nN m : ℕ\nhN : 0 < N\na✝ : d N m * R N m < rad N\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 97,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n⊢ (∏ x ∈ (m.gcd N).primeFactors, x) * ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x) =\n    ∏ x ∈ N.primeFactors, x\n@"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 97,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 0\n  a ≥ 1\n  b - c ≥ 1\nwhere\n a := ↑N\n b := ↑(∏ x ∈ N.primeFactors, x)\n c := ↑(∏ x ∈ (m.gcd N).primeFactors,"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 119,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  ⊢ (∏ x ∈ (m.gcd N).primeFactors, x) * ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x) =\n      ∏ x ∈ N.prime"
+   }
+  },
+  "gdt/prime_coprime_prod": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 24,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 39,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 18,
+    "first_error": "omega could not prove the goal:\nNo usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication,"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 27,
+    "first_error": "unsolved goals\na : ℕ\nha : a.Prime\ns : Finset ℕ\nhs : ∀ p ∈ s, p.Prime\nha_not : a ∉ s\n⊢ a.Coprime (∏ p ∈ s, p)"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "expected type must not contain free or meta variables\n  a.Coprime (∏ p ∈ s, p)"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 56,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  a : ℕ\n  ha : a.Prime\n  s : Finset ℕ\n  hs : ∀ p ∈ s, p.Prime\n  ha_not : a ∉ s\n  ⊢ a.Coprime (∏ p ∈ s, p)\n@"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 52,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\na : ℕ\nha : a.Prime\ns : Finset ℕ\nhs : ∀ p ∈ s, p.Prime\nha_not : a ∉ s\na✝ : a.gcd (∏ p ∈ s, p) < 1\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 40,
+    "first_error": "simp_all made no progress"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 43,
+    "first_error": "simp_all made no progress"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 62,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  a : ℕ\n  ha : a.Prime\n  s : Finset ℕ\n  hs : ∀ p ∈ s, p.Prime\n  ha_not : a ∉ s\n  ⊢ a.Coprime (∏ p ∈ s, p)"
+   }
+  },
+  "gdt/prod_primes_squarefree": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 47,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 59,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "omega could not prove the goal:\nNo usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication,"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 60,
+    "first_error": "unsolved goals\ns : Finset ℕ\nhs : ∀ p ∈ s, p.Prime\n⊢ Squarefree (∏ p ∈ s, p)"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "expected type must not contain free or meta variables\n  Squarefree (∏ p ∈ s, p)"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 75,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  s : Finset ℕ\n  hs : ∀ p ∈ s, p.Prime\n  ⊢ Squarefree (∏ p ∈ s, p)"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "linarith failed to find a contradiction\ns : Finset ℕ\nhs : ∀ p ∈ s, p.Prime\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 55,
+    "first_error": "simp_all made no progress"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 62,
+    "first_error": "simp_all made no progress"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 110,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  s : Finset ℕ\n  hs : ∀ p ∈ s, p.Prime\n  ⊢ Squarefree (∏ p ∈ s, p)"
+   }
+  },
+  "gdt/rad_squarefree": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 26,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 25,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "omega could not prove the goal:\nNo usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication,"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 31,
+    "first_error": "unsolved goals\nn : ℕ\n⊢ Squarefree (rad n)"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 14,
+    "first_error": "expected type must not contain free or meta variables\n  Squarefree (rad n)"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 36,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  n : ℕ\n  ⊢ Squarefree (rad n)"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "linarith failed to find a contradiction\nn : ℕ\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 97,
+    "first_error": "unsolved goals\nn : ℕ\n⊢ Squarefree (∏ x ∈ n.primeFactors, x)"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 101,
+    "first_error": "omega could not prove the goal:\nNo usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication,"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 143,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  n : ℕ\n  ⊢ Squarefree (∏ x ∈ n.primeFactors, x)"
+   }
+  },
+  "gdt/coprime_d_R": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 25,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑N"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 19,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n⊢ (d N m).Coprime (R N m)"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "expected type must not contain free or meta variables\n  (d N m).Coprime (R N m)"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 33,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  ⊢ (d N m).Coprime (R N m)"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 56,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nN m : ℕ\nhN : 0 < N\na✝ : (d N m).gcd (R N m) < 1\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 64,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n⊢ (∏ x ∈ (m.gcd N).primeFactors, x).Coprime ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x)"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 71,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑N"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 84,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  ⊢ (∏ x ∈ (m.gcd N).primeFactors, x).Coprime ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x)"
+   }
+  },
+  "gdt/rad_dvd_self": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 24,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 25,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑n % ↑(rad n)"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 26,
+    "first_error": "unsolved goals\nn : ℕ\n⊢ rad n ∣ n"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 14,
+    "first_error": "expected type must not contain free or meta variables\n  rad n ∣ n"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 35,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  n : ℕ\n  ⊢ rad n ∣ n"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "linarith failed to find a contradiction\nn : ℕ\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 65,
+    "first_error": "unsolved goals\nn : ℕ\n⊢ ∏ x ∈ n.primeFactors, x ∣ n"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 74,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑n % ↑(∏ x ∈ n.primeFactors, x)"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 91,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  n : ℕ\n  ⊢ ∏ x ∈ n.primeFactors, x ∣ n"
+   }
+  },
+  "gdt/coprime_iff_coprime_rad": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 29,
+    "first_error": "unsolved goals\nk n : ℕ\nhn : ¬n = 0\n⊢ k.Coprime n ↔ k.Coprime (rad n)"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 23,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑n"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 20,
+    "first_error": "unsolved goals\nk n : ℕ\nhn : n ≠ 0\n⊢ k.Coprime n ↔ k.Coprime (rad n)"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 14,
+    "first_error": "expected type must not contain free or meta variables\n  k.Coprime n ↔ k.Coprime (rad n)"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 65,
+    "first_error": "unsolved goals\ncase mp\nk n : ℕ\nhn : ¬n = 0\na : k.Coprime n\n⊢ k.Coprime (rad n)\n\ncase mpr\nk n : ℕ\nhn : ¬n = 0\na : k.Coprime (rad n)\n⊢ k.Coprime n"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "linarith failed to find a contradiction\nk n : ℕ\nhn : n ≠ 0\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 44,
+    "first_error": "unsolved goals\nk n : ℕ\nhn : ¬n = 0\n⊢ k.Coprime n ↔ k.Coprime (∏ x ∈ n.primeFactors, x)"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 49,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑n"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 115,
+    "first_error": "unsolved goals\ncase mp\nk n : ℕ\nhn : ¬n = 0\na : k.Coprime n\n⊢ k.Coprime (∏ x ∈ n.primeFactors, x)\n\ncase mpr\nk n : ℕ\nhn : ¬n = 0\na : k.Coprime (∏ x ∈ n.primeFactors, x)\n⊢ k.Coprime n"
+   }
+  },
+  "gdt/coprime_of_modEq_natAbs": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 19,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 39,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "omega could not prove the goal:\nNo usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication,"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 20,
+    "first_error": "unsolved goals\nk : ℕ\na : ℤ\ne : ℕ\nhk : ↑k ≡ a [ZMOD ↑e]\nha : a.natAbs.gcd e = 1\n⊢ k.Coprime e"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "expected type must not contain free or meta variables\n  k.Coprime e"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 52,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  k : ℕ\n  a : ℤ\n  e : ℕ\n  hk : ↑k ≡ a [ZMOD ↑e]\n  ha : a.natAbs.gcd e = 1\n  ⊢ k.Coprime e"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 60,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nk : ℕ\na : ℤ\ne : ℕ\nhk : ↑k ≡ a [ZMOD ↑e]\nha : a.natAbs.gcd e = 1\na✝ : k.gcd e < 1\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 35,
+    "first_error": "simp_all made no progress"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 38,
+    "first_error": "simp_all made no progress"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 50,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  k : ℕ\n  a : ℤ\n  e : ℕ\n  hk : ↑k ≡ a [ZMOD ↑e]\n  ha : a.natAbs.gcd e = 1\n  ⊢ k.Coprime e"
+   }
+  },
+  "gdt/gcd_with_N_iff_gcd_with_R": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 22,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 39,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 21,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 25,
+    "first_error": "unsolved goals\nN m k : ℕ\nhN : 0 < N\n_hm : 0 < m\na : ℤ\nha : Admissible N m a\nhk : ↑k ≡ a [ZMOD ↑m]\n⊢ k.gcd N = 1 ↔ k.gcd (R N m) = 1"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 19,
+    "first_error": "expected type must not contain free or meta variables\n  k.gcd N = 1 ↔ k.gcd (R N m) = 1"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 90,
+    "first_error": "unsolved goals\ncase mp\nN m k : ℕ\nhN : 0 < N\n_hm : 0 < m\na : ℤ\nha : Admissible N m a\nhk : ↑k ≡ a [ZMOD ↑m]\na_1 : k.gcd N = 1\n⊢ k.gcd (R N m) = 1\n\ncase mpr\nN m k : ℕ\nhN : 0 < N\n_hm : 0 < m\na : ℤ\nha : Ad"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 60,
+    "first_error": "linarith failed to find a contradiction\nN m k : ℕ\nhN : 0 < N\n_hm : 0 < m\na : ℤ\nha : Admissible N m a\nhk : ↑k ≡ a [ZMOD ↑m]\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 135,
+    "first_error": "unsolved goals\nN m k : ℕ\nhN : 0 < N\n_hm : 0 < m\na : ℤ\nha : a.natAbs.gcd (∏ x ∈ (m.gcd N).primeFactors, x) = 1\nhk : ↑k ≡ a [ZMOD ↑m]\n⊢ k.gcd N = 1 ↔ k.gcd ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).p"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 142,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 170,
+    "first_error": "unsolved goals\ncase mp\nN m k : ℕ\nhN : 0 < N\n_hm : 0 < m\na : ℤ\nha : Admissible N m a\nhk : ↑k ≡ a [ZMOD ↑m]\na_1 : k.gcd N = 1\n⊢ k.gcd ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x) = 1\n\nc"
+   }
+  },
+  "gdt/coprime_add_mul_right": {
+   "simp": {
+    "candidate": true,
+    "timeout": false,
+    "elab_ms": 24,
+    "first_error": null,
+    "strict_status": "certified",
+    "strict_reasons": []
+   },
+   "simp_all": {
+    "candidate": true,
+    "timeout": false,
+    "elab_ms": 24,
+    "first_error": null,
+    "strict_status": "certified",
+    "strict_reasons": []
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "omega could not prove the goal:\nNo usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication,"
+   },
+   "norm_num": {
+    "candidate": true,
+    "timeout": false,
+    "elab_ms": 26,
+    "first_error": null,
+    "strict_status": "certified",
+    "strict_reasons": []
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "expected type must not contain free or meta variables\n  (k + e * c).Coprime e ↔ k.Coprime e"
+   },
+   "aesop": {
+    "candidate": true,
+    "timeout": false,
+    "elab_ms": 30,
+    "first_error": null,
+    "strict_status": "certified",
+    "strict_reasons": []
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "linarith failed to find a contradiction\nk c e : ℕ\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": true,
+    "timeout": false,
+    "elab_ms": 22,
+    "first_error": null,
+    "strict_status": "certified",
+    "strict_reasons": []
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": true,
+    "timeout": false,
+    "elab_ms": 25,
+    "first_error": null,
+    "strict_status": "certified",
+    "strict_reasons": []
+   },
+   "norm_num_defs_aesop": {
+    "candidate": true,
+    "timeout": false,
+    "elab_ms": 26,
+    "first_error": null,
+    "strict_status": "certified",
+    "strict_reasons": []
+   }
+  },
+  "gdt/periodic_window_card_eq": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 86,
+    "first_error": "unsolved goals\nP : ℕ → Prop\ninst✝ : DecidablePred P\nT : ℕ\nhP : ∀ (n : ℕ), P (n + T) ↔ P n\nb : ℕ\n⊢ (Finset.filter P (Finset.Ico b (b + T))).card = (Finset.filter P (Finset.range T)).card"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 132,
+    "first_error": "unsolved goals\nP : ℕ → Prop\ninst✝ : DecidablePred P\nT : ℕ\nhP : ∀ (n : ℕ), P (n + T) ↔ P n\nb : ℕ\n⊢ (Finset.filter P (Finset.Ico b (b + T))).card = (Finset.filter P (Finset.range T)).card"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 23,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a - c ≥ 1\n  c ≥ 0\n  a ≥ 0\nwhere\n a := ↑(Finset.filter P (Finset.Ico 0 T)).card\n c := ↑(Finset.filter P (Finset.I"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 122,
+    "first_error": "unsolved goals\nP : ℕ → Prop\ninst✝ : DecidablePred P\nT : ℕ\nhP : ∀ (n : ℕ), P (n + T) ↔ P n\nb : ℕ\n⊢ (Finset.filter P (Finset.Ico b (b + T))).card = (Finset.filter P (Finset.range T)).card"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 22,
+    "first_error": "expected type must not contain free or meta variables\n  (Finset.filter P (Finset.Ico b (b + T))).card = (Finset.filter P (Finset.Ico 0 T)).card"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 156,
+    "first_error": "unsolved goals\nP : ℕ → Prop\ninst : DecidablePred P\nT : ℕ\nhP : ∀ (n : ℕ), P (n + T) ↔ P n\nb : ℕ\n⊢ (Finset.filter P (Finset.Ico b (b + T))).card = (Finset.filter P (Finset.range T)).card"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 60,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nP : ℕ → Prop\ninst✝ : DecidablePred P\nT : ℕ\nhP : ∀ (n : ℕ), P (n + T) ↔ P n\nb : ℕ\na✝ : (Finset.filter P (Finset.Ico b (b + T))).card < (Finset.filter P"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 115,
+    "first_error": "unsolved goals\nP : ℕ → Prop\ninst✝ : DecidablePred P\nT : ℕ\nhP : ∀ (n : ℕ), P (n + T) ↔ P n\nb : ℕ\n⊢ (Finset.filter P (Finset.Ico b (b + T))).card = (Finset.filter P (Finset.range T)).card"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 116,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a - c ≥ 1\n  c ≥ 0\n  a ≥ 0\nwhere\n a := ↑(Finset.filter P (Finset.range T)).card\n c := ↑(Finset.filter P (Finset.I"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 138,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  P : ℕ → Prop\n  inst✝ : DecidablePred P\n  T : ℕ\n  hP : ∀ (n : ℕ), P (n + T) ↔ P n\n  b : ℕ\n  ⊢ (Finset.filter P (Finset.Ico b (b + T))).card = (Fi"
+   }
+  },
+  "gdt/coprime_m_R": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 22,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑N"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 27,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n⊢ m.Coprime (R N m)"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 13,
+    "first_error": "expected type must not contain free or meta variables\n  m.Coprime (R N m)"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 32,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  ⊢ m.Coprime (R N m)"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 56,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nN m : ℕ\nhN : 0 < N\na✝ : m.gcd (R N m) < 1\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 68,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n⊢ m.Coprime ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x)"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 71,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑N"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 81,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  ⊢ m.Coprime ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x)"
+   }
+  },
+  "gdt/accepted_iff_coprime_R": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 45,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 39,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 20,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 54,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\nn : ℕ\n⊢ accepted N m a n ↔ ↑n ≡ a [ZMOD ↑m] ∧ n.gcd (R N m) = 1"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 19,
+    "first_error": "expected type must not contain free or meta variables\n  accepted N m a n ↔ ↑n ≡ a [ZMOD ↑m] ∧ n.gcd (R N m) = 1"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 137,
+    "first_error": "unsolved goals\ncase mp.left\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\nn : ℕ\na_1 : accepted N m a n\n⊢ ↑n ≡ a [ZMOD ↑m]\n\ncase mp.right\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 59,
+    "first_error": "linarith failed to find a contradiction\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\nn : ℕ\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 161,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nn : ℕ\nh : a.natAbs.gcd (∏ x ∈ (m.gcd N).primeFactors, x) = 1\n⊢ ↑n ≡ a [ZMOD ↑m] → (n.gcd N = 1 ↔ n.gcd ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).p"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 163,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 218,
+    "first_error": "unsolved goals\ncase mp\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\nn : ℕ\na_1 : ↑n ≡ a [ZMOD ↑m]\na_2 : n.gcd N = 1\n⊢ n.gcd ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x) = 1"
+   }
+  },
+  "gdt/rad_pos": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 36,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 21,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 14,
+    "first_error": "omega could not prove the goal:\nNo usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication,"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 31,
+    "first_error": "unsolved goals\nn : ℕ\n⊢ 0 < rad n"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 14,
+    "first_error": "expected type must not contain free or meta variables\n  0 < rad n"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 30,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  n : ℕ\n  ⊢ 0 < rad n"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 46,
+    "first_error": "linarith failed to find a contradiction\ncase h\nn : ℕ\na✝ : 0 ≥ rad n\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 263,
+    "first_error": "unsolved goals\nn : ℕ\n⊢ ∀ (i : ℕ), i.Prime → i ∣ n → ¬n = 0 → 0 < i"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 284,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑n"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 231,
+    "first_error": "unsolved goals\nn i : ℕ\na : i.Prime\na_1 : i ∣ n\na_2 : ¬n = 0\n⊢ 0 < i"
+   }
+  },
+  "gdt/R_pos": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 36,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 27,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑N"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 28,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n⊢ 0 < R N m"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 13,
+    "first_error": "expected type must not contain free or meta variables\n  0 < R N m"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 36,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  ⊢ 0 < R N m"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 58,
+    "first_error": "linarith failed to find a contradiction\ncase h\nN m : ℕ\nhN : 0 < N\na✝ : 0 ≥ R N m\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 73,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n⊢ 0 < (∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 81,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≤ 0\n  a ≥ 1\nwhere\n a := ↑N\n b := ↑(∏ x ∈ N.primeFactors, x) / ↑(∏ x ∈ (m.gcd N).primeFactors, x)"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 92,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  ⊢ 0 < (∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x"
+   }
+  },
+  "gdt/exists_repr_mod_R": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 36,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 52,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 21,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  e ≥ 0\n  f ≥ 0\n  c ≥ 1\n  e - f ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m\n e := ↑(R N m)\n f := ↑r"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 46,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nr : ℕ\nhr : r < R N m\n⊢ ∃ n < Tmin N m, ↑n ≡ a [ZMOD ↑m] ∧ n % R N m = r"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "expected type must not contain free or meta variables\n  ∃ n < Tmin N m, ↑n ≡ a [ZMOD ↑m] ∧ n % R N m = r"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 175,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  r : ℕ\n  hr : r < R N m\n  ⊢ ∃ n < Tmin N m, ↑n ≡ a [ZMOD ↑m] ∧ n % R N m = r"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 70,
+    "first_error": "linarith failed to find a contradiction\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nr : ℕ\nhr : r < R N m\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 187,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nr : ℕ\nhr : r < (∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x\n⊢ ∃ n < m * ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x),"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 209,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  f ≥ 0\n  c ≥ 1\n  e - f ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m\n e := ↑(∏ x ∈ N.primeFactors, x) / ↑(∏ x ∈ (m.gcd N).p"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 316,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  r : ℕ\n  hr : r < R N m\n  ⊢ ∃ n < m * ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x),"
+   }
+  },
+  "gdt/repr_unique": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 22,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 59,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 22,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  e ≥ 0\n  g ≥ 0\n  f ≥ 0\n  e - g ≥ 1\n  i ≥ 0\n  f - g ≤ -1\n  e - f ≥ 1\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m\n e :="
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 23,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n_hm : 0 < m\na : ℤ\nn1 n2 : ℕ\nh1 : n1 < Tmin N m\nh2 : n2 < Tmin N m\nhmod1 : ↑n1 ≡ a [ZMOD ↑m]\nhmod2 : ↑n2 ≡ a [ZMOD ↑m]\nhReq : n1 % R N m = n2 % R N m\n⊢ n1 = n2"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 20,
+    "first_error": "expected type must not contain free or meta variables\n  n1 = n2"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 68,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  _hm : 0 < m\n  a : ℤ\n  n1 n2 : ℕ\n  h1 : n1 < Tmin N m\n  h2 : n2 < Tmin N m\n  hmod1 : ↑n1 ≡ a [ZMOD ↑m]\n  hmod2 : ↑n2 ≡ a ["
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 98,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nN m : ℕ\nhN : 0 < N\n_hm : 0 < m\na : ℤ\nn1 n2 : ℕ\nh1 : n1 < Tmin N m\nh2 : n2 < Tmin N m\nhmod1 : ↑n1 ≡ a [ZMOD ↑m]\nhmod2 : ↑n2 ≡ a [ZMOD ↑m]\nhReq : n1 % R"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 213,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n_hm : 0 < m\na : ℤ\nn1 n2 : ℕ\nh1 : n1 < m * ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x)\nh2 : n2 < m * ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).pri"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 221,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  g ≥ 0\n  f ≥ 0\n  e - g ≥ 1\n  i ≥ 0\n  f - g ≤ -1\n  e - f ≥ 1\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m\n e := ↑m * ↑("
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 66,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  _hm : 0 < m\n  a : ℤ\n  n1 n2 : ℕ\n  h1 : n1 < Tmin N m\n  h2 : n2 < Tmin N m\n  hmod1 : ↑n1 ≡ a [ZMOD ↑m]\n  hmod2 : ↑n2 ≡ a ["
+   }
+  },
+  "gdt/gcd_mod_eq": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a - b ≥ 1\n  b ≥ 0\n  a ≥ 0\nwhere\n a := ↑((n % R).gcd R)\n b := ↑(n.gcd R)"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 21,
+    "first_error": "unsolved goals\nn R : ℕ\n⊢ n.gcd R = (n % R).gcd R"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "expected type must not contain free or meta variables\n  n.gcd R = (n % R).gcd R"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 29,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  n R : ℕ\n  ⊢ n.gcd R = (n % R).gcd R"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 52,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nn R : ℕ\na✝ : n.gcd R < (n % R).gcd R\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 18,
+    "first_error": "simp_all made no progress"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "simp_all made no progress"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 31,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  n R : ℕ\n  ⊢ n.gcd R = (n % R).gcd R"
+   }
+  },
+  "gdt/exists_accepted": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 30,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 26,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 18,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\n⊢ ∃ n, accepted N m a n"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "expected type must not contain free or meta variables\n  ∃ n, accepted N m a n"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 55,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : Admissible N m a\n  ⊢ ∃ n, accepted N m a n"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 56,
+    "first_error": "linarith failed to find a contradiction\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 124,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : a.natAbs.gcd (∏ x ∈ (m.gcd N).primeFactors, x) = 1\n⊢ ∃ n, ↑n ≡ a [ZMOD ↑m] ∧ n.gcd N = 1"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 135,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 142,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : Admissible N m a\n  ⊢ ∃ n, ↑n ≡ a [ZMOD ↑m] ∧ n.gcd N = 1"
+   }
+  },
+  "gdt/primeFactors_forall_dvd_imp_dvd": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 27,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 300,
+    "first_error": "unsolved goals\nn t : ℕ\n_hn : 0 < n\nhall : ∀ (p : ℕ), p.Prime → p ∣ n → ¬n = 0 → p ∣ t\n⊢ rad n ∣ t"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 1\n  a ≥ 1\nwhere\n a := ↑n\n b := ↑t % ↑(rad n)"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 28,
+    "first_error": "unsolved goals\nn t : ℕ\n_hn : 0 < n\nhall : ∀ p ∈ n.primeFactors, p ∣ t\n⊢ rad n ∣ t"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "expected type must not contain free or meta variables\n  rad n ∣ t"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 614,
+    "first_error": "unsolved goals\nn t : ℕ\n_hn : 0 < n\nhall : ∀ (p : ℕ), p.Prime → p ∣ n → ¬n = 0 → p ∣ t\n⊢ rad n ∣ t"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 48,
+    "first_error": "linarith failed to find a contradiction\nn t : ℕ\n_hn : 0 < n\nhall : ∀ p ∈ n.primeFactors, p ∣ t\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 365,
+    "first_error": "unsolved goals\nn t : ℕ\n_hn : 0 < n\nhall : ∀ (p : ℕ), p.Prime → p ∣ n → ¬n = 0 → p ∣ t\n⊢ ∏ x ∈ n.primeFactors, x ∣ t"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 353,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 1\n  a ≥ 1\nwhere\n a := ↑n\n b := ↑t % ↑(∏ x ∈ n.primeFactors, x)"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 649,
+    "first_error": "unsolved goals\nn t : ℕ\n_hn : 0 < n\nhall : ∀ (p : ℕ), p.Prime → p ∣ n → ¬n = 0 → p ∣ t\n⊢ ∏ x ∈ n.primeFactors, x ∣ t"
+   }
+  },
+  "gdt/exists_witness_avoiding_dvd": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 37,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 56,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 26,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 40,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\np : ℕ\nhp : p.Prime\nhpR : p ∣ R N m\n⊢ ∃ n1, accepted N m a n1 ∧ ¬p ∣ n1"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "expected type must not contain free or meta variables\n  ∃ n1, accepted N m a n1 ∧ ¬p ∣ n1"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 175,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : Admissible N m a\n  p : ℕ\n  hp : p.Prime\n  hpR : p ∣ R N m\n  ⊢ ∃ n1, accepted N m a n1 ∧ ¬p ∣ n1"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 56,
+    "first_error": "linarith failed to find a contradiction\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\np : ℕ\nhp : p.Prime\nhpR : p ∣ R N m\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 308,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\np : ℕ\nh : a.natAbs.gcd (∏ x ∈ (m.gcd N).primeFactors, x) = 1\nhp : p.Prime\nhpR : p ∣ (∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x\n⊢ ∃ n"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 304,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 300,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : Admissible N m a\n  p : ℕ\n  hp : p.Prime\n  hpR : p ∣ R N m\n  ⊢ ∃ n1, (↑n1 ≡ a [ZMOD ↑m] ∧ n1.gcd"
+   }
+  },
+  "gdt/squarefree_prime_dvd_split": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 43,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 63,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 19,
+    "first_error": "omega could not prove the goal:\nNo usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication,"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 49,
+    "first_error": "unsolved goals\nn p : ℕ\nhsf : Squarefree n\nhp : p.Prime\nhpn : p ∣ n\n⊢ p.Coprime (n / p) ∧ p * (n / p) = n"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "expected type must not contain free or meta variables\n  p.Coprime (n / p) ∧ p * (n / p) = n"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 133,
+    "first_error": "unsolved goals\ncase left\nn p : ℕ\nhsf : Squarefree n\nhp : p.Prime\nhpn : p ∣ n\n⊢ p.Coprime (n / p)\n\ncase right\nn p : ℕ\nhsf : Squarefree n\nhp : p.Prime\nhpn : p ∣ n\n⊢ p * (n / p) = n"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "linarith failed to find a contradiction\nn p : ℕ\nhsf : Squarefree n\nhp : p.Prime\nhpn : p ∣ n\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 61,
+    "first_error": "simp_all made no progress"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 64,
+    "first_error": "simp_all made no progress"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 143,
+    "first_error": "unsolved goals\ncase left\nn p : ℕ\nhsf : Squarefree n\nhp : p.Prime\nhpn : p ∣ n\n⊢ p.Coprime (n / p)\n\ncase right\nn p : ℕ\nhsf : Squarefree n\nhp : p.Prime\nhpn : p ∣ n\n⊢ p * (n / p) = n"
+   }
+  },
+  "gdt/R_squarefree": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 26,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 35,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑N"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 31,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n⊢ Squarefree (R N m)"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 14,
+    "first_error": "expected type must not contain free or meta variables\n  Squarefree (R N m)"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 49,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  ⊢ Squarefree (R N m)"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 45,
+    "first_error": "linarith failed to find a contradiction\nN m : ℕ\nhN : 0 < N\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 113,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\n⊢ Squarefree ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x)"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 153,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑N"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 226,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  ⊢ Squarefree ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x)"
+   }
+  },
+  "gdt/exists_coprime_R_neg_t_mod_p": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 73,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 96,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 21,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 1\n  a ≥ 1\nwhere\n a := ↑N\n b := ↑t % ↑p"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 103,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\np t : ℕ\nhp : p.Prime\nhpR : p ∣ R N m\nhpt : ¬p ∣ t\n⊢ ∃ r < R N m, r.Coprime (R N m) ∧ ↑r ≡ -↑t [ZMOD ↑p]"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 19,
+    "first_error": "expected type must not contain free or meta variables\n  ∃ r < R N m, r.Coprime (R N m) ∧ ↑r ≡ -↑t [ZMOD ↑p]"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 362,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  p t : ℕ\n  hp : p.Prime\n  hpR : p ∣ R N m\n  hpt : ¬p ∣ t\n  ⊢ ∃ r < R N m, r.Coprime (R N m) ∧ ↑r ≡ -↑t [ZMOD ↑p]"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 51,
+    "first_error": "linarith failed to find a contradiction\nN m : ℕ\nhN : 0 < N\np t : ℕ\nhp : p.Prime\nhpR : p ∣ R N m\nhpt : ¬p ∣ t\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 391,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\np t : ℕ\nhp : p.Prime\nhpR : p ∣ (∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactors, x\nhpt : ¬p ∣ t\n⊢ ∃ r < (∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFacto"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 402,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 1\n  a ≥ 1\nwhere\n a := ↑N\n b := ↑t % ↑p"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 559,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  p t : ℕ\n  hp : p.Prime\n  hpR : p ∣ R N m\n  hpt : ¬p ∣ t\n  ⊢ ∃ r < (∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd N).primeFactor"
+   }
+  },
+  "gdt/rad_eq_self_of_squarefree": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 34,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a - b ≥ 1\n  b ≥ 0\n  a ≥ 1\nwhere\n a := ↑n\n b := ↑(rad n)"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 17,
+    "first_error": "unsolved goals\nn : ℕ\n_hn : 0 < n\nhsf : Squarefree n\n⊢ rad n = n"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 15,
+    "first_error": "expected type must not contain free or meta variables\n  rad n = n"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 51,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  n : ℕ\n  _hn : 0 < n\n  hsf : Squarefree n\n  ⊢ rad n = n"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 56,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nn : ℕ\n_hn : 0 < n\nhsf : Squarefree n\na✝ : rad n < n\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 73,
+    "first_error": "unsolved goals\nn : ℕ\n_hn : 0 < n\nhsf : Squarefree n\n⊢ ∏ x ∈ n.primeFactors, x = n"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 69,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a - b ≥ 1\n  b ≥ 0\n  a ≥ 1\nwhere\n a := ↑n\n b := ↑(∏ x ∈ n.primeFactors, x)"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 71,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  n : ℕ\n  _hn : 0 < n\n  hsf : Squarefree n\n  ⊢ ∏ x ∈ n.primeFactors, x = n"
+   }
+  },
+  "gdt/canonical_window_card_eq_range_coprime": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 62,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\n_h : Admissible N m a\n⊢ (Finset.filter (fun n => ↑n ≡ a [ZMOD ↑m] ∧ n.gcd (R N m) = 1) (Finset.range (Tmin N m))).card =\n    (Finset.filter (fun r =>"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 96,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\n_h : Admissible N m a\n⊢ (Finset.filter (fun n => ↑n ≡ a [ZMOD ↑m] ∧ n.gcd (R N m) = 1) (Finset.range (Tmin N m))).card =\n    (Finset.filter (fun r =>"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 27,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  e ≥ 0\n  f ≥ 0\n  c ≥ 1\n  e - f ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m\n e := ↑(Finset.filter (fun r => r.gcd (R N m)"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 74,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\n_h : Admissible N m a\n⊢ (Finset.filter (fun n => ↑n ≡ a [ZMOD ↑m] ∧ n.gcd (R N m) = 1) (Finset.range (Tmin N m))).card =\n    (Finset.filter (fun r =>"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 25,
+    "first_error": "expected type must not contain free or meta variables\n  (Finset.filter (fun n => ↑n ≡ a [ZMOD ↑m] ∧ n.gcd (R N m) = 1) (Finset.Ico 0 (Tmin N m))).card =\n    (Finset.filter (fun r => r.gcd (R N m) = 1)"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 154,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\n_h : Admissible N m a\n⊢ (Finset.filter (fun n => ↑n ≡ a [ZMOD ↑m] ∧ n.gcd (R N m) = 1) (Finset.range (Tmin N m))).card =\n    (Finset.filter (fun r =>"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 112,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\n_h : Admissible N m a\na✝ :\n  (Finset.filter (fun n => ↑n ≡ a [ZMOD ↑m] ∧ n.gcd (R N m) = 1) (Finset.Ico 0 (Tmin N"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 340,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\n_h : a.natAbs.gcd (∏ x ∈ (m.gcd N).primeFactors, x) = 1\n⊢ (Finset.filter (fun n => ↑n ≡ a [ZMOD ↑m] ∧ n.gcd ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ (m.gcd"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 344,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  f ≥ 0\n  e ≥ 0\n  e - f ≥ 1\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m\n e := ↑(Finset.filter (fun r => r.gcd ((∏ x ∈"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 284,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  _h : Admissible N m a\n  ⊢ (Finset.filter (fun n => ↑n ≡ a [ZMOD ↑m] ∧ n.gcd ((∏ x ∈ N.primeFactors,"
+   }
+  },
+  "gdt/count_canonical_period": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 36,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\n⊢ (Finset.filter (accepted N m a) (Finset.range (Tmin N m))).card = φ (R N m)"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 57,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\n⊢ (Finset.filter (accepted N m a) (Finset.range (Tmin N m))).card = φ (R N m)"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 21,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  e ≥ 0\n  f ≥ 0\n  c ≥ 1\n  e - f ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m\n e := ↑(φ (R N m))\n f := ↑(Finset.filter (acce"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 44,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\n⊢ (Finset.filter (accepted N m a) (Finset.range (Tmin N m))).card = φ (R N m)"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 21,
+    "first_error": "expected type must not contain free or meta variables\n  (Finset.filter (accepted N m a) (Finset.Ico 0 (Tmin N m))).card = φ (R N m)"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 95,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\n⊢ (Finset.filter (accepted N m a) (Finset.range (Tmin N m))).card = φ (R N m)"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 77,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : Admissible N m a\na✝ : (Finset.filter (accepted N m a) (Finset.Ico 0 (Tmin N m))).card < φ (R N m)\n⊢ False\nfail"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 180,
+    "first_error": "unsolved goals\nN m : ℕ\nhN : 0 < N\nhm : 0 < m\na : ℤ\nh : a.natAbs.gcd (∏ x ∈ (m.gcd N).primeFactors, x) = 1\n⊢ (Finset.filter (accepted N m a)\n        (Finset.range (m * ((∏ x ∈ N.primeFactors, x) / ∏ x"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 174,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  f ≥ 0\n  e ≥ 0\n  e - f ≥ 1\n  c ≥ 1\n  b ≥ 1\nwhere\n b := ↑N\n c := ↑m\n e := ↑(φ ((∏ x ∈ N.primeFactors, x) / ∏ x ∈ ("
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 180,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  N m : ℕ\n  hN : 0 < N\n  hm : 0 < m\n  a : ℤ\n  h : Admissible N m a\n  ⊢ (Finset.filter (accepted N m a)\n          (Finset.range (m * ((∏ x ∈ N.prim"
+   }
+  },
+  "gdt/card_filter_Ico_split": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 54,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 62,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 25,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  g ≥ 0\n  k ≥ 0\n  j ≥ 0\n  e - f ≥ 0\n  i + j - k ≥ 1\n  i ≥ 0\n  f ≥ 0\n  e ≥ 0\n  e - g ≤ 0\nwhere\n e := ↑b\n f := ↑a\n g"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 61,
+    "first_error": "unsolved goals\nP : ℕ → Prop\ninst✝ : DecidablePred P\na b c : ℕ\nhab : a ≤ b\nhbc : b ≤ c\n⊢ (Finset.filter P (Finset.Ico a c)).card =\n    (Finset.filter P (Finset.Ico a b)).card + (Finset.filter P (Finset"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 21,
+    "first_error": "expected type must not contain free or meta variables\n  (Finset.filter P (Finset.Ico a c)).card =\n    (Finset.filter P (Finset.Ico a b)).card + (Finset.filter P (Finset.Ico b c)).card"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 79,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  P : ℕ → Prop\n  inst✝ : DecidablePred P\n  a b c : ℕ\n  hab : a ≤ b\n  hbc : b ≤ c\n  ⊢ (Finset.filter P (Finset.Ico a c)).card =\n      (Finset.filte"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 83,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nP : ℕ → Prop\ninst✝ : DecidablePred P\na b c : ℕ\nhab : a ≤ b\nhbc : b ≤ c\na✝ :\n  (Finset.filter P (Finset.Ico a c)).card <\n    (Finset.filter P (Finset.I"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 60,
+    "first_error": "simp_all made no progress"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 60,
+    "first_error": "simp_all made no progress"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 109,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  P : ℕ → Prop\n  inst✝ : DecidablePred P\n  a b c : ℕ\n  hab : a ≤ b\n  hbc : b ≤ c\n  ⊢ (Finset.filter P (Finset.Ico a c)).card =\n      (Finset.filte"
+   }
+  },
+  "gdt/S_eq_filter_Ico": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 59,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 60,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 20,
+    "first_error": "omega could not prove the goal:\nNo usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication,"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 76,
+    "first_error": "unsolved goals\nN L m : ℕ\na : ℤ\n⊢ S N L m a = Finset.filter (accepted N m a) (Finset.Ico 1 (L + 1))"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 20,
+    "first_error": "expected type must not contain free or meta variables\n  S N L m a = Finset.filter (accepted N m a) (Finset.Ico 1 (L + 1))"
+   },
+   "aesop": {
+    "candidate": true,
+    "timeout": false,
+    "elab_ms": 72,
+    "first_error": null,
+    "strict_status": "certified",
+    "strict_reasons": []
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 23,
+    "first_error": "failed to synthesize\n  LinearOrder (Finset ℕ)\nuse `set_option diagnostics true` to get diagnostic information"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 86,
+    "first_error": "unsolved goals\nN L m : ℕ\na : ℤ\n⊢ Finset.filter (accepted N m a) (Finset.Icc 1 L) = Finset.filter (accepted N m a) (Finset.Ico 1 (L + 1))"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 89,
+    "first_error": "omega could not prove the goal:\nNo usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication,"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": true,
+    "timeout": false,
+    "elab_ms": 117,
+    "first_error": null,
+    "strict_status": "certified",
+    "strict_reasons": []
+   }
+  },
+  "gdt/rad_factorization_eq_one": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 33,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 77,
+    "first_error": "unsolved goals\nn : ℕ\n_hn : 0 < n\np : ℕ\nhp : p.Prime ∧ p ∣ n ∧ ¬n = 0\n⊢ (rad n).factorization p = 1"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 18,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑n"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 40,
+    "first_error": "unsolved goals\nn : ℕ\n_hn : 0 < n\np : ℕ\nhp : p ∈ n.primeFactors\n⊢ (rad n).factorization p = 1"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "expected type must not contain free or meta variables\n  (rad n).factorization p = 1"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 166,
+    "first_error": "unsolved goals\nn : ℕ\n_hn : 0 < n\np : ℕ\nleft : p.Prime\nleft_1 : p ∣ n\nright : ¬n = 0\n⊢ (rad n).factorization p = 1"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 62,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nn : ℕ\n_hn : 0 < n\np : ℕ\nhp : p ∈ n.primeFactors\na✝ : (rad n).factorization p < 1\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 122,
+    "first_error": "unsolved goals\nn : ℕ\n_hn : 0 < n\np : ℕ\nhp : p.Prime ∧ p ∣ n ∧ ¬n = 0\n⊢ (∏ x ∈ n.primeFactors, x).factorization p = 1"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 123,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑n"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 267,
+    "first_error": "unsolved goals\nn : ℕ\n_hn : 0 < n\np : ℕ\nleft : p.Prime\nleft_1 : p ∣ n\nright : ¬n = 0\n⊢ (∏ x ∈ n.primeFactors, x).factorization p = 1"
+   }
+  },
+  "gdt/totient_rad_mul": {
+   "simp": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 42,
+    "first_error": "simp made no progress"
+   },
+   "simp_all": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 53,
+    "first_error": "simp_all made no progress"
+   },
+   "omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 18,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\n  b - c ≥ 1\nwhere\n a := ↑n\n b := ↑(rad n) * ↑(φ n)\n c := ↑n * ↑(φ (rad n))"
+   },
+   "norm_num": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 44,
+    "first_error": "unsolved goals\nn : ℕ\n_hn : 0 < n\n⊢ n * φ (rad n) = rad n * φ n"
+   },
+   "decide": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 16,
+    "first_error": "expected type must not contain free or meta variables\n  n * φ (rad n) = rad n * φ n"
+   },
+   "aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 66,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  n : ℕ\n  _hn : 0 < n\n  ⊢ n * φ (rad n) = rad n * φ n"
+   },
+   "linarith": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 82,
+    "first_error": "linarith failed to find a contradiction\ncase h1.h\nn : ℕ\n_hn : 0 < n\na✝ : n * φ (rad n) < rad n * φ n\n⊢ False\nfailed"
+   },
+   "simp_all_defs": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 101,
+    "first_error": "unsolved goals\nn : ℕ\n_hn : 0 < n\n⊢ n * φ (∏ x ∈ n.primeFactors, x) = (∏ x ∈ n.primeFactors, x) * φ n"
+   },
+   "intros_simp_all_defs_omega": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 96,
+    "first_error": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\n  b - c ≥ 1\nwhere\n a := ↑n\n b := ↑(∏ x ∈ n.primeFactors, x) * ↑(φ n)\n c := ↑n * ↑(φ (∏ x ∈ n.primeFactors,"
+   },
+   "norm_num_defs_aesop": {
+    "candidate": false,
+    "timeout": false,
+    "elab_ms": 113,
+    "first_error": "tactic 'aesop' failed, made no progress\nInitial goal:\n  n : ℕ\n  _hn : 0 < n\n  ⊢ n * φ (∏ x ∈ n.primeFactors, x) = (∏ x ∈ n.primeFactors, x) * φ n"
+   }
+  }
+ }
+}

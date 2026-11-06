@@ -1,0 +1,521 @@
+{
+ "repl_import_s": 2.3,
+ "disagreements": 0,
+ "comparison": [
+  {
+   "case": "V1_valid_proof_gdt_empty",
+   "direct_status": "preliminary",
+   "repl_status": "preliminary",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": true
+   },
+   "repl_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": true,
+   "direct_wall_s": 2.7,
+   "repl_wall_s": 0.4
+  },
+  {
+   "case": "V2_valid_proof_coprime_add_mul_right",
+   "direct_status": "preliminary",
+   "repl_status": "preliminary",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": true
+   },
+   "repl_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": true,
+   "direct_wall_s": 2.6,
+   "repl_wall_s": 0.3
+  },
+  {
+   "case": "V3_valid_full_code_gdt_empty",
+   "direct_status": "preliminary",
+   "repl_status": "preliminary",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": true,
+   "direct_wall_s": 2.6,
+   "repl_wall_s": 0.4
+  },
+  {
+   "case": "I1_sorry",
+   "direct_status": "rejected",
+   "repl_status": "rejected",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": false,
+    "C6_no_local_axioms": true,
+    "C7_options": true
+   },
+   "repl_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": false,
+    "C6_no_local_axioms": true,
+    "C7_options": true
+   },
+   "repl_sorries_in_candidate": [
+    55
+   ],
+   "v15_complete_on_repl_messages": false,
+   "direct_wall_s": 2.5,
+   "repl_wall_s": 0.3
+  },
+  {
+   "case": "I2_admit",
+   "direct_status": "rejected",
+   "repl_status": "rejected",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": false,
+    "C6_no_local_axioms": true,
+    "C7_options": true
+   },
+   "repl_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": false,
+    "C6_no_local_axioms": true,
+    "C7_options": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": false,
+   "direct_wall_s": 2.6,
+   "repl_wall_s": 0.3
+  },
+  {
+   "case": "I3_compile_error",
+   "direct_status": "rejected",
+   "repl_status": "rejected",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": false,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": false,
+    "C6_no_local_axioms": true,
+    "C7_options": true
+   },
+   "repl_checks": {
+    "C1_compile": false,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": false,
+    "C6_no_local_axioms": true,
+    "C7_options": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": false,
+   "direct_wall_s": 2.5,
+   "repl_wall_s": 0.3
+  },
+  {
+   "case": "I4_weakened_statement_full_code",
+   "direct_status": "rejected",
+   "repl_status": "rejected",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": false,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": false,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": true,
+   "direct_wall_s": 2.5,
+   "repl_wall_s": 0.3
+  },
+  {
+   "case": "I5_local_axiom_full_code",
+   "direct_status": "rejected",
+   "repl_status": "rejected",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": false,
+    "C6_no_local_axioms": false,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": false,
+    "C6_no_local_axioms": false,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": true,
+   "direct_wall_s": 2.5,
+   "repl_wall_s": 0.3
+  },
+  {
+   "case": "I6_exit_after_partial_proof",
+   "direct_status": "rejected",
+   "repl_status": "rejected",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": false,
+    "C2_check_ran": false,
+    "C3_present_theorem": false,
+    "C4_statement": false,
+    "C5_axioms": false,
+    "C6_no_local_axioms": false,
+    "C7_options": true
+   },
+   "repl_checks": {
+    "C1_compile": false,
+    "C2_check_ran": false,
+    "C3_present_theorem": false,
+    "C4_statement": false,
+    "C5_axioms": false,
+    "C6_no_local_axioms": false,
+    "C7_options": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": false,
+   "direct_wall_s": 2.3,
+   "repl_wall_s": 0.1
+  },
+  {
+   "case": "I7_native_decide_dependency",
+   "direct_status": "rejected",
+   "repl_status": "rejected",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": false,
+    "C6_no_local_axioms": true,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": false,
+    "C6_no_local_axioms": true,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": true,
+   "direct_wall_s": 2.6,
+   "repl_wall_s": 0.4
+  },
+  {
+   "case": "I8_renamed_theorem_full_code",
+   "direct_status": "rejected",
+   "repl_status": "rejected",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": false,
+    "C4_statement": false,
+    "C5_axioms": false,
+    "C6_no_local_axioms": true,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": false,
+    "C4_statement": false,
+    "C5_axioms": false,
+    "C6_no_local_axioms": true,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": true,
+   "direct_wall_s": 2.6,
+   "repl_wall_s": 0.3
+  },
+  {
+   "case": "I9_prefix_tampering_full_code",
+   "direct_status": "rejected",
+   "repl_status": "rejected",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": null,
+    "C2_check_ran": null,
+    "C3_present_theorem": null,
+    "C4_statement": null,
+    "C5_axioms": null,
+    "C6_no_local_axioms": null,
+    "C7_options": null,
+    "prefix": false
+   },
+   "repl_checks": {
+    "C1_compile": null,
+    "C2_check_ran": null,
+    "C3_present_theorem": null,
+    "C4_statement": null,
+    "C5_axioms": null,
+    "C6_no_local_axioms": null,
+    "C7_options": null,
+    "prefix": false
+   },
+   "repl_sorries_in_candidate": null,
+   "v15_complete_on_repl_messages": null,
+   "direct_wall_s": 0.0,
+   "repl_wall_s": null
+  },
+  {
+   "case": "I10_skipKernelTC_option",
+   "direct_status": "rejected",
+   "repl_status": "rejected",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": false,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": false,
+    "prefix": true
+   },
+   "repl_checks": {
+    "C1_compile": false,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": false,
+    "prefix": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": false,
+   "direct_wall_s": 2.7,
+   "repl_wall_s": 0.4
+  },
+  {
+   "case": "P1_valid_proof_without_kernel_replay",
+   "direct_status": "preliminary",
+   "repl_status": "preliminary",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": true
+   },
+   "repl_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": true,
+   "direct_wall_s": 2.7,
+   "repl_wall_s": 0.4
+  },
+  {
+   "case": "P2_valid_full_code_without_kernel_replay",
+   "direct_status": "preliminary",
+   "repl_status": "preliminary",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": true,
+    "C6_no_local_axioms": true,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": true,
+   "direct_wall_s": 2.6,
+   "repl_wall_s": 0.3
+  },
+  {
+   "case": "P3_local_axiom_without_kernel_replay",
+   "direct_status": "rejected",
+   "repl_status": "rejected",
+   "agree": true,
+   "direct_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": false,
+    "C6_no_local_axioms": false,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_checks": {
+    "C1_compile": true,
+    "C2_check_ran": true,
+    "C3_present_theorem": true,
+    "C4_statement": true,
+    "C5_axioms": false,
+    "C6_no_local_axioms": false,
+    "C7_options": true,
+    "prefix": true
+   },
+   "repl_sorries_in_candidate": [],
+   "v15_complete_on_repl_messages": true,
+   "direct_wall_s": 2.6,
+   "repl_wall_s": 0.3
+  }
+ ],
+ "certify_mode": [
+  {
+   "case": "V1_valid_proof_gdt_empty",
+   "expected": "certified",
+   "status": "certified",
+   "passed": true,
+   "direct_recheck": "certified",
+   "reasons": []
+  },
+  {
+   "case": "V2_valid_proof_coprime_add_mul_right",
+   "expected": "certified",
+   "status": "certified",
+   "passed": true,
+   "direct_recheck": "certified",
+   "reasons": []
+  },
+  {
+   "case": "V3_valid_full_code_gdt_empty",
+   "expected": "certified",
+   "status": "certified",
+   "passed": true,
+   "direct_recheck": "certified",
+   "reasons": []
+  },
+  {
+   "case": "I4_weakened_statement_full_code",
+   "expected": "rejected",
+   "status": "rejected",
+   "passed": true,
+   "direct_recheck": null,
+   "reasons": [
+    "C4_statement"
+   ]
+  },
+  {
+   "case": "I5_local_axiom_full_code",
+   "expected": "rejected",
+   "status": "rejected",
+   "passed": true,
+   "direct_recheck": null,
+   "reasons": [
+    "C5_axioms",
+    "C6_no_local_axioms"
+   ]
+  }
+ ]
+}

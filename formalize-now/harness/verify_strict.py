@@ -22,6 +22,14 @@ as necessary and insufficient. A candidate is ACCEPTED only when all hold:
 A token scan (sorry, admit, apply?, native_decide, …) is recorded as an additional
 signal only; decisions come from C1–C8 on the elaborated declarations.
 
+Status (RPI-DS-001c)
+  rejected     : any of C1–C7 failed, or C8 ran and failed;
+  preliminary  : C1–C7 passed and C8 (independent kernel replay) was NOT run;
+  certified    : C1–C8 all passed.
+Only `certified` results count as solved: `accepted` is True exactly for
+`certified`, and `count_certified()` re-validates every record it counts.
+Exit code: 0 certified, 2 preliminary, 1 rejected.
+
 Modes
   proof     : candidate = proof text after the item's `:= by`; the wrapper assembles
               trusted prefix + trusted statement + candidate proof.
@@ -102,7 +110,10 @@ def parse_messages(out):
         res.append(dict(severity=m["sev"], line=int(m["line"]), data=out[m.end():end].strip()))
     return res
 
-def verify(item_id, candidate, mode, use_l4c=False):
+def assemble(item_id, candidate, mode):
+    """Trusted assembly shared by the direct path and the REPL adapter.
+    Returns (item, prefix, source, rec); source is None when the full-code prefix
+    check fails (rec is then already final)."""
     item = load_item(item_id)
     prefix = item["header"] + item["definitions"] + "\n"
     rec = dict(item=item_id, mode=mode, checks={}, reasons=[])
@@ -115,14 +126,45 @@ def verify(item_id, candidate, mode, use_l4c=False):
         source = prefix + expected_block(item) + "\n" + cand_part
     else:
         if not candidate.startswith(prefix):
-            rec.update(accepted=False, reasons=["full-code candidate does not start with the trusted header and definitions"])
             rec["checks"]["prefix"] = False
-            return rec
+            rec = finalize(rec)
+            rec["reasons"] = ["prefix: full-code candidate does not start with the trusted header and definitions"]
+            return item, prefix, None, rec
         rec["checks"]["prefix"] = True
         source = prefix + expected_block(item) + "\n" + candidate[len(prefix):]
     source += "\n" + check_block(item_id)
     rec["token_scan"] = scan(candidate)
     rec["checks"]["C7_options"] = not any(o in candidate for o in FORBIDDEN_OPTIONS)
+    return item, prefix, source, rec
+
+def expected_lines(item, prefix):
+    """1-based line range of the trusted expected block inside the assembled source."""
+    return range(prefix.count("\n") + 1, (prefix + expected_block(item)).count("\n") + 2)
+
+SPEC = re.compile(r"\._at\..*\._spec_\d+$")
+
+def apply_check_result(rec, chk_json):
+    """C2–C6 from the trusted trailing check's JSON (None when it did not run)."""
+    rec["checks"]["C2_check_ran"] = chk_json is not None
+    res = chk_json or {}
+    rec["lean_check"] = res
+    rec["checks"]["C3_present_theorem"] = bool(res.get("present") and res.get("is_theorem"))
+    rec["checks"]["C4_statement"] = bool(res.get("type_alpha_equivalent"))
+    axs = res.get("axioms")
+    rec["checks"]["C5_axioms"] = axs is not None and all(a in ALLOWED for a in axs)
+    # compiler specialisations (`f._at.g._spec_n`) are registered as axiom-like
+    # declarations by Lean 4.9's code generator; they are recorded but excluded here.
+    # Soundness rests on C5: any axiom the target theorem reaches, whatever its
+    # name, falls outside the whitelist and rejects the candidate.
+    rec["local_axioms_compiler_specialisations"] = [a for a in res.get("local_axioms", []) if SPEC.search(a)]
+    rec["local_axioms_declared"] = [a for a in res.get("local_axioms", []) if not SPEC.search(a)]
+    rec["checks"]["C6_no_local_axioms"] = chk_json is not None and not rec["local_axioms_declared"]
+    return rec
+
+def verify(item_id, candidate, mode, use_l4c=False):
+    item, prefix, source, rec = assemble(item_id, candidate, mode)
+    if source is None:
+        return rec
     with tempfile.TemporaryDirectory(dir=LEAN49) as td:
         mod = "RPICandidate"
         path = Path(td) / f"{mod}.lean"; path.write_text(source)
@@ -134,27 +176,13 @@ def verify(item_id, candidate, mode, use_l4c=False):
         out = p.stdout + p.stderr
         msgs = parse_messages(out)
         # messages from the trusted expected block (its `sorry`) are excluded from C1
-        exp_lines = range(prefix.count("\n") + 1, (prefix + expected_block(item)).count("\n") + 2)
-        cand_msgs = [m for m in msgs if m["line"] not in exp_lines]
+        exp = expected_lines(item, prefix)
+        cand_msgs = [m for m in msgs if m["line"] not in exp]
         rec["messages"] = [dict(m, data=m["data"][:400]) for m in cand_msgs if m["severity"] != "info"]
         rec["checks"]["C1_compile"] = p.returncode == 0 and not any(m["severity"] == "error" for m in cand_msgs)
         chk = re.search(r"@@RPI_CHECK (\{.*\})", out)
-        rec["checks"]["C2_check_ran"] = chk is not None
-        res = json.loads(chk.group(1)) if chk else {}
-        rec["lean_check"] = res
-        rec["checks"]["C3_present_theorem"] = bool(res.get("present") and res.get("is_theorem"))
-        rec["checks"]["C4_statement"] = bool(res.get("type_alpha_equivalent"))
-        axs = res.get("axioms")
-        rec["checks"]["C5_axioms"] = axs is not None and all(a in ALLOWED for a in axs)
-        # compiler specialisations (`f._at.g._spec_n`) are registered as axiom-like
-        # declarations by Lean 4.9's code generator; they are recorded but excluded here.
-        # Soundness rests on C5: any axiom the target theorem reaches, whatever its
-        # name, falls outside the whitelist and rejects the candidate.
-        spec = re.compile(r"\._at\..*\._spec_\d+$")
-        rec["local_axioms_compiler_specialisations"] = [a for a in res.get("local_axioms", []) if spec.search(a)]
-        rec["local_axioms_declared"] = [a for a in res.get("local_axioms", []) if not spec.search(a)]
-        rec["checks"]["C6_no_local_axioms"] = chk is not None and not rec["local_axioms_declared"]
-        if use_l4c and rec["checks"]["C1_compile"]:
+        apply_check_result(rec, json.loads(chk.group(1)) if chk else None)
+        if use_l4c and all(rec["checks"].get(k) for k in REQUIRED):
             env = dict(os.environ)
             lp = subprocess.run(["lake", "env", "printenv", "LEAN_PATH"], cwd=LEAN49, capture_output=True, text=True).stdout.strip()
             env["LEAN_PATH"] = lp + ":" + td
@@ -164,9 +192,42 @@ def verify(item_id, candidate, mode, use_l4c=False):
         # V1.5 decision on the same compile, for comparison (no REPL `sorries` field: use sorry warnings)
         sorry_warn = any("declaration uses 'sorry'" in m["data"] for m in cand_msgs)
         rec["v15_complete_equivalent"] = v15_complete(cand_msgs, sorry_warn)
-    rec["accepted"] = all(v for k, v in rec["checks"].items())
-    rec["reasons"] = [k for k, v in rec["checks"].items() if not v]
+    rec["path"] = "direct"
+    return finalize(rec)
+
+REQUIRED = ["C1_compile", "C2_check_ran", "C3_present_theorem", "C4_statement",
+            "C5_axioms", "C6_no_local_axioms", "C7_options"]
+
+def finalize(rec):
+    checks = rec["checks"]
+    failed = [k for k, v in checks.items() if v is False]
+    if failed or not all(checks.get(k) for k in REQUIRED):
+        status = "rejected"
+    elif checks.get("C8_lean4checker") is True:
+        status = "certified"
+    else:
+        status = "preliminary"
+    rec["status"] = status
+    rec["certified"] = status == "certified"
+    rec["accepted"] = rec["certified"]            # accepted means certified, nothing weaker
+    rec["kernel_replay"] = "passed" if checks.get("C8_lean4checker") is True else (
+        "failed" if checks.get("C8_lean4checker") is False else "not_run")
+    rec["reasons"] = failed + ([] if status != "preliminary" else ["C8_lean4checker_not_run"])
     return rec
+
+def count_certified(records):
+    """Count solved results. A record counts only if its status is `certified` AND its
+    check vector independently shows C1–C8 all True; anything else is excluded, and a
+    record claiming `certified` without that evidence raises."""
+    n = 0
+    for r in records:
+        checks = r.get("checks", {})
+        evidence = all(checks.get(k) is True for k in REQUIRED + ["C8_lean4checker"])
+        if r.get("status") == "certified":
+            if not evidence:
+                raise ValueError(f"record {r.get('item')} claims certified without C1–C8 evidence")
+            n += 1
+    return n
 
 def main():
     ap = argparse.ArgumentParser()
@@ -182,7 +243,7 @@ def main():
     s = json.dumps(rec, indent=1, ensure_ascii=False)
     if a.json: Path(a.json).write_text(s + "\n")
     print(s)
-    sys.exit(0 if rec["accepted"] else 1)
+    sys.exit({"certified": 0, "preliminary": 2}.get(rec["status"], 1))
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,165 @@
+@@T begin gdt/gdt_empty 1224184
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:48:2: error: expected type must not contain free or meta variables
+  S N L m a = ∅
+@@T end gdt/gdt_empty 1224200
+@@T begin gdt/gdt_periodic 1224210
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:63:2: error: expected type must not contain free or meta variables
+  IsPeriod N m a (Tmin N m)
+@@T end gdt/gdt_periodic 1224225
+@@T begin gdt/gdt_minimal_period 1224237
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:78:2: error: expected type must not contain free or meta variables
+  Tmin N m ∣ t
+@@T end gdt/gdt_minimal_period 1224254
+@@T begin gdt/gdt_count_per_period 1224265
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:94:2: error: expected type must not contain free or meta variables
+  (Finset.filter (accepted N m a) (Finset.Ico b (b + Tmin N m))).card = φ (R N m)
+@@T end gdt/gdt_count_per_period 1224285
+@@T begin gdt/gdt_density 1224295
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:110:2: error: expected type must not contain free or meta variables
+  (S N (q * Tmin N m + s) m a).card = q * φ (R N m) + (S N s m a).card
+@@T end gdt/gdt_density 1224315
+@@T begin gdt/gdt_correction_factor 1224324
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:125:2: error: expected type must not contain free or meta variables
+  φ (R N m) * N * φ (d N m) = d N m * R N m * φ N
+@@T end gdt/gdt_correction_factor 1224342
+@@T begin gdt/general_divisor_theorem 1224352
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:147:2: error: expected type must not contain free or meta variables
+  (¬Admissible N m a → S N L m a = ∅) ∧
+    (Admissible N m a →
+        IsPeriod N m a (Tmin N m) ∧
+          (∀ (t : ℕ), 0 < t → IsPeriod N m a t → Tmin N m ∣ t) ∧
+            ∀ (b : ℕ), (Finset.filter (accepted N m a) (Finset.Ico b (b + Tmin N m))).card = φ (R N m)) ∧
+      φ (R N m) * N * φ (d N m) = d N m * R N m * φ N
+@@T end gdt/general_divisor_theorem 1224381
+@@T begin gdt/d_dvd_rad 1224391
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:160:2: error: expected type must not contain free or meta variables
+  d N m ∣ rad N
+@@T end gdt/d_dvd_rad 1224405
+@@T begin gdt/d_mul_R_eq_rad 1224415
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:173:2: error: expected type must not contain free or meta variables
+  d N m * R N m = rad N
+@@T end gdt/d_mul_R_eq_rad 1224431
+@@T begin gdt/prime_coprime_prod 1224441
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:188:2: error: expected type must not contain free or meta variables
+  a.Coprime (∏ p ∈ s, p)
+@@T end gdt/prime_coprime_prod 1224457
+@@T begin gdt/prod_primes_squarefree 1224468
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:202:2: error: expected type must not contain free or meta variables
+  Squarefree (∏ p ∈ s, p)
+@@T end gdt/prod_primes_squarefree 1224484
+@@T begin gdt/rad_squarefree 1224494
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:215:2: error: expected type must not contain free or meta variables
+  Squarefree (rad n)
+@@T end gdt/rad_squarefree 1224508
+@@T begin gdt/coprime_d_R 1224518
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:229:2: error: expected type must not contain free or meta variables
+  (d N m).Coprime (R N m)
+@@T end gdt/coprime_d_R 1224533
+@@T begin gdt/rad_dvd_self 1224542
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:242:2: error: expected type must not contain free or meta variables
+  rad n ∣ n
+@@T end gdt/rad_dvd_self 1224556
+@@T begin gdt/coprime_iff_coprime_rad 1224566
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:256:2: error: expected type must not contain free or meta variables
+  k.Coprime n ↔ k.Coprime (rad n)
+@@T end gdt/coprime_iff_coprime_rad 1224580
+@@T begin gdt/coprime_of_modEq_natAbs 1224589
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:271:2: error: expected type must not contain free or meta variables
+  k.Coprime e
+@@T end gdt/coprime_of_modEq_natAbs 1224605
+@@T begin gdt/gcd_with_N_iff_gcd_with_R 1224615
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:288:2: error: expected type must not contain free or meta variables
+  k.gcd N = 1 ↔ k.gcd (R N m) = 1
+@@T end gdt/gcd_with_N_iff_gcd_with_R 1224634
+@@T begin gdt/coprime_add_mul_right 1224644
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:302:2: error: expected type must not contain free or meta variables
+  (k + e * c).Coprime e ↔ k.Coprime e
+@@T end gdt/coprime_add_mul_right 1224659
+@@T begin gdt/periodic_window_card_eq 1224670
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:318:2: error: expected type must not contain free or meta variables
+  (Finset.filter P (Finset.Ico b (b + T))).card = (Finset.filter P (Finset.Ico 0 T)).card
+@@T end gdt/periodic_window_card_eq 1224692
+@@T begin gdt/coprime_m_R 1224702
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:332:2: error: expected type must not contain free or meta variables
+  m.Coprime (R N m)
+@@T end gdt/coprime_m_R 1224715
+@@T begin gdt/accepted_iff_coprime_R 1224725
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:348:2: error: expected type must not contain free or meta variables
+  accepted N m a n ↔ ↑n ≡ a [ZMOD ↑m] ∧ n.gcd (R N m) = 1
+@@T end gdt/accepted_iff_coprime_R 1224744
+@@T begin gdt/rad_pos 1224754
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:361:2: error: expected type must not contain free or meta variables
+  0 < rad n
+@@T end gdt/rad_pos 1224768
+@@T begin gdt/R_pos 1224778
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:374:2: error: expected type must not contain free or meta variables
+  0 < R N m
+@@T end gdt/R_pos 1224791
+@@T begin gdt/exists_repr_mod_R 1224801
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:391:2: error: expected type must not contain free or meta variables
+  ∃ n < Tmin N m, ↑n ≡ a [ZMOD ↑m] ∧ n % R N m = r
+@@T end gdt/exists_repr_mod_R 1224818
+@@T begin gdt/repr_unique 1224828
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:408:2: error: expected type must not contain free or meta variables
+  n1 = n2
+@@T end gdt/repr_unique 1224848
+@@T begin gdt/gcd_mod_eq 1224858
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:422:2: error: expected type must not contain free or meta variables
+  n.gcd R = (n % R).gcd R
+@@T end gdt/gcd_mod_eq 1224873
+@@T begin gdt/exists_accepted 1224883
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:436:2: error: expected type must not contain free or meta variables
+  ∃ n, accepted N m a n
+@@T end gdt/exists_accepted 1224898
+@@T begin gdt/primeFactors_forall_dvd_imp_dvd 1224908
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:450:2: error: expected type must not contain free or meta variables
+  rad n ∣ t
+@@T end gdt/primeFactors_forall_dvd_imp_dvd 1224923
+@@T begin gdt/exists_witness_avoiding_dvd 1224934
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:465:2: error: expected type must not contain free or meta variables
+  ∃ n1, accepted N m a n1 ∧ ¬p ∣ n1
+@@T end gdt/exists_witness_avoiding_dvd 1224950
+@@T begin gdt/squarefree_prime_dvd_split 1224961
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:479:2: error: expected type must not contain free or meta variables
+  p.Coprime (n / p) ∧ p * (n / p) = n
+@@T end gdt/squarefree_prime_dvd_split 1224978
+@@T begin gdt/R_squarefree 1224989
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:492:2: error: expected type must not contain free or meta variables
+  Squarefree (R N m)
+@@T end gdt/R_squarefree 1225003
+@@T begin gdt/exists_coprime_R_neg_t_mod_p 1225011
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:507:2: error: expected type must not contain free or meta variables
+  ∃ r < R N m, r.Coprime (R N m) ∧ ↑r ≡ -↑t [ZMOD ↑p]
+@@T end gdt/exists_coprime_R_neg_t_mod_p 1225030
+@@T begin gdt/rad_eq_self_of_squarefree 1225039
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:521:2: error: expected type must not contain free or meta variables
+  rad n = n
+@@T end gdt/rad_eq_self_of_squarefree 1225054
+@@T begin gdt/canonical_window_card_eq_range_coprime 1225064
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:539:2: error: expected type must not contain free or meta variables
+  (Finset.filter (fun n => ↑n ≡ a [ZMOD ↑m] ∧ n.gcd (R N m) = 1) (Finset.Ico 0 (Tmin N m))).card =
+    (Finset.filter (fun r => r.gcd (R N m) = 1) (Finset.range (R N m))).card
+@@T end gdt/canonical_window_card_eq_range_coprime 1225089
+@@T begin gdt/count_canonical_period 1225099
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:555:2: error: expected type must not contain free or meta variables
+  (Finset.filter (accepted N m a) (Finset.Ico 0 (Tmin N m))).card = φ (R N m)
+@@T end gdt/count_canonical_period 1225120
+@@T begin gdt/card_filter_Ico_split 1225130
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:572:2: error: expected type must not contain free or meta variables
+  (Finset.filter P (Finset.Ico a c)).card =
+    (Finset.filter P (Finset.Ico a b)).card + (Finset.filter P (Finset.Ico b c)).card
+@@T end gdt/card_filter_Ico_split 1225151
+@@T begin gdt/S_eq_filter_Ico 1225161
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:587:2: error: expected type must not contain free or meta variables
+  S N L m a = Finset.filter (accepted N m a) (Finset.Ico 1 (L + 1))
+@@T end gdt/S_eq_filter_Ico 1225181
+@@T begin gdt/rad_factorization_eq_one 1225191
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:602:2: error: expected type must not contain free or meta variables
+  (rad n).factorization p = 1
+@@T end gdt/rad_factorization_eq_one 1225207
+@@T begin gdt/totient_rad_mul 1225217
+/home/claude/rpi/DeepSeek-Prover-V2/formalize-now/baseline/runs/cauto_decide.lean:616:2: error: expected type must not contain free or meta variables
+  n * φ (rad n) = rad n * φ n
+@@T end gdt/totient_rad_mul 1225233
+
+# exit=1 wall_s=3.4

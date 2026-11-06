@@ -1,0 +1,24 @@
+simp                         wall=   4.3s candidates=1 timeouts=0
+simp_all                     wall=   5.0s candidates=1 timeouts=0
+omega                        wall=   3.4s candidates=0 timeouts=0
+norm_num                     wall=   4.5s candidates=1 timeouts=0
+decide                       wall=   3.4s candidates=0 timeouts=0
+aesop                        wall=   8.0s candidates=2 timeouts=0
+linarith                     wall=   4.9s candidates=0 timeouts=0
+simp_all_defs                wall=  10.6s candidates=1 timeouts=0
+intros_simp_all_defs_omega   wall=  10.7s candidates=1 timeouts=0
+norm_num_defs_aesop          wall=  17.5s candidates=2 timeouts=0
+  verify gdt/coprime_add_mul_right                      simp                         -> certified
+  verify gdt/coprime_add_mul_right                      simp_all                     -> certified
+  verify gdt/coprime_add_mul_right                      norm_num                     -> certified
+  verify gdt/coprime_add_mul_right                      aesop                        -> certified
+  verify gdt/coprime_add_mul_right                      simp_all_defs                -> certified
+  verify gdt/coprime_add_mul_right                      intros_simp_all_defs_omega   -> certified
+  verify gdt/coprime_add_mul_right                      norm_num_defs_aesop          -> certified
+  verify gdt/S_eq_filter_Ico                            aesop                        -> certified
+  verify gdt/S_eq_filter_Ico                            norm_num_defs_aesop          -> certified
+SOLVED 2 / 39 ['gdt/S_eq_filter_Ico', 'gdt/coprime_add_mul_right']
+
+real	1m52.321s
+user	1m40.256s
+sys	0m11.684s

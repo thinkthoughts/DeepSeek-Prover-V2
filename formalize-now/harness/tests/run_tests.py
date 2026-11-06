@@ -2,13 +2,13 @@
 """RPI-DS-001b wrapper tests: valid and deliberately invalid candidates.
 Each case states the expected decision of verify_strict.py; the run also records
 what DeepSeek-Prover-V1.5's `complete` criterion would decide on the same compile.
-usage: run_tests.py [--lean4checker]   (writes harness/tests/results.json)
+usage: run_tests.py   (writes harness/tests/results.json; needs LEAN4CHECKER)
 """
 import json, re, sys
 from pathlib import Path
 H = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(H))
-from verify_strict import verify, load_item
+from verify_strict import verify, load_item, count_certified
 F = H.parent
 ref = (F / "lean49/GDTBench/SolutionRef.lean").read_text()
 
@@ -49,19 +49,42 @@ CASES = [
   full(E, between="set_option debug.skipKernelTC true\n\n"), False),
 ]
 
+# RPI-DS-001c: the 13 original cases run WITH kernel replay (expected certified/rejected);
+# the P cases run WITHOUT it and must come out `preliminary` (or rejected), never certified.
+STATUS_CASES = [(c[0], c[1], c[2], c[3], "certified" if c[4] else "rejected", True) for c in CASES] + [
+ ("P1_valid_proof_without_kernel_replay", E, "proof", ref_body("gdt_empty"), "preliminary", False),
+ ("P2_valid_full_code_without_kernel_replay", E, "full-code", full(E), "preliminary", False),
+ ("P3_local_axiom_without_kernel_replay", E, "full-code",
+  full(E, between="axiom rpi_cheat : False\n\n", proof="exact rpi_cheat.elim"), "rejected", False),
+]
+
 def main():
-    use_l4c = "--lean4checker" in sys.argv
-    out, fails = [], 0
-    for cid, item, mode, cand, expect in CASES:
-        r = verify(item, cand, mode, use_l4c)
-        ok = r["accepted"] == expect
+    out, fails, recs = [], 0, {}
+    for cid, item, mode, cand, expect, l4c in STATUS_CASES:
+        r = verify(item, cand, mode, l4c)
+        recs[cid] = r
+        ok = r["status"] == expect and r["accepted"] == (expect == "certified")
         fails += not ok
-        out.append(dict(case=cid, item=item, mode=mode, expected_accept=expect, accepted=r["accepted"],
-                        test_passed=ok, reasons=r["reasons"], v15_complete_equivalent=r.get("v15_complete_equivalent"),
-                        token_scan=r.get("token_scan"), lean_check=r.get("lean_check"), wall_s=r.get("wall_s"),
+        out.append(dict(case=cid, item=item, mode=mode, kernel_replay_requested=l4c, expected_status=expect,
+                        status=r["status"], accepted=r["accepted"], test_passed=ok, reasons=r["reasons"],
+                        v15_complete_equivalent=r.get("v15_complete_equivalent"), token_scan=r.get("token_scan"),
+                        lean_check=r.get("lean_check"), wall_s=r.get("wall_s"), checks=r.get("checks"),
                         first_messages=[m["data"][:160] for m in r.get("messages", []) if m["severity"] == "error"][:2]))
-        print(f"{cid:40s} expect={expect!s:5} got={r['accepted']!s:5} {'PASS' if ok else 'FAIL'}  v15={r.get('v15_complete_equivalent')}  {r['reasons']}")
-    (H / "tests/results.json").write_text(json.dumps(dict(lean4checker=use_l4c, failures=fails, cases=out), indent=1, ensure_ascii=False) + "\n")
+        print(f"{cid:44s} expect={expect:11s} got={r['status']:11s} {'PASS' if ok else 'FAIL'}  v15={r.get('v15_complete_equivalent')}  {r['reasons']}")
+    # counting tests
+    counting = []
+    n = count_certified([recs["V1_valid_proof_gdt_empty"], recs["P1_valid_proof_without_kernel_replay"],
+                         recs["I1_sorry"]])
+    counting.append(dict(test="T1_only_certified_counted", expected=1, got=n, passed=n == 1))
+    forged = dict(recs["P1_valid_proof_without_kernel_replay"], status="certified")
+    try:
+        count_certified([forged]); raised = False
+    except ValueError:
+        raised = True
+    counting.append(dict(test="T2_forged_certified_status_raises", expected="ValueError", got="ValueError" if raised else "counted", passed=raised))
+    for c in counting:
+        fails += not c["passed"]; print(f"{c['test']:44s} {'PASS' if c['passed'] else 'FAIL'}  got={c['got']}")
+    (H / "tests/results.json").write_text(json.dumps(dict(failures=fails, cases=out, counting=counting), indent=1, ensure_ascii=False) + "\n")
     sys.exit(1 if fails else 0)
 
 if __name__ == "__main__":

@@ -9,17 +9,28 @@ is upstream.
 python3 harness/verify_strict.py --item gdt/gdt_empty --proof cand.lean --lean4checker --json out.json
 # full-code mode: candidate is a whole file starting with the item's header + definitions
 python3 harness/verify_strict.py --item gdt/gdt_empty --full-code cand_full.lean
-# tests (3 valid, 10 invalid)
-LEAN4CHECKER=<lean4checker@v4.9.0-rc1 binary> python3 harness/tests/run_tests.py --lean4checker
+# tests: 13 cases with kernel replay, 3 preliminary-mode cases, 2 counting guards
+LEAN4CHECKER=<lean4checker@v4.9.0-rc1 binary> python3 harness/tests/run_tests.py
+# REPL adapter vs direct verifier (DeepSeek REPL xinhjBrant/repl@3334a97)
+RPI_REPL=<repl binary> LEAN4CHECKER=<…> python3 harness/tests/run_repl_tests.py
 ```
 
 Requirements: the `formalize-now/lean49` project built (`lake build`), with the full Mathlib
 cache, because items import `Mathlib`. Each run takes about 4–8 s and about 3.5 GB of RAM.
 
-## Decision
+## Status (RPI-DS-001c)
 
-A candidate is accepted only when C1–C7 hold, and C8 as well when `--lean4checker` is
-given:
+| Status | Meaning |
+|---|---|
+| `certified` | C1–C8 passed, including independent kernel replay; the only status that counts as solved |
+| `preliminary` | C1–C7 passed, C8 not run (fast screening, e.g. `harness/repl_adapter.py`) |
+| `rejected` | any check failed |
+
+`accepted` is true exactly for `certified`. Use `count_certified(records)` to tally
+results: it re-checks each record's C1–C8 evidence and raises on a record that claims
+`certified` without it. Exit codes: 0 certified, 2 preliminary, 1 rejected.
+
+## Checks
 
 | Check | Requirement |
 |---|---|

@@ -1,6 +1,31 @@
-# formalize-now / GDT-Ladder — RPI-DS-001a (Stage 0) and RPI-DS-001b
+# formalize-now / GDT-Ladder — RPI-DS-001a, 001b, 001c
 
-## RPI-DS-001b — reference proof certification (current)
+## Benchmark status (RPI-DS-001c, 2026-11-05)
+
+| Component | Status |
+|---|---|
+| Specification and inventory (001a) | 48 declarations, kernel dependency graph, Lean 4.9 translation logged |
+| Reference proofs (001b, re-checked in 001c) | 39/39 certified: statement-preserving, axioms ⊆ {propext, Quot.sound, Classical.choice}, lean4checker replay and `--fresh` pass |
+| Strict verifier | statuses `rejected` / `preliminary` / `certified`; `certified` requires lean4checker (C8); 18/18 tests |
+| REPL adapter | DeepSeek REPL `3334a97`; agrees with the direct verifier on 16/16 cases (check vectors and status); certify mode 5/5; about 0.3 s per candidate |
+| Tactic baseline (Cauto) | 2/39 certified (`coprime_add_mul_right`, `S_eq_filter_Ico`); 0/7 challenge theorems |
+| Environment | Lean, REPL and Mathlib sources identical to DeepSeek's. Batteries differs by one linter commit, outside the proofs' closure. Exact fork build deferred |
+| Pre-registration | `PREREGISTRATION.md`, `preregistration.json` (sha256 `fb58a25d…`), prompts `benchmark/prompts_v1.jsonl` (184; 0 reference-proof matches) |
+| Instrumentation | `harness/instrument.py`. Tokens, attempts, GPU time and energy are filled at inference; RAPL and NVML are absent on this host and recorded as such |
+| Model inference | not started; gate in `reports/RECOMMENDATION_RPI-DS-001d.md` |
+
+001c reports:
+
+- `reports/CAUTO_BASELINE_001c.md`
+- `reports/ENVIRONMENT_COMPATIBILITY_001c.md`
+- `reports/RPI-DS-001c_BUILD_AND_VALIDATION.md`
+- `reports/RECOMMENDATION_RPI-DS-001d.md`
+
+Full validation command: `LEAN4CHECKER=… RPI_REPL=… tools/validate_001c.sh`.
+
+---
+
+## RPI-DS-001b — reference proof certification
 
 All 39 GDT theorems (7 challenge theorems and 32 helper lemmas) are certified in the
 model-matched environment: Lean 4.9.0-rc1 with Mathlib `d1d1e4b7`.
@@ -101,7 +126,9 @@ formalize-now/
     gdt_items.jsonl            39 items in DeepSeek V1.5/V2 prompt shape (no proofs)
     AllItemsCheck.lean         all items under the V1.5 header, for the elaboration check
   tools/                       extractors, translator, generators, check scripts
-  harness/                     strict verification wrapper and tests (001b)
+  harness/                     strict verifier, REPL adapter, prompts, instrumentation, tests (001b–001c)
+  baseline/                    Cauto tactic baseline (001c)
+  PREREGISTRATION.md, preregistration.json   Stage 1 design, fixed before inference (001c)
   reports/                     human-readable reports (+ _generated_* tables)
   logs/                        build, elaboration, axiom and extraction logs
 ```

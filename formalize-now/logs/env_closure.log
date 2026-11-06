@@ -1,0 +1,8 @@
+roots=39 closure_constants=8170 modules=273
+constants_from_differing_modules=[]
+batteries_modules_in_closure=[Batteries.Data.List.Basic, Batteries.Data.Nat.Gcd, Batteries.Data.List.Init.Attach, Batteries.Data.Nat.Basic, Batteries.Data.List.Pairwise, Batteries.Logic, Batteries.Data.List.Perm, Batteries.Data.List.Lemmas, Batteries.Data.List.Count]
+top_modules=[(Init.Prelude, 436), (Mathlib.Algebra.Group.Defs, 326), (Mathlib.Data.Multiset.Basic, 248), (Init.Core, 242), (Init.Data.Nat.Basic, 201), (Mathlib.Data.Finset.Basic, 198), (Mathlib.Algebra.Ring.Defs, 193), (Batteries.Data.List.Lemmas, 151), (Mathlib.Algebra.Order.Ring.Defs, 128), (Mathlib.Order.WithBot, 125), (Init.Data.Int.Order, 121), (Mathlib.Order.Lattice, 121), (Init.PropLemmas, 114), (Init.Data.List.Lemmas, 109), (Batteries.Data.List.Perm, 103)]
+
+real	0m2.304s
+user	0m2.054s
+sys	0m0.207s

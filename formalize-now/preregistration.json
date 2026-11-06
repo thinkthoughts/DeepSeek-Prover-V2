@@ -1,0 +1,78 @@
+{
+ "schema": "rpi-ds-001c/preregistration/v1",
+ "fixed_on": "2026-11-05",
+ "document": "PREREGISTRATION.md",
+ "question": "Does providing the established GDT lemma decomposition increase the number of kernel-verified theorems solved by DeepSeek-Prover-V2-7B under a matched computational budget?",
+ "items": {
+  "file": "benchmark/gdt_items_v2.jsonl",
+  "sha256": "8dc688e7717bcc0813367fb9090acd46d750755bdeedb00009dabe97b754c025",
+  "challenge": 7,
+  "helpers": 32,
+  "closure_sizes": {
+   "gdt_correction_factor": 8,
+   "gdt_count_per_period": 22,
+   "gdt_density": 25,
+   "gdt_empty": 0,
+   "gdt_minimal_period": 21,
+   "gdt_periodic": 7,
+   "general_divisor_theorem": 33
+  },
+  "cauto_certified": [
+   "coprime_add_mul_right",
+   "S_eq_filter_Ico"
+  ]
+ },
+ "model": {
+  "id": "deepseek-ai/DeepSeek-Prover-V2-7B",
+  "revision": "a8d9e14432b2e8dd9df2a4d4e70f1ba9bc8d9b7b",
+  "dtype": "bfloat16"
+ },
+ "prompts": {
+  "file": "benchmark/prompts_v1.jsonl",
+  "sha256": "de8143b2b3bd95e5e4252912c6c04d91eab3f3ac103094cdb5796743bfc9caea",
+  "count": 184,
+  "primary_mode": "cot",
+  "secondary_mode": "noncot",
+  "leak_check_lines": 471,
+  "leaks": 0
+ },
+ "sampling": {
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "max_new_tokens": {
+   "noncot": 8192,
+   "cot": 16384
+  },
+  "seed_rule": "int(sha256(\"rpi-ds-001c\" + prompt_id + str(i))[:8], 16)"
+ },
+ "conditions": {
+  "C0": "direct, 7 theorems",
+  "C0h": "direct + closure lemma statements as comments",
+  "C1": "each of 39 items alone, 32 samples",
+  "C2": "each of 39 items with direct deps as sorry-declarations, 32 samples; theorem-level by assembly",
+  "Cauto": "baseline/cauto.py"
+ },
+ "attempts": {
+  "C1": 32,
+  "C2": 32,
+  "C0": "32*(1+|closure(T)|)",
+  "C0h": "32*(1+|closure(T)|)",
+  "C0_cap_factor_equal_tokens": 2
+ },
+ "budget_matching": [
+  "equal_attempts",
+  "equal_generated_tokens",
+  "equal_total_tokens (secondary)"
+ ],
+ "verification": {
+  "wrapper": "harness/verify_strict.py",
+  "certified_requires": "C1-C8 incl. lean4checker",
+  "screening": "harness/repl_adapter.py (preliminary only)"
+ },
+ "robustness": {
+  "reorderings": 200,
+  "seed": "rpi-ds-001c-bootstrap"
+ },
+ "interpretation": "PREREGISTRATION.md section 10",
+ "amendments": []
+}
